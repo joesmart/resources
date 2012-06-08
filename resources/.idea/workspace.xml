@@ -4,7 +4,669 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="" />
+    <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="">
+      <change type="DELETED" beforePath="F:\workspaces\idea\temp\resources\logs\resources.log" afterPath="" />
+      <change type="DELETED" beforePath="F:\workspaces\idea\temp\resources\logs\resources.log.2012-06-07" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/javax.ws.rs.ext.MessageBodyReader" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/javax.ws.rs.ext.MessageBodyReader" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/javax.ws.rs.ext.MessageBodyWriter" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/javax.ws.rs.ext.MessageBodyWriter" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/img/glyphicons-halflings-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/img/glyphicons-halflings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/image/grid-18px-masked.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/image/grid-18px-masked.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_228ef1_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/jquery_32x32.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/jquery_32x32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/jqueryui_32x32.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/jqueryui_32x32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/sizzlejs_32x32.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/sizzlejs_32x32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/transparent_1x1.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/transparent_1x1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/ui-anim_basic_16x16.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/images/ui-anim_basic_16x16.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/search.php" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/images/calendar.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/images/calendar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras2.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras2_min.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras2_min.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras3.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras3_min.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras3_min.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras4.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras4_min.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras4_min.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras_min.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/images/high_tatras_min.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/calendar.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/calendar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-config-on-tile.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-config-on-tile.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-config-on.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-config-on.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-spindown-closed.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-spindown-closed.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-spindown-open.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/demo-spindown-open.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/icon-docs-info.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/icon-docs-info.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/pbar-ani.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/images/pbar-ani.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/earth.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/earth.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/flight.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/flight.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/rocket.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/images/rocket.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/images/pbar-ani.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/images/pbar-ani.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content3-slow.php" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content3-slow.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content4-broken.php" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content4-broken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_454545_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_888888_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_228ef1_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/images/unchecked.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/images/unchecked.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/img/loading.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/img/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/img/progressbar.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/img/progressbar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/static/favicon.ico" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/static/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/main.py" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/static/favicon.ico" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/static/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/index.php" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/upload.class.php" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/upload.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/parent.iml" afterPath="$PROJECT_DIR$/../parent/parent.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/pom.xml" afterPath="$PROJECT_DIR$/../parent/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/readme.md" afterPath="$PROJECT_DIR$/../parent/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/src/test/java/readme.md" afterPath="$PROJECT_DIR$/../parent/src/test/java/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/resources_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/resources_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/resources_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/resources_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cfml.xml" afterPath="$PROJECT_DIR$/.idea/cfml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Admin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Admin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/ZouYanjian.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/ZouYanjian.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_morphia_morphia_0_99.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_morphia_morphia_0_99.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_morphia_morphia_validation_0_99.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_morphia_morphia_validation_0_99.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_12_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_12_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_testlib_10_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_testlib_10_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guiceberry_guiceberry_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guiceberry_guiceberry_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_assistedinject_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_assistedinject_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_persist_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_persist_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_servlet_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_servlet_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_throwingproviders_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_throwingproviders_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_3_166.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_3_166.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_guice_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_guice_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_multipart_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_multipart_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_6_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_6_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_coobird_thumbnailator_0_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_coobird_thumbnailator_0_4_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_3_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_3_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_platform_3_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_platform_3_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_dozer_dozer_5_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_dozer_dozer_5_3_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_15.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_15.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__opensymphony_sitemesh_2_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__opensymphony_sitemesh_2_4_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_beta1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_beta1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_beta1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_beta1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dbunit_dbunit_2_4_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dbunit_dbunit_2_4_8.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_aggregate_jetty_webapp_8_1_3_v20120416.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_aggregate_jetty_webapp_8_1_3_v20120416.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jsp_8_1_3_v20120416.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jsp_8_1_3_v20120416.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_com_sun_el_2_2_0_v201108011116.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_com_sun_el_2_2_0_v201108011116.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_el_2_2_0_v201108011116.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_el_2_2_0_v201108011116.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_2_2_0_v201112011158.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_2_2_0_v201112011158.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_jstl_1_2_0_v201105211821.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_jstl_1_2_0_v201105211821.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_jasper_glassfish_2_2_2_v201112011158.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_jasper_glassfish_2_2_2_v201112011158.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_taglibs_standard_glassfish_1_2_0_v201112081803.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_taglibs_standard_glassfish_1_2_0_v201112081803.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_eclipse_jdt_core_3_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_eclipse_jdt_core_3_7_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_3_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_3_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_16_1_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_16_1_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_7_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_7_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20080701.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20080701.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_mimepull_1_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_mimepull_1_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_9_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_9_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_2_8_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_2_8_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_8_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_8_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_support_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_support_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_core_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_core_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_common_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_module_junit4_common_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_reflect_1_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_reflect_1_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_0_11_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_0_11_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_21_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_21_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_6_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_6_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webbitserver_webbit_0_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webbitserver_webbit_0_4_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_9_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iml" afterPath="$PROJECT_DIR$/resources.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/AppGuiceFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/AppGuiceFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/TestFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/TestFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/jersey/MainJerseyApplciation.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/jersey/MainJerseyApplciation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/PropertiesDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/PropertiesDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/DomainObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/DomainObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Properties.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Properties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/ResourceEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/ResourceEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/DataPageInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/DataPageInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileUrl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileUrl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/PropertiesService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/PropertiesService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/servlet/URIServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/servlet/URIServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/StringUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/StringUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rebel.xml" afterPath="$PROJECT_DIR$/src/main/java/rebel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/Log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/badpanelsource.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/badpanelsource.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/black.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/black.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/decorator.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/decorator.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/freemarker.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/freemarker.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/nopanelsource.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/nopanelsource.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/panel.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/panel.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/printable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/printable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-ie.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-ie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-lynx.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-lynx.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-ns.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-ns.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-opera.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test-opera.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/upload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/upload.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/velocity.vm" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/velocity.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sitemesh.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sitemesh.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/graphic.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/graphic.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/list_resource.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/list_resource.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/menu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap-responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap-responsive.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/2.0.3/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/jquery-ui-1.8.20.custom.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/css/ui-lightness/jquery-ui-1.8.20.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/AUTHORS.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/AUTHORS.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/GPL-LICENSE.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/GPL-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/MIT-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/collapsible.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/collapsible.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/custom-icons.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/custom-icons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/fillspace.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/fillspace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/hoverintent.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/hoverintent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/mouseover.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/mouseover.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/no-auto-height.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/no-auto-height.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/sortable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/accordion/sortable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/addClass/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/addClass/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/addClass/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/addClass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/animate/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/animate/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/animate/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/animate/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/categories.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/categories.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/combobox.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/combobox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/custom-data.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/custom-data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/folding.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/folding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/london.xml" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/london.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/maxheight.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/maxheight.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/multiple-remote.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/multiple-remote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/multiple.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/multiple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote-jsonp.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote-jsonp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote-with-cache.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote-with-cache.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/remote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/xml.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/autocomplete/xml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/checkbox.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/checkbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/icons.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/icons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/radio.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/radio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/splitbutton.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/splitbutton.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/toolbar.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/button/toolbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/alt-field.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/alt-field.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/animation.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/animation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/buttonbar.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/buttonbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/date-formats.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/date-formats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/date-range.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/date-range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/dropdown-month-year.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/dropdown-month-year.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/icon-trigger.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/icon-trigger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/inline.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/inline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/localization.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/localization.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/min-max.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/min-max.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/multiple-calendars.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/multiple-calendars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/other-months.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/other-months.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/show-week.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/datepicker/show-week.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/demos.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/demos.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/animated.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/animated.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-confirmation.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-confirmation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-form.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-message.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal-message.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/dialog/modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/constrain-movement.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/constrain-movement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/cursor-style.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/cursor-style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/delay-start.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/delay-start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/events.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/handle.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/handle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/revert.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/revert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/scroll.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/scroll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/snap-to.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/snap-to.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/sortable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/sortable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/visual-feedback.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/draggable/visual-feedback.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/accepted-elements.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/accepted-elements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/photo-manager.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/photo-manager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/propagation.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/propagation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/revert.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/revert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/shopping-cart.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/shopping-cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/visual-feedback.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/droppable/visual-feedback.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/easing.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/easing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/effect/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/hide/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/hide/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/hide/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/hide/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/cycler.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/cycler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/position/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/animated.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/animated.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/resize.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/progressbar/resize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/removeClass/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/removeClass/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/removeClass/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/removeClass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/animate.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/animate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/aspect-ratio.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/aspect-ratio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/constrain-area.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/constrain-area.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/delay-start.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/delay-start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/helper.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/helper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/max-min.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/max-min.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/snap-to-grid.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/snap-to-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/synchronous-resize.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/synchronous-resize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/textarea.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/textarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/visual-feedback.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/resizable/visual-feedback.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/display-grid.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/display-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/serialize.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/selectable/serialize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/show/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/show/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/show/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/show/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/colorpicker.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/colorpicker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/hotelrooms.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/hotelrooms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/multiple-vertical.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/multiple-vertical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/range-vertical.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/range-vertical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/range.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/rangemax.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/rangemax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/rangemin.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/rangemin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/side-scroll.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/side-scroll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/slider-vertical.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/slider-vertical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/steps.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/steps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/tabs.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/slider/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/connect-lists-through-tabs.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/connect-lists-through-tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/connect-lists.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/connect-lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/delay-start.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/delay-start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/display-grid.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/display-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/empty-lists.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/empty-lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/items.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/items.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/placeholder.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/placeholder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/portlets.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/sortable/portlets.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/switchClass/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/switchClass/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/switchClass/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/switchClass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content1.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content2.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/ajax/content2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/bottom.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/bottom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/collapsible.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/collapsible.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/cookie.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/cookie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/manipulation.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/manipulation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/mouseover.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/mouseover.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/sortable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/sortable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/vertical.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/tabs/vertical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggleClass/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggleClass/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggleClass/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggleClass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggle/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggle/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggle/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/demos/toggle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/accordion.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/accordion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/addClass.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/addClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/animate.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/animate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/autocomplete.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/autocomplete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/button.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/datepicker.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/datepicker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/dialog.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/draggable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/draggable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/droppable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/droppable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/effect.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/effect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/hide.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/hide.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/position.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/position.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/progressbar.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/progressbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/removeClass.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/removeClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/resizable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/resizable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/selectable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/selectable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/show.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/slider.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/slider.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/sortable.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/sortable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/switchClass.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/switchClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/tabs.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/toggle.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/toggle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/toggleClass.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/docs/toggleClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.bgiframe-2.1.2.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.bgiframe-2.1.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.cookie.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.cookie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.metadata.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/jquery.metadata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/qunit.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/qunit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/qunit.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/external/qunit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/jquery-1.7.2.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/jquery-1.7.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/package.json" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.accordion.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.all.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.autocomplete.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.base.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.button.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.core.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.datepicker.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.progressbar.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.progressbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.resizable.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.resizable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.selectable.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.selectable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.slider.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.tabs.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.theme.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/base/jquery.ui.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery-ui-1.8.20.custom.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery-ui-1.8.20.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.accordion.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.all.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.autocomplete.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.base.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.button.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.core.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.datepicker.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.progressbar.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.progressbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.resizable.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.resizable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.selectable.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.selectable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.slider.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.tabs.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.theme.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/themes/ui-lightness/jquery.ui.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery-ui-i18n.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery-ui-i18n.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-af.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ar-DZ.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ar-DZ.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ar.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-az.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-bg.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-bs.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-bs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ca.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-cs.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-cy-GB.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-cy-GB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-da.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-de.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-el.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-AU.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-AU.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-GB.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-GB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-NZ.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-en-NZ.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-eo.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-es.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-et.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-eu.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fa.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fi.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fo.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fr-CH.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fr-CH.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fr.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ge.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-gl.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-he.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hi.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hr.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hu.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hy.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-hy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-id.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-is.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-it.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ja.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-kk.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-kk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-km.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ko.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lb.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lt.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lv.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-mk.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ml.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ms.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-nl-BE.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-nl-BE.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-nl.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-no.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pl.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pt-BR.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pt-BR.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pt.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-rm.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-rm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ro.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ru.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sk.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sl.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sq.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sr-SR.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sr-SR.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sr.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sv.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ta.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-ta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-th.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-tj.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-tj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-tr.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-uk.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-vi.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-CN.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-HK.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-HK.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery-ui-1.8.20.custom.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery-ui-1.8.20.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.blind.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.blind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.bounce.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.bounce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.clip.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.clip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.core.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.drop.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.drop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.explode.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.explode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.fade.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.fade.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.fold.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.fold.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.highlight.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.highlight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.pulsate.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.pulsate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.scale.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.scale.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.shake.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.shake.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.slide.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.slide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.transfer.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.effects.transfer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.accordion.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.autocomplete.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.button.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.core.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.datepicker.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.dialog.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.draggable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.draggable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.droppable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.droppable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.mouse.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.mouse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.position.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.position.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.progressbar.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.progressbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.resizable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.resizable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.selectable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.selectable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.slider.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.sortable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.tabs.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.widget.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/jquery.ui.widget.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.blind.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.blind.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.bounce.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.bounce.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.clip.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.clip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.core.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.drop.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.drop.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.explode.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.explode.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.fade.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.fade.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.fold.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.fold.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.highlight.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.highlight.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.pulsate.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.pulsate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.scale.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.scale.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.shake.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.shake.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.slide.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.slide.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.transfer.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.effects.transfer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.accordion.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.autocomplete.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.autocomplete.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.button.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.button.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.core.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.datepicker.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.dialog.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.dialog.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.draggable.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.draggable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.droppable.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.droppable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.mouse.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.mouse.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.position.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.position.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.progressbar.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.progressbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.resizable.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.resizable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.selectable.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.selectable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.slider.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.sortable.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.sortable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.tabs.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.tabs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.widget.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/development-bundle/ui/minified/jquery.ui.widget.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/js/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/js/jquery-1.7.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/js/jquery-ui-1.8.20.custom.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-ui-1.8.20/js/jquery-ui-1.8.20.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/jquery.validate.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/jquery.validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/messages_cn.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/messages_cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/validate.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery-validation/1.9.0/validate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery/1.7.1/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery/1.7.1/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/jquery/1.7.1/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery/1.7.1/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/pagination/smartpaginator.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/pagination/smartpaginator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/.gitignore" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/README.md" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/cors/postmessage.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/cors/postmessage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/cors/result.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/cors/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/css/jquery.fileupload-ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/css/jquery.fileupload-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/cors/jquery.postmessage-transport.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/cors/jquery.postmessage-transport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/cors/jquery.xdr-transport.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/cors/jquery.xdr-transport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload-fp.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload-fp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload-ui.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.fileupload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.iframe-transport.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/jquery.iframe-transport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/locale.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/locale.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/js/vendor/jquery.ui.widget.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/js/vendor/jquery.ui.widget.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/package.json" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/app.yaml" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/app/main.go" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/app/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/resize/resize.go" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/resize/resize.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/static/robots.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-go/static/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/app.yaml" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/static/robots.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/gae-python/static/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/.gitignore" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/package.json" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/server.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/node/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/files/.htaccess" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/server/php/files/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/test/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/upload/test/test.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/upload/test/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/upload/upload.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/upload/upload.jsp" />
+    </list>
     <ignored path="resources.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="logs/resources.log.2012-06-01" />
@@ -84,8 +746,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -682,12 +1344,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -716,39 +1378,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -758,12 +1388,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -778,22 +1408,22 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="project.structure.side.proportion" value="0.44638693" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -892,24 +1522,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -943,19 +1555,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
       <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1075,11 +1685,42 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1109,17 +1750,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1570,14 +2200,13 @@
       <window_info id="Kahlua" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5804749" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5620053" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="BuildWatcher" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76649076" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23580158" sideWeight="0.5237467" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49734244" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23580158" sideWeight="0.2176781" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292595" sideWeight="0.5343008" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946082" sideWeight="0.28627968" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946082" sideWeight="0.6451187" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35488126" sideWeight="0.49173257" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1589,6 +2218,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.49748382" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5620053" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39899352" sideWeight="0.6015831" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -1629,7 +2259,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="main page modified" />
@@ -1699,107 +2329,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/DataPageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileUrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="21" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/DomainObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="12" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="12" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="439" selection-end="439" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="13" column="13" selection-start="439" selection-end="439" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="324" selection-end="324" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="324" selection-end="324" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="47" selection-start="2174" selection-end="2205" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="70" column="47" selection-start="2174" selection-end="2205" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="9" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/upload.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="48" selection-start="5171" selection-end="5171" vertical-scroll-proportion="0.027027028">
-          <folding />
-        </state>
+        <state line="92" column="48" selection-start="5171" selection-end="5171" vertical-scroll-proportion="0.027027028" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="7" selection-start="755" selection-end="1655" vertical-scroll-proportion="1.9233927">
-          <folding />
-        </state>
+        <state line="78" column="7" selection-start="755" selection-end="1655" vertical-scroll-proportion="1.9233927" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="8" selection-start="2681" selection-end="2723" vertical-scroll-proportion="0.75376195">
-          <folding />
-        </state>
+        <state line="69" column="8" selection-start="2681" selection-end="2723" vertical-scroll-proportion="0.75376195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2319" selection-end="2319" vertical-scroll-proportion="0.025991792">
-          <folding />
-        </state>
+        <state line="63" column="0" selection-start="2319" selection-end="2319" vertical-scroll-proportion="0.025991792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../parent/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="62" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="62" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../parent/src/test/java/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
   </component>
