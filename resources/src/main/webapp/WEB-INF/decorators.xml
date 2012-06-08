@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<decorators defaultdir="/WEB-INF/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/static/*</pattern>
+    </excludes>
+    <decorator name="main" page="decorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="left-panel" page="panel.jsp"/>
+    <decorator name="upload" page="upload.jsp">
+        <pattern>/upload/*</pattern>
+        <pattern></pattern>
+    </decorator>
+    <!-- <decorator name="printable" page="printable.jsp"/>
+    <decorator name="black" page="black.jsp"/>
+    <decorator name="nopanelsource" page="nopanelsource.jsp"/>
+    <decorator name="badpanelsource" page="badpanelsource.jsp"/>
+
+    <decorator name="velocity" page="velocity.vm">
+        <pattern>/velocity.html</pattern>
+    </decorator>
+
+    <decorator name="freemarker" page="freemarker.ftl">
+        <pattern>/freemarker.html</pattern>
+    </decorator>
+
+    <decorator name="test" page="test.jsp">
+        <pattern>/agent.jsp</pattern>
+    </decorator>-->
+</decorators>
