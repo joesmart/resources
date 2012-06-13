@@ -1,5 +1,8 @@
 package com.feature.resources.server.resources;
 
+import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.DataListInfo;
+import com.feature.resources.server.dto.PageInfo;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.util.StringUtil;
 import com.google.common.base.Preconditions;
@@ -57,9 +60,27 @@ public class GraphicResource {
     @POST
     @Path("/add")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response addNewGraphicResource(String value){
+    public Response addNewGraphicResource(String value) {
         LOGGER.info(value);
-        return  Response.ok("hello").build();
+        return Response.ok("hello").build();
+    }
+
+    @GET
+    @Path("/pageinfo")
+    @Produces({MediaType.APPLICATION_JSON})
+    public PageInfo getGraphicPageInfo() {
+        PageInfo pageInfo = new PageInfo(10, 10);
+        return pageInfo;
+    }
+
+    @GET
+    @Path("/page")
+    @Produces({MediaType.APPLICATION_JSON})
+    public DataListInfo<Graphic> getGraphicsPage(@QueryParam("requestPage")int requestPage,
+                                                           @QueryParam("pageSize") int pageSize) {
+        DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
+
+        return dataListInfo;
     }
 
 }

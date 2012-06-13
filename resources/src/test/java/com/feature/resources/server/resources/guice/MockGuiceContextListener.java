@@ -1,6 +1,7 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.resources.context.resolver.JacksonContextResolver;
 import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
@@ -35,7 +36,7 @@ public class MockGuiceContextListener extends GuiceServletContextListener {
         JerseyServletModule jerseyServletModule = new JerseyServletModule() {
             @Override
             protected void configureServlets() {
-
+                bind(JacksonContextResolver.class).in(Scopes.SINGLETON);
                 bind(String.class).annotatedWith(Names.named("abc")).toInstance("12312");
                 serve("/rs/*").with(GuiceContainer.class, params);
             }

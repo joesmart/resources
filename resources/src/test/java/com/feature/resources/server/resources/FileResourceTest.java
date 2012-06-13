@@ -1,17 +1,13 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.resources.guice.MockGuiceContextListener;
 import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
-import com.google.inject.servlet.GuiceFilter;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.test.framework.AppDescriptor;
-import com.sun.jersey.test.framework.JerseyTest;
-import com.sun.jersey.test.framework.WebAppDescriptor;
 import org.jukito.JukitoRunner;
 import org.junit.After;
 import org.junit.Before;
@@ -32,22 +28,13 @@ import static org.fest.assertions.Assertions.assertThat;
  * FileName:FileResourceTest
  */
 @RunWith(value = JukitoRunner.class)
-public class FileResourceTest extends JerseyTest {
+public class FileResourceTest extends BasicJerseyTest {
 
     @Inject
     private TestDataObjectFactory testDataObjectFactory;
 
     public FileResourceTest() {
-
-        super(new WebAppDescriptor.Builder("com.feature.resources.server.resources")
-                .contextListenerClass(MockGuiceContextListener.class)
-                .filterClass(GuiceFilter.class)
-//                .contextPath("")
-                .servletPath("rs")
-                .build());
-
-        //   testDataObjectFactory = new TestDataObjectFactory();
-
+        super();
     }
 
     @Override
