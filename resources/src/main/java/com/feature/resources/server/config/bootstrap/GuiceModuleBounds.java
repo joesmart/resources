@@ -2,6 +2,7 @@ package com.feature.resources.server.config.bootstrap;
 
 import com.feature.resources.server.config.morphia.MorphiaGuiceModule;
 import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.resources.context.resolver.JacksonContextResolver;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
 import com.feature.resources.server.service.impl.GraphicServiceImpl;
@@ -33,6 +34,7 @@ public class GuiceModuleBounds extends GuiceServletContextListener {
         JerseyServletModule jerseyServletModule = new JerseyServletModule(){
             @Override
             protected void configureServlets() {
+                bind(JacksonContextResolver.class).in(Scopes.SINGLETON);
                 serve("/rs/*").with(GuiceContainer.class, params);
             }
         };
