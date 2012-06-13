@@ -23,12 +23,11 @@ public class JacksonContextResolver implements ContextResolver<ObjectMapper> {
 
     public JacksonContextResolver(){
        this.objectMapper = new ObjectMapper()
-                                .configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false)
-                                ;
+                                .configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         this.objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
     @Override
     public ObjectMapper getContext(Class<?> type) {
-        return objectMapper;  //To change body of implemented methods use File | Settings | File Templates.
+        return objectMapper;
     }
 }
