@@ -11,7 +11,7 @@ import java.util.UUID;
  * FileName:DomainObjectFactory
  */
 public class DomainObjectFactory {
-    public Graphic createGraphic(String fileName, long size, String contentType) {
+    public Graphic createGraphic(String fileName, String contentType) {
         Graphic graphic = new Graphic();
         graphic.setType(contentType);
         graphic.setName(fileName);

@@ -24,9 +24,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 @Path("/file")
@@ -54,7 +52,7 @@ public class FileResource {
     @SuppressWarnings(value = "unchecked")
     public void post(@Context HttpServletRequest req, @Context HttpServletResponse res) throws IOException, FileUploadException {
 
-        String key = "";
+        String key = "xxx";
         ServletFileUpload uploadHandler = new ServletFileUpload(new DiskFileItemFactory());
         List<FileItem> fileItems = uploadHandler.parseRequest(req);
         for (FileItem fileItem : fileItems) {
@@ -71,20 +69,18 @@ public class FileResource {
     }
 
     private String dealUploadDataToCreateNewGraphic(String fileName, long size, String contentType, byte[] contents) {
-        Graphic graphic = objectFactory.createGraphic(fileName, size, contentType);
+        Graphic graphic = objectFactory.createGraphic(fileName, contentType);
         Properties properties = objectFactory.createProperties(fileName, size, contentType);
-        saveProperties(properties);
-        saveGraphic(contents, graphic, properties);
+        storeProperties(properties);
+        graphic.setProperties(properties);
+        graphic = graphicService.saveGraphic(contents, graphic);
         return graphic.getId().toString();
     }
+    /**
+     * MongoDb must store Properties first then the Graphics and properties can setup relationship.
+     */
 
-    private void saveGraphic(byte[] contents, Graphic graphic, Properties properties) {
-        graphic.setProperties(properties);
-        InputStream inputStream = new ByteArrayInputStream(contents);
-        graphicService.addNewGraphic(graphic, inputStream);
-    }
-
-    private void saveProperties(Properties properties) {
+    private void storeProperties(Properties properties) {
         propertiesService.addNewProperties(properties);
     }
 

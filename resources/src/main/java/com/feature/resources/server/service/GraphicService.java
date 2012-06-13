@@ -27,4 +27,5 @@ public interface GraphicService {
   
   public void writeOriginalResourceIntoOutputStream(String graphicId, OutputStream outputStream);
 
+  public Graphic saveGraphic(byte[] contents, Graphic graphic);
 }

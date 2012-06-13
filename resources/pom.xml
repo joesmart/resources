@@ -36,12 +36,16 @@
             <groupId>opensymphony</groupId>
             <artifactId>sitemesh</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
+            <artifactId>javaee-api</artifactId>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
 
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.servlet</artifactId>
+        </dependency>
         <!-- LOGGING begin -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -237,10 +241,17 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-jsp</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.google.guiceberry</groupId>
-            <artifactId>guiceberry</artifactId>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-grizzly2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jukito</groupId>
+            <artifactId>jukito</artifactId>
         </dependency>
         <!-- TEST end -->
     </dependencies>
