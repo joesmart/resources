@@ -73,7 +73,6 @@
           <element id="library" level="project" name="Maven: org.glassfish.external:management-api:3.0.0-b012" />
           <element id="library" level="project" name="Maven: org.glassfish.grizzly:grizzly-rcm:2.2.1" />
           <element id="library" level="project" name="Maven: com.sun.jersey:jersey-grizzly2:1.12" />
-          <element id="library" level="project" name="Maven: org.jukito:jukito:1.1" />
         </element>
       </element>
     </root>
