@@ -3,15 +3,19 @@ package com.feature.resources.server.resources.guice;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
+import com.google.common.collect.*;
 import com.google.common.io.Resources;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.name.Named;
 import lombok.Data;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -24,6 +28,7 @@ import static org.mockito.Mockito.when;
  */
 @Data
 public class MockGraphicServiceProvider implements Provider<GraphicService> {
+    public static final Logger LOGGER = LoggerFactory.getLogger(MockGraphicServiceProvider.class);
 
     private GraphicService graphicService;
     TestDataObjectFactory testDataObjectFactory;
@@ -37,10 +42,21 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         ObjectId id = new ObjectId();
         Graphic afterSaveGraphic = cloneNewGraphicObjct(graphic, id);
         String idString = id.toString();
+
+        List<Graphic> graphics = Lists.newArrayList();
+        ContiguousSet<Integer> set = Ranges.closedOpen(1,11).asSet(DiscreteDomains.integers());
+        LOGGER.info(set.toString()+"set size"+ set.size());
+        for(Integer i:set){
+          graphics.add(graphic);
+        }
+
         URL url=  Resources.getResource("com/feature/resources/server/resources/graphics.png");
         byte[] bytes = Resources.toByteArray(url);
         when(graphicService.saveGraphic(bytes, graphic)).thenReturn(afterSaveGraphic);
+
         when(graphicService.get(idString)).thenReturn(afterSaveGraphic);
+
+        when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);
     }
 
     private Graphic cloneNewGraphicObjct(Graphic graphic, ObjectId id) {

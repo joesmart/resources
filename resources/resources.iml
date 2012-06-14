@@ -158,7 +158,7 @@
     <orderEntry type="library" name="Maven: org.glassfish.external:management-api:3.0.0-b012" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-rcm:2.2.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-grizzly2:1.12" level="project" />
-    <orderEntry type="library" name="Maven: org.jukito:jukito:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jukito:jukito:1.1" level="project" />
   </component>
 </module>
 

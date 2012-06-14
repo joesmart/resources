@@ -153,4 +153,10 @@ public class GraphicServiceImpl implements GraphicService {
         InputStream inputStream = new ByteArrayInputStream(contents);
         return  addNewGraphic(graphic, inputStream);
     }
+
+    @Override
+    public List<Graphic> findGraphicByPage(int requestpage, int pageSize) {
+        List<Graphic> graphics =  graphicDao.findByPage(requestpage,pageSize);
+        return graphics;
+    }
 }

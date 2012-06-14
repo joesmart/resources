@@ -78,8 +78,11 @@ public class GraphicResource {
     @Produces({MediaType.APPLICATION_JSON})
     public DataListInfo<Graphic> getGraphicsPage(@QueryParam("requestPage")int requestPage,
                                                            @QueryParam("pageSize") int pageSize) {
+        List<Graphic> graphics = graphicService.findGraphicByPage(requestPage,pageSize);
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
-
+        dataListInfo.setDataList(graphics);
+        dataListInfo.setName("Graphics");
+        dataListInfo.setDataSize(graphics == null? 0:graphics.size());
         return dataListInfo;
     }
 

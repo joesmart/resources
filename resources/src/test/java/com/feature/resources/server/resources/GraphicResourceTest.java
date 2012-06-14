@@ -41,6 +41,6 @@ public class GraphicResourceTest extends BasicJerseyTest {
         String dataJson = resource.path("graphics").path("page").queryParam("requestPage","1").queryParam("pageSize","10").get(String.class);
         LOGGER.info(dataJson);
         assertThat(dataJson).isNotNull();
-        assertThat(dataJson).isEqualTo("{}");
+        assertThat(dataJson.contains("\"dataSize\":10")).isTrue();
     }
 }

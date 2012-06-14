@@ -8,24 +8,24 @@ import java.util.List;
 
 public interface GraphicService {
 
-  public Graphic addNewGraphic(Graphic graphic, InputStream inputStream);
+    public Graphic addNewGraphic(Graphic graphic, InputStream inputStream);
 
-  public Graphic add(Graphic graphic);
+    public Graphic add(Graphic graphic);
 
-  public void delete(String id);
+    public void delete(String id);
 
-  public Graphic get(String id);
+    public Graphic get(String id);
 
-  // For requestFactory
-  public List<Graphic> findAll();
+    public List<Graphic> findAll();
 
-  // For Rest
-  public void writeThumbnailStreamIntoDisplay(String graphicId, OutputStream outputStream);
+    public void writeThumbnailStreamIntoDisplay(String graphicId, OutputStream outputStream);
 
-  // For Rest Serivces;
-  public void displayThumbnailImage(String graphicId, OutputStream outputStream, List<Integer> size);
-  
-  public void writeOriginalResourceIntoOutputStream(String graphicId, OutputStream outputStream);
+    public void displayThumbnailImage(String graphicId, OutputStream outputStream, List<Integer> size);
 
-  public Graphic saveGraphic(byte[] contents, Graphic graphic);
+    public void writeOriginalResourceIntoOutputStream(String graphicId, OutputStream outputStream);
+
+    public Graphic saveGraphic(byte[] contents, Graphic graphic);
+
+    public List<Graphic> findGraphicByPage(int requestpage,int  pageSize);
+
 }
