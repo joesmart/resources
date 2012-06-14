@@ -21,11 +21,12 @@ import javax.ws.rs.ext.Provider;
 public class JacksonContextResolver implements ContextResolver<ObjectMapper> {
     private ObjectMapper objectMapper;
 
-    public JacksonContextResolver(){
-       this.objectMapper = new ObjectMapper()
-                                .configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
+    public JacksonContextResolver() {
+        this.objectMapper = new ObjectMapper()
+                .configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
         this.objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
+
     @Override
     public ObjectMapper getContext(Class<?> type) {
         return objectMapper;
