@@ -35,4 +35,9 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).asList());
         return graphics;
     }
+
+    public long getTotalRecordCount() {
+        long totalrecord = count();
+        return totalrecord;  //To change body of created methods use File | Settings | File Templates.
+    }
 }

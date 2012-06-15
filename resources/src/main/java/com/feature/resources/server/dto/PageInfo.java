@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class PageInfo {
     public PageInfo(int totalRecord, int pageSize) {
-        this.totalRecord = totalRecord;
+        this.totalPage = totalRecord;
         this.pageSize = pageSize;
     }
 
-    private int totalRecord;
+    private int totalPage;
     private int pageSize;
 }

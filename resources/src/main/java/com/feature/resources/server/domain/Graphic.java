@@ -27,7 +27,7 @@ public class Graphic extends ResourceEntity {
     @PostLoad
     public void updatePath(){
         String path = "rs/graphics?id=" + this.getId().toString();
-        this.thumbnailPath=path + "&size=80X80";
+        this.thumbnailPath=path + "&size=30X30";
         this.originalFilePath= path;
     }
 }

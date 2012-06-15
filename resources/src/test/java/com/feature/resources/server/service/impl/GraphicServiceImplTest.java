@@ -3,8 +3,8 @@ package com.feature.resources.server.service.impl;
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
@@ -19,6 +19,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 
@@ -41,6 +42,8 @@ public class GraphicServiceImplTest {
     private Graphic graphic;
     private ObjectId objectId;
     private List<Graphic> graphics;
+    private GridFSDBFile gridFSDBFile;
+    private InputStream inputStream;
 
 
     public static  class  Module extends JukitoModule{
@@ -62,6 +65,15 @@ public class GraphicServiceImplTest {
             graphics.add(graphic);
         }
         objectId = new ObjectId();
+
+        gridFSDBFile = mock(GridFSDBFile.class);
+        inputStream = testDataObjectFactory.getTestGraphicResource();
+        when(graphicDao.getGridFSDBFile(null)).thenReturn(gridFSDBFile);
+        when(gridFSDBFile.getInputStream()).thenReturn(inputStream);
+        byte[] bytes = new byte[2048];
+        byte[] returnBytes = new byte[2048];
+//        inputStream.read(returnBytes);
+//        when(inputStream.read(bytes)).thenReturn(returnBytes.length).thenReturn(-1);
 
         Mockito.when(graphicDao.findByPage(1,10)).thenReturn(graphics);
         Mockito.when(graphicDao.findOne("id",objectId)).thenReturn(graphic);
@@ -100,8 +112,6 @@ public class GraphicServiceImplTest {
 
     @Test
     public void testWriteThumbnailStreamIntoDisplay(OutputStream outputStream) throws Exception {
-        GridFSDBFile gridFSDBFile  = mock(GridFSDBFile.class);
-        when(graphicDao.getGridFSDBFile(null)).thenReturn(gridFSDBFile);
 
         graphicService.writeOriginalResourceIntoOutputStream(objectId.toString(),outputStream);
 
@@ -110,24 +120,27 @@ public class GraphicServiceImplTest {
     }
 
     @Test
-    public void testDisplayThumbnailImage(OutputStream outputStream) throws Exception {
+    public void testDisplayThumbnailImage(TestDataObjectFactory testDataObjectFactory,OutputStream outputStream) throws Exception {
         List<Integer> integers = Lists.newArrayList(40,40);
-        graphicService.displayThumbnailImage(objectId.toString(),outputStream,integers);
-        GridFSDBFile gridFSDBFile  = mock(GridFSDBFile.class);
-        when(graphicDao.getGridFSDBFile(null)).thenReturn(gridFSDBFile);
+        graphicService.displayThumbnailImage(objectId.toString(), outputStream, integers);
+        verify(graphicDao).get(objectId);
+        verify(graphicDao).getGridFSDBFile(graphic.getAttachment());
+    }
+
+    @Test
+    public void testWriteOriginalResourceIntoOutputStream(OutputStream outputStream) throws Exception {
+
+        graphicService.writeOriginalResourceIntoOutputStream(objectId.toString(), outputStream);
 
         verify(graphicDao).get(objectId);
         verify(graphicDao).getGridFSDBFile(graphic.getAttachment());
     }
 
     @Test
-    public void testWriteOriginalResourceIntoOutputStream() throws Exception {
-
-    }
-
-    @Test
     public void testSaveGraphic() throws Exception {
-
+        byte[] bytes = new byte[2048];
+        graphicService.saveGraphic(bytes,graphic);
+        verify(graphicDao).save(graphic);
     }
 
     @Test

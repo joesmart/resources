@@ -20,12 +20,13 @@
     <link href="${ctx}/static/jquery-ui-1.8.20/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css"
           rel="stylesheet"/>
     <script src="${ctx}/static/bootstrap/2.0.3/js/bootstrap.js" type="text/javascript"></script>
-    <script src="${ctx}/static/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <%--<script src="${ctx}/static/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>--%>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="${ctx}/static/jquery-validation/1.9.0/jquery.validate.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-validation/1.9.0/messages_cn.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-ui-1.8.20/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
-    <script src="${ctx}/static/pagination/smartpaginator.js" type="text/javascript"></script>
-
+    <script src="${ctx}/static/plugin/jquery.pubsub.min.js" type="text/javascript"></script>
+    <script src="${ctx}/static/plugin/tables-my.js" type="text/javascript"></script>
 
     <decorator:head/>
 </head>
@@ -68,7 +69,7 @@
             <div class="span2 well leftpanel-height">
                 <page:applyDecorator page="/menu.jsp" name="left-panel"/>
             </div>
-            <div class="span10 well rightpanel-height">
+            <div class="span10 well rightpanel-height"id="main_panel">
                 <decorator:body/>
             </div>
         </div>

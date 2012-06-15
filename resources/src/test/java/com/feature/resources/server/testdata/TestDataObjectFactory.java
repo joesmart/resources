@@ -1,4 +1,4 @@
-package com.feature.resources.server.resources.testdata;
+package com.feature.resources.server.testdata;
 
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
@@ -36,7 +36,8 @@ public class TestDataObjectFactory {
         properties.setMimeType("png");
     }
 
-    public InputStream getTestGraphicResource(InputStream inputStream) {
+    public InputStream getTestGraphicResource() {
+        InputStream inputStream = null;
         try {
             URL url = Resources.getResource("com/feature/resources/server/resources/graphics.png");
             inputStream = Resources.newInputStreamSupplier(url).getInput() ;

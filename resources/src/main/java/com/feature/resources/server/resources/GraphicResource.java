@@ -69,7 +69,12 @@ public class GraphicResource {
     @Path("/pageinfo")
     @Produces({MediaType.APPLICATION_JSON})
     public PageInfo getGraphicPageInfo() {
-        PageInfo pageInfo = new PageInfo(10, 10);
+        long totalRecords = graphicService.getGraphicsTotalCount();
+        LOGGER.info("Graphics Size:"+ totalRecords);
+        int pageSize = 10;
+        int max_page = (int)(totalRecords/pageSize);
+        int totalPages = (int)(((double)totalRecords/pageSize)>max_page?max_page+1:max_page);
+        PageInfo pageInfo = new PageInfo(totalPages, pageSize);
         return pageInfo;
     }
 

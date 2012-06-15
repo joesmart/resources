@@ -1,7 +1,7 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
 import com.google.common.collect.*;
 import com.google.common.io.Resources;
@@ -44,19 +44,26 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         String idString = id.toString();
 
         List<Graphic> graphics = Lists.newArrayList();
-        ContiguousSet<Integer> set = Ranges.closedOpen(1,11).asSet(DiscreteDomains.integers());
-        LOGGER.info(set.toString()+"set size"+ set.size());
-        for(Integer i:set){
-          graphics.add(graphic);
-        }
+
+
 
         URL url=  Resources.getResource("com/feature/resources/server/resources/graphics.png");
         byte[] bytes = Resources.toByteArray(url);
         when(graphicService.saveGraphic(bytes, graphic)).thenReturn(afterSaveGraphic);
+        when(graphicService.getGraphicsTotalCount()).thenReturn(100L);
 
         when(graphicService.get(idString)).thenReturn(afterSaveGraphic);
-
+        generateGraphicListTestFixture(graphic, graphics);
         when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);
+    }
+
+    private void generateGraphicListTestFixture(Graphic graphic, List<Graphic> graphics) {
+        ContiguousSet<Integer> set = Ranges.closedOpen(1, 11).asSet(DiscreteDomains.integers());
+        LOGGER.info(set.toString()+"set size"+ set.size());
+        for(Integer i:set){
+            graphic.setId(new ObjectId());
+            graphics.add(graphic);
+        }
     }
 
     private Graphic cloneNewGraphicObjct(Graphic graphic, ObjectId id) {

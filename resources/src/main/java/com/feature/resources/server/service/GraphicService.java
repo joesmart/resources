@@ -28,4 +28,5 @@ public interface GraphicService {
 
     public List<Graphic> findGraphicByPage(int requestpage,int  pageSize);
 
+    public long getGraphicsTotalCount();
 }

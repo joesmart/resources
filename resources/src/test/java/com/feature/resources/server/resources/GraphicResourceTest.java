@@ -33,7 +33,7 @@ public class GraphicResourceTest extends BasicJerseyTest {
         String pageInfo = resource.path("graphics").path("pageinfo").get(String.class);
         LOGGER.info("unit-test:" + pageInfo);
         assertThat(pageInfo).isNotNull();
-        assertThat(pageInfo).isEqualTo("{\"totalRecord\":10,\"pageSize\":10}");
+        assertThat(pageInfo).isEqualTo("{\"totalPage\":10,\"pageSize\":10}");
     }
 
     @Test

@@ -1,7 +1,7 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.DomainObjectFactory;
-import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.name.Named;

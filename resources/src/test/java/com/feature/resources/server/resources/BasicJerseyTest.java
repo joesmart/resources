@@ -16,8 +16,8 @@ public class BasicJerseyTest extends JerseyTest {
         super(new WebAppDescriptor.Builder("com.feature.resources.server.resources")
                 .contextListenerClass(MockGuiceContextListener.class)
                 .filterClass(GuiceFilter.class)
-//                .contextPath("")
-                .servletPath("rs")
+//               .contextPath("abc")
+                 .servletPath("/rs")
                 .build());
 
     }

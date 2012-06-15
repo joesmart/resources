@@ -38,7 +38,7 @@ public class GraphicServiceImpl implements GraphicService {
             Object fileId = graphicDao.create(graphic.getName(), "application/image", inputStream);
             graphic.setAttachment(fileId);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("errors:", e);
         }
         graphicDao.save(graphic);
         return graphic;
@@ -137,14 +137,14 @@ public class GraphicServiceImpl implements GraphicService {
             try {
                 input.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error("IO errors:", e);
             }
         }
         if (outputStream != null) {
             try {
                 outputStream.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error("IO errors:",e);
             }
         }
     }
@@ -158,5 +158,10 @@ public class GraphicServiceImpl implements GraphicService {
     public List<Graphic> findGraphicByPage(int requestpage, int pageSize) {
         List<Graphic> graphics =  graphicDao.findByPage(requestpage,pageSize);
         return graphics;
+    }
+
+    @Override
+    public long getGraphicsTotalCount() {
+        return graphicDao.getTotalRecordCount();
     }
 }

@@ -1,6 +1,6 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.resources.testdata.TestDataObjectFactory;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -72,8 +72,7 @@ public class FileResourceTest extends BasicJerseyTest {
 
     @Test
     public void testPost() {
-        InputStream inputStream = null;
-        inputStream = testDataObjectFactory.getTestGraphicResource(inputStream);
+        final InputStream inputStream = testDataObjectFactory.getTestGraphicResource();
         FormDataMultiPart mp = new FormDataMultiPart();
         FormDataBodyPart p = new FormDataBodyPart(FormDataContentDisposition.name("part").build(), "CONTENT");
         FormDataBodyPart inputStreamBody = new FormDataBodyPart(FormDataContentDisposition.name("file").fileName("graphics.png").size(1000L).build(), inputStream, MediaType.APPLICATION_OCTET_STREAM_TYPE);
@@ -81,7 +80,6 @@ public class FileResourceTest extends BasicJerseyTest {
         mp.bodyPart(inputStreamBody);
         WebResource webResource = resource().path("file");
         webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE).post(mp);
-
     }
 
 }
