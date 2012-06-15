@@ -42,15 +42,22 @@
     </properties>
     <repositories>
         <repository>
+            <id>Java.Net</id>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+
+  <!--      <repository>
+            <id>glassfish-extras-repository</id>
+            <url>http://download.java.net/maven/glassfish/org/glassfish/extras</url>
+        </repository>-->
+
+        <repository>
             <id>maven-mongodb-plugin-repo</id>
             <name>maven mongodb plugin repository</name>
             <url>http://maven-mongodb-plugin.googlecode.com/svn/maven/repo</url>
             <layout>default</layout>
         </repository>
-        <repository>
-            <id>Java.Net</id>
-            <url>http://download.java.net/maven/2/</url>
-        </repository>
+
         <repository>
             <id>Glassfish</id>
             <name>Glassfish Maven2 Repository</name>
@@ -59,25 +66,27 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
-            <!-- sitemesh -->
-            <dependency>
-                <groupId>opensymphony</groupId>
-                <artifactId>sitemesh</artifactId>
-                <version>2.4.2</version>
-            </dependency>
             <!--java EE spec-->
-            <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>6.0</version>
-                <scope>provided</scope>
-            </dependency>
 
             <dependency>
                 <groupId>org.glassfish</groupId>
                 <artifactId>javax.servlet</artifactId>
                 <version>3.0</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- sitemesh -->
+            <dependency>
+                <groupId>opensymphony</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>2.4.2</version>
             </dependency>
 
             <!-- REST begin -->
@@ -550,12 +559,14 @@
             <dependency>
                 <groupId>com.sun.jersey.jersey-test-framework</groupId>
                 <artifactId>jersey-test-framework-grizzly2</artifactId>
-                <version>${jersey.version}</version>
+                <version>1.12</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.jukito</groupId>
                 <artifactId>jukito</artifactId>
                 <version>1.1</version>
+                <scope>test</scope>
             </dependency>
 
             <!-- TEST end -->
@@ -599,6 +610,11 @@
                             <version>2.12</version>
                         </dependency>
                     </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>2.12</version>
                 </plugin>
 
                 <!-- 增加更多的Source 和 Test Source 目录插件 -->
