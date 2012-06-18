@@ -43,6 +43,7 @@
           <element id="library" level="project" name="Maven: com.google.code.morphia:morphia:0.99" />
           <element id="library" level="project" name="Maven: com.google.code.morphia:morphia-validation:0.99" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
+          <element id="library" level="project" name="Maven: com.google.code.morphia:morphia-logging-slf4j:0.99" />
           <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-multibindings:3.0" />
           <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0" />
           <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-persist:3.0" />

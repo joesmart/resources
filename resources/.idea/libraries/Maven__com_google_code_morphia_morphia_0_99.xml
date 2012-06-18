@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/google/code/morphia/morphia/0.99/morphia-0.99-sources.jar!/" />
+      <root url="file://F:/open_source/morphia-read-only/morphia/src/main/java" />
     </SOURCES>
   </library>
 </component>
