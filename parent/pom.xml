@@ -46,11 +46,6 @@
             <url>http://download.java.net/maven/2/</url>
         </repository>
 
-  <!--      <repository>
-            <id>glassfish-extras-repository</id>
-            <url>http://download.java.net/maven/glassfish/org/glassfish/extras</url>
-        </repository>-->
-
         <repository>
             <id>maven-mongodb-plugin-repo</id>
             <name>maven mongodb plugin repository</name>
@@ -161,6 +156,11 @@
             <dependency>
                 <groupId>com.google.code.morphia</groupId>
                 <artifactId>morphia-validation</artifactId>
+                <version>${morphia.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.morphia</groupId>
+                <artifactId>morphia-logging-slf4j</artifactId>
                 <version>${morphia.version}</version>
             </dependency>
 

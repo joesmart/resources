@@ -1,6 +1,7 @@
 package com.feature.resources.server.service;
 
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.GraphicDTO;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -29,4 +30,6 @@ public interface GraphicService {
     public List<Graphic> findGraphicByPage(int requestpage,int  pageSize);
 
     public long getGraphicsTotalCount();
+
+    public void updateGraphic(GraphicDTO graphicDTO);
 }

@@ -19,6 +19,10 @@ public class Graphic extends ResourceEntity {
     private Properties properties;
     @Property("image_appachement")
     private Object attachment;
+    @Reference
+    private WorkSpace workSpace;
+    private TagDescription tag;
+
 
     public  Graphic(){
         super.setType("Graphic");

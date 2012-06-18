@@ -94,7 +94,7 @@
                 <li><a href="#">文档</a></li>
                 <li><a href="#">视频</a></li>
                 <li><a href="${ctx}/upload/upload.jsp">上传</a></li>
-                <li><a href="">其他</a></li>
+                <li><a href="${ctx}/other/createWorkspace.jsp">其他</a></li>
             </ul>
         </div>
     </header>

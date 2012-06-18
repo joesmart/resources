@@ -2,6 +2,7 @@ package com.feature.resources.server.resources;
 
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.DataListInfo;
+import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.dto.PageInfo;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.util.StringUtil;
@@ -23,7 +24,7 @@ import java.util.List;
 
 @Path("/graphics")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML,MediaType.APPLICATION_FORM_URLENCODED})
 public class GraphicResource {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GraphicResource.class);
@@ -36,7 +37,6 @@ public class GraphicResource {
     public StreamingOutput getGraphicbyId(
             @QueryParam(value = "id") final String graphicId,
             @QueryParam(value = "size") String size) {
-        LOGGER.info(graphicId);
         Preconditions.checkNotNull(graphicId);
         if (!Strings.isNullOrEmpty(size)) {
             List<String> sizeList = Lists.newArrayList(Splitter.on('X').split(size));
@@ -58,11 +58,12 @@ public class GraphicResource {
     }
 
     @POST
-    @Path("/add")
+    @Path("/update")
     @Produces({MediaType.APPLICATION_JSON})
-    public Response addNewGraphicResource(String value) {
-        LOGGER.info(value);
-        return Response.ok("hello").build();
+    public Response addNewGraphicResource(GraphicDTO graphicDTO) {
+        LOGGER.info("Graphic Info" + graphicDTO.toString());
+        graphicService.updateGraphic(graphicDTO);
+        return Response.ok().build();
     }
 
     @GET
@@ -70,11 +71,11 @@ public class GraphicResource {
     @Produces({MediaType.APPLICATION_JSON})
     public PageInfo getGraphicPageInfo() {
         long totalRecords = graphicService.getGraphicsTotalCount();
-        LOGGER.info("Graphics Size:"+ totalRecords);
         int pageSize = 10;
         int max_page = (int)(totalRecords/pageSize);
         int totalPages = (int)(((double)totalRecords/pageSize)>max_page?max_page+1:max_page);
         PageInfo pageInfo = new PageInfo(totalPages, pageSize);
+        LOGGER.info("Current Graphics Size:"+ totalRecords);
         return pageInfo;
     }
 
@@ -91,4 +92,10 @@ public class GraphicResource {
         return dataListInfo;
     }
 
+    @POST
+    @Path("/delete")
+    public Response deteleGraphic(@FormParam("id") String id){
+        graphicService.delete(id);
+        return Response.ok().build();
+    }
 }

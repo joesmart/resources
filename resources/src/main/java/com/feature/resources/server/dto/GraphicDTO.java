@@ -12,6 +12,7 @@ import lombok.Data;
 public class GraphicDTO {
     private String id;
     private String name;
+    private String description;
     private String size;
     private String url;
 }

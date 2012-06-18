@@ -3,6 +3,7 @@ package com.feature.resources.server.service.impl;
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.GraphicService;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
@@ -163,5 +164,13 @@ public class GraphicServiceImpl implements GraphicService {
     @Override
     public long getGraphicsTotalCount() {
         return graphicDao.getTotalRecordCount();
+    }
+
+    @Override
+    public void updateGraphic(GraphicDTO graphicDTO) {
+        Graphic graphic  = get(graphicDTO.getId());
+        graphic.setName(graphicDTO.getName());
+        graphic.setDescription(graphicDTO.getDescription());
+        graphicDao.save(graphic);
     }
 }

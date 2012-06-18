@@ -17,4 +17,5 @@ public class Properties extends BaseEntity {
     private Date modified;
     private String mimeType;
     private String status;
+
 }

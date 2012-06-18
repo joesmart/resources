@@ -21,12 +21,12 @@ public class MorphiaGuiceModule extends AbstractModule {
     @Provides
     public Datastore provideMorphia() {
         try {
+
             Mongo mongo = new Mongo("127.0.0.1", 27017);
-            // Mongo mongo = new Mongo("127.0.0.1", 27017);
             Morphia morphia = new Morphia();
             morphia.map(Graphic.class);
-
             Datastore ds = morphia.createDatastore(mongo, "testDb");
+
             MorphiaValidation morphiaValidation = new MorphiaValidation();
             morphiaValidation.applyTo(morphia);
             ds.ensureIndexes();

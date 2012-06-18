@@ -87,7 +87,8 @@
                 a = $("<a/> ").append($("<i class='icon-wrench'></i>")).append(options.page_buttons.data_edit);
                 a.attr("id", value.idString).attr('href', 'javascript:void(0)');
                 a.click(function () {
-                    options.edit_view_show();
+                    var obj = options.map[value.idString];
+                    options.edit_view_show(this,obj);
                 });
                 td.append(a).append("&nbsp;");
             }
@@ -180,7 +181,6 @@
          $('a[id=\"'+current_page+'\"]').parent().addClass("active");
         console.log("current_page:"+current_page);
         var total_page = options.page_info.totalPage;
-//        current_page = parseInt(current_page);
         if(current_page <= 1){
             first.addClass("disabled");
             prev.addClass("disabled");
@@ -208,11 +208,11 @@
             if (current_page < 1) current_page = 1;
         } else if (id_value == "next") {
             current_page = current_page + 1;
-            if (current_page > options.totalPage) current_page = options.totalPage;
+            if (current_page > options.page_info.totalPage) current_page = options.page_info.totalPage;
         } else if (id_value == "first") {
             current_page = 1;
         } else if (id_value == "last") {
-            current_page = options.totalPage;
+            current_page = options.page_info.totalPage;
         } else {
             current_page = id_value;
         }
@@ -239,6 +239,7 @@
     }
 
     $.fn.myTables = function (options) {
+        var current_page = 0;
         // Here's a best practice for overriding 'defaults'
         // with specified options. Note how, rather than a
         // regular defaults object being passed as the second
@@ -249,13 +250,62 @@
 
         var tables;
         $.subscribe("/data/delete",function(topic,data){
-            console.log(topic);
-            console.log(data);
+            if(data.message == "success"){
+                $.ajax(
+                    {
+                        url:"/resources/rs/graphics/pageinfo",
+                        type:"GET"
+                    }
+                ).success(function (data) {
+                        options.page_info = data;
+                        $.ajax({
+                            url:"/resources/rs/graphics/page",
+                            type:"GET",
+                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize
+                        }).success(function (data) {
+                                console.log(data);
+                                options.data = data.dataList;
+                                generateClientCache(options);
+                                $('#dataContainer tbody tr').remove();
+                                var _table_body = $('#dataContainer tbody ');
+                                if(_table_body){
+                                    crateTableBody(options,_table_body);
+                                }
+                            });
+                    }).fail(function (data) {
+                        console.log(data);
+                    });
 
-            $('#dataContainer tbody tr').remove();
-            var _table_body = $('#dataContainer tbody ');
-            if(_table_body){
-                crateTableBody(options,_table_body);
+            }
+        });
+
+        $.subscribe("/data/saved",function(topic,data){
+            if(data.message == "success"){
+                $.ajax(
+                    {
+                        url:"/resources/rs/graphics/pageinfo",
+                        type:"GET"
+                    }
+                ).success(function (data) {
+                        options.page_info = data;
+                        $.ajax({
+                            url:"/resources/rs/graphics/page",
+                            type:"GET",
+                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize
+                        }).success(function (data) {
+                                console.log(data);
+                                options.data = data.dataList;
+                                generateClientCache(options);
+                                $('#dataContainer tbody tr').remove();
+                                var _table_body = $('#dataContainer tbody ');
+                                if(_table_body){
+                                    crateTableBody(options,_table_body);
+                                }
+                            });
+                    }).fail(function (data) {
+                        console.log(data);
+                    });
+
             }
         });
 
@@ -270,7 +320,7 @@
         generateClientCache(options);
 
         return this.each(function () {
-            var current_page = 1;
+            current_page = 1;
             var filter_array = ["first","next","prev","last"];
             console.log("xxx");
             tables = createTable(options);

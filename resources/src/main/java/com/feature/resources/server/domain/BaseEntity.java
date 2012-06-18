@@ -15,8 +15,13 @@ public class BaseEntity {
     @Transient
     private String idString;
     private Date updateDate;
+    private Date createDate;
     @Version
     private Long version;
+
+    public BaseEntity(){
+        createDate = new Date();
+    }
 
     @PrePersist
     public void prepersist() {

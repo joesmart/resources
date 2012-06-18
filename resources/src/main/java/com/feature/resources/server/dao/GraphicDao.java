@@ -32,7 +32,10 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
             requestpage = 1;
         }
         int offset = (requestpage-1) * pageSize;
-        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).asList());
+        ds.getMapper().createEntityCache();
+        graphicQuery = createQuery();
+        graphicQuery.order("-createDate");
+        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
         return graphics;
     }
 

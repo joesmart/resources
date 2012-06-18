@@ -11,7 +11,9 @@
     <decorator name="left-panel" page="panel.jsp"/>
     <decorator name="upload" page="upload.jsp">
         <pattern>/upload/*</pattern>
-        <pattern></pattern>
+    </decorator>
+    <decorator name="other" page="other.jsp">
+        <pattern>/other/*</pattern>
     </decorator>
     <!-- <decorator name="printable" page="printable.jsp"/>
     <decorator name="black" page="black.jsp"/>

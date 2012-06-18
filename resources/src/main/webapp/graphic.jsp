@@ -30,11 +30,27 @@
                     <label>描述:</label>
                     <textarea rows="4" cols="10" id="description"></textarea>
                     <br/>
-                    <a href="#">属性详情</a>
+                    <a id="properties" href="#" class="btn btn-large"><i class="icon-forward"></i>属性详情</a>
                 </form>
+                <br/>
+                <button id="save_button" class="btn btn-large" style="display: none;">保存</button>
             </div>
             <div id="properties_info" class="span6" style="display: none">
-                xxxxxx
+                <h3>属性列表</h3>
+                <br/>
+                <form>
+                    <label>UUID</label>
+                    <span id="uuid"></span>
+                    <label>储存路径:</label>
+                    <span id="path"></span>
+                    <label>大小:</label>
+                    <span id="size"></span>
+                    <label>创建时间:</label>
+                    <span id="createTime"></span>
+                    <br/>
+                    <br/>
+                    <a id="back" href="#" class="btn btn-large"><i class="icon-backward"></i>返回</a>
+                </form>
             </div>
         </div>
     </div>

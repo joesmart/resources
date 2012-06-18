@@ -26,7 +26,6 @@
     <script src="${ctx}/static/jquery-validation/1.9.0/messages_cn.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-ui-1.8.20/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/plugin/jquery.pubsub.min.js" type="text/javascript"></script>
-    <script src="${ctx}/static/plugin/tables-my.js" type="text/javascript"></script>
 
     <decorator:head/>
 </head>
@@ -67,9 +66,9 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span2 well leftpanel-height">
-                <page:applyDecorator page="/menu.jsp" name="left-panel"/>
+                <page:applyDecorator page="/other/menu.jsp" name="left-panel"/>
             </div>
-            <div class="span10 well rightpanel-height"id="main_panel">
+            <div class="span10 well rightpanel-height">
                 <decorator:body/>
             </div>
         </div>
