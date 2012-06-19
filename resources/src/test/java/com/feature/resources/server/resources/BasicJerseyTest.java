@@ -2,8 +2,11 @@ package com.feature.resources.server.resources;
 
 import com.feature.resources.server.resources.guice.MockGuiceContextListener;
 import com.google.inject.servlet.GuiceFilter;
+import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.test.framework.JerseyTest;
 import com.sun.jersey.test.framework.WebAppDescriptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * User: ZouYanjian
@@ -12,6 +15,9 @@ import com.sun.jersey.test.framework.WebAppDescriptor;
  * FileName:BasicJerseyTest
  */
 public class BasicJerseyTest extends JerseyTest {
+    public static final Logger LOGGER = LoggerFactory.getLogger(GraphicResourceTest.class);
+    protected WebResource resource;
+
     public BasicJerseyTest(){
         super(new WebAppDescriptor.Builder("com.feature.resources.server.resources")
                 .contextListenerClass(MockGuiceContextListener.class)

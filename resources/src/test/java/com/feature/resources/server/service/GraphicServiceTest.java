@@ -1,9 +1,9 @@
-package com.feature.resources.server.service.impl;
+package com.feature.resources.server.service;
 
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.service.impl.GraphicServiceImpl;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.common.collect.Lists;
@@ -30,10 +30,10 @@ import static org.mockito.Mockito.*;
  * User: ZouYanjian
  * Date: 12-6-13
  * Time: 下午4:44
- * FileName:GraphicServiceImplTest
+ * FileName:GraphicServiceTest
  */
 @RunWith(JukitoRunner.class)
-public class GraphicServiceImplTest {
+public class GraphicServiceTest {
 
     @Inject
     GraphicService graphicService;

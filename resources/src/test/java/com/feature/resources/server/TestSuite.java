@@ -1,7 +1,9 @@
 package com.feature.resources.server;
 
+import com.feature.resources.server.dao.DaoUnitTestSuite;
 import com.feature.resources.server.resources.ResourcesUnitTestSuite;
-import com.feature.resources.server.service.impl.GraphicServiceImplTest;
+import com.feature.resources.server.service.ServiceUnitTestSuite;
+import com.feature.resources.server.util.StringUtilTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -14,7 +16,9 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         ResourcesUnitTestSuite.class,
-        GraphicServiceImplTest.class
+        ServiceUnitTestSuite.class,
+        DaoUnitTestSuite.class,
+        StringUtilTest.class
 })
 public class TestSuite {
 }

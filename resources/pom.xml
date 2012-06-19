@@ -279,10 +279,17 @@
             <artifactId>jersey-test-framework-grizzly2</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.sun.jersey.jersey-test-framework</groupId>
+            <artifactId>jersey-test-framework-inmemory</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.jukito</groupId>
             <artifactId>jukito</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>de.flapdoodle.embedmongo</groupId>
+            <artifactId>de.flapdoodle.embedmongo</artifactId>
+        </dependency>
         <!-- TEST end -->
     </dependencies>
 

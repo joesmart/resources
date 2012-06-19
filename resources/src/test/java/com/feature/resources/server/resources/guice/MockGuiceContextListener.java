@@ -2,6 +2,8 @@ package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.DomainObjectFactory;
 import com.feature.resources.server.resources.context.resolver.JacksonContextResolver;
+import com.feature.resources.server.service.TagService;
+import com.feature.resources.server.service.WorkSpaceService;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
@@ -48,6 +50,8 @@ public class MockGuiceContextListener extends GuiceServletContextListener {
                 bind(DomainObjectFactory.class).toProvider(MockDoaminObjectFactoryProvider.class).in(Scopes.SINGLETON);
                 bind(GraphicService.class).toProvider(MockGraphicServiceProvider.class).in(Scopes.SINGLETON);
                 bind(PropertiesService.class).toProvider(MockPropertiesServiceProvider.class).in(Scopes.SINGLETON);
+                bind(WorkSpaceService.class).toProvider(MockWorkSpaceServiceProvider.class).in(Scopes.SINGLETON);
+                bind(TagService.class).toProvider(MockTagServiceProvider.class).in(Scopes.SINGLETON);
             }
 
             @Provides @Named("testData") @Singleton

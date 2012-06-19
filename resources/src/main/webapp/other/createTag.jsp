@@ -40,6 +40,7 @@
                     }
                 }
             }).success(function(event){
+                        console.log(event);
                         alert("数据添加成功");
                         $("form input[type='text']").val("");
                     }).fail(function(event){

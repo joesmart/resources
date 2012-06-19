@@ -1,6 +1,5 @@
 package com.feature.resources.server.servlet;
 
-import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.service.GraphicService;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * User: ZouYanjian
@@ -27,8 +25,6 @@ public class URIServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse response) throws ServletException, IOException {
-        List<Graphic> graphics = graphicService.findAll();
-        httpServletRequest.setAttribute("graphics",graphics);
         httpServletRequest.getRequestDispatcher("/graphic.jsp").forward(httpServletRequest, response);
     }
 

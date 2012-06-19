@@ -10,4 +10,6 @@ import com.feature.resources.server.dto.TagDTO;
  */
 public interface TagService {
     public void addNewTag(TagDTO tagDTO);
+
+    public boolean exists(String tag);
 }

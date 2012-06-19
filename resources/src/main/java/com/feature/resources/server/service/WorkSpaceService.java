@@ -10,4 +10,6 @@ import com.feature.resources.server.dto.WorkspaceDTO;
  */
 public interface WorkSpaceService {
     public void addNewWorkspace(WorkspaceDTO workspaceDTO);
+
+    public boolean exists(String name);
 }

@@ -12,7 +12,9 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         FileResourceTest.class,
-        GraphicResourceTest.class
+        GraphicResourceTest.class,
+        TagResourceTest.class,
+        WorkspaceResourceTest.class
 })
 public class ResourcesUnitTestSuite {
 }

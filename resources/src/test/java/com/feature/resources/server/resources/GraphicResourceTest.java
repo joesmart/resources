@@ -1,12 +1,9 @@
 package com.feature.resources.server.resources;
 
 import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.representation.Form;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -17,9 +14,6 @@ import static org.fest.assertions.Assertions.assertThat;
  * FileName:GraphicResourceTest
  */
 public class GraphicResourceTest extends BasicJerseyTest {
-
-    public static final Logger LOGGER = LoggerFactory.getLogger(GraphicResourceTest.class);
-    private WebResource resource;
 
     public GraphicResourceTest() {
         super();

@@ -2,6 +2,7 @@ package com.feature.resources.server.testdata;
 
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
+import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.io.Resources;
 import com.google.inject.Singleton;
 import lombok.Data;
@@ -23,6 +24,7 @@ import static org.fest.assertions.Assertions.assertThat;
 public class TestDataObjectFactory {
     private Graphic graphic;
     private Properties properties;
+    private WorkSpaceService workSpaceService;
 
     public TestDataObjectFactory(){
         graphic = new Graphic();
@@ -43,8 +45,16 @@ public class TestDataObjectFactory {
             inputStream = Resources.newInputStreamSupplier(url).getInput() ;
             assertThat(inputStream).isNotNull();
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return inputStream;
+    }
+
+    public WorkSpaceService getWorkSpaceService() {
+        return workSpaceService;
+    }
+
+    public void setWorkSpaceService(WorkSpaceService workSpaceService){
+        this.workSpaceService = workSpaceService;
     }
 }

@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "4fdeed8997acc121c3d6d330" }, "className" : "com.feature.resources.server.domain.WorkSpace", "name" : "adfadf", "type" : "Base", "updateDate" : { "$date" : 1340009864631 }, "createDate" : { "$date" : 1340009864630 }, "version" : 1340009865343 }
+{ "_id" : { "$oid" : "4fdeff3997ac6e3962d58d0d" }, "className" : "com.feature.resources.server.domain.WorkSpace", "name" : "Test", "type" : "Base", "updateDate" : { "$date" : 1340014393821 }, "createDate" : { "$date" : 1340014393821 }, "version" : 1340014393854 }

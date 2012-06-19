@@ -25,4 +25,9 @@ public class TagServiceImpl implements TagService {
 
         tagDao.save(tagDescription);
     }
+
+    @Override
+    public boolean exists(String tag) {
+        return  tagDao.isAlreadyExists(tag);
+    }
 }

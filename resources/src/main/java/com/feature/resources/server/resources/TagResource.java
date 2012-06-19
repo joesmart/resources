@@ -13,15 +13,20 @@ import javax.ws.rs.core.Response;
 
 @Path("/tag")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML,MediaType.APPLICATION_FORM_URLENCODED})
+@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_FORM_URLENCODED})
 public class TagResource {
     @Inject
     private TagService tagService;
 
     @Path("/add")
     @POST
-    public Response addNewWorkspace(TagDTO tagDTO){
-        tagService.addNewTag(tagDTO);
-        return  Response.ok().build();
+    public Response addNewWorkspace(TagDTO tagDTO) {
+        if (!tagService.exists(tagDTO.getTag())) {
+            tagService.addNewTag(tagDTO);
+            return Response.ok().build();
+        } else {
+            return Response.status(Response.Status.NOT_MODIFIED).build();
+        }
+
     }
 }
