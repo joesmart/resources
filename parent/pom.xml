@@ -50,6 +50,12 @@
         </repository>
 
         <repository>
+            <id>morphia.googlecode.com</id>
+            <name>Morphia Repo at Google Code</name>
+            <url>http://morphia.googlecode.com/svn/mavenrepo</url>
+        </repository>
+
+        <repository>
             <id>Glassfish</id>
             <name>Glassfish Maven2 Repository</name>
             <url>http://download.java.net/maven/glassfish/</url>
