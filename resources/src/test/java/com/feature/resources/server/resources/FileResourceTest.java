@@ -9,10 +9,8 @@ import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.test.framework.AppDescriptor;
 import org.jukito.JukitoRunner;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.MockitoAnnotations;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -40,12 +38,6 @@ public class FileResourceTest extends BasicJerseyTest {
     protected AppDescriptor configure() {
         return super.configure();
     }
-
-    @Before
-    public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-    }
-
 
     @Test
     public void testHead() throws Exception {

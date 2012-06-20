@@ -10,6 +10,7 @@ import com.sun.jersey.test.framework.spi.container.TestContainerException;
 import com.sun.jersey.test.framework.spi.container.TestContainerFactory;
 import org.junit.After;
 import org.junit.Before;
+import org.mockito.MockitoAnnotations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,13 +41,15 @@ public class BasicJerseyTest extends JerseyTest {
     }
 
     @Before
-    public  void setup() {
+    public void setUp() throws Exception {
+        MockitoAnnotations.initMocks(this);
         resource = resource();
+//        super.setUp();
     }
 
-
     @After
-    public void tearDown() throws Exception{
+    public void tearDown() throws Exception {
+       // super.tearDown();
     }
 
 }
