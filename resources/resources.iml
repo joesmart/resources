@@ -9,11 +9,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-          <root url="file://$MODULE_DIR$/target/generated-sources/annotations" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -36,6 +31,8 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:2.8.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.glassfish:javax.servlet:3.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: opensymphony:sitemesh:2.4.2" level="project" />
@@ -68,8 +65,8 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.8.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:bson:2.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.morphia:morphia:0.99" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.morphia:morphia-validation:0.99" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:1.0.0.GA" level="project" />
