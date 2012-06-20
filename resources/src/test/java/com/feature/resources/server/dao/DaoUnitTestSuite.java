@@ -13,7 +13,4 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({TagDaoTest.class, WorkSpaceDaoTest.class,GraphicDaoTest.class})
 public class DaoUnitTestSuite {
 
-    public void test(){
-
-    }
 }
