@@ -12,7 +12,7 @@ import com.google.inject.Inject;
  * Time: 下午4:23
  * FileName:WorkspaceServiceImpl
  */
-public class WorkspaceServiceImpl implements WorkSpaceService {
+public class WorkSpaceServiceImpl implements WorkSpaceService {
     @Inject
     private WorkSpaceDao workSpaceDao;
 

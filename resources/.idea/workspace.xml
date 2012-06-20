@@ -5,10 +5,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/FileResourceTest.java" line="66" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="">
+    <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="update">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iml" afterPath="$PROJECT_DIR$/resources.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" />
     </list>
     <list id="21d2d47e-2f45-4a30-b088-714d10784fd2" name="Rejected commit: Default" comment="main page modified" />
     <ignored path="resources.iws" />
@@ -30,20 +31,20 @@
     <splitter proportion="0.5" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/resources$WorkSpaceServiceTest.coverage" NAME="WorkSpaceServiceTest Coverage Results" MODIFIED="1340073789071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.feature.resources.server.service.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/resources$GraphicServiceImplTest_testWriteThumbnailStreamIntoDisplay.coverage" NAME="GraphicServiceImplTest.testWriteThumbnailStreamIntoDisplay Coverage Results" MODIFIED="1339640146794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/resources$WorkSpaceServiceTest.coverage" NAME="WorkSpaceServiceTest Coverage Results" MODIFIED="1340073789071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.feature.resources.server.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/resources$Jetty.coverage" NAME="Jetty Coverage Results" MODIFIED="1338605455705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/resources$GraphicResourceTest.coverage" NAME="GraphicResourceTest Coverage Results" MODIFIED="1339640441046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.resources.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/resources$TagResourceTest.coverage" NAME="TagResourceTest Coverage Results" MODIFIED="1340090803577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/resources$WorkspaceResourceTest_should_add_a_new_Workspace_successful.coverage" NAME="WorkspaceResourceTest.should_add_a_new_Workspace_successful Coverage Results" MODIFIED="1340089472942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.resources.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/resources$WorkspaceResourceTest_should_add_a_new_Workspace_successful.coverage" NAME="WorkspaceResourceTest.should_add_a_new_Workspace_successful Coverage Results" MODIFIED="1340089472942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/resources$TagResourceTest.coverage" NAME="TagResourceTest Coverage Results" MODIFIED="1340090803577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.resources.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/resources$TestSuite.coverage" NAME="TestSuite Coverage Results" MODIFIED="1340109692922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -203,8 +204,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -222,10 +223,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkspaceServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java">
+      <file leaf-file-name="WorkSpaceServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+            <state line="14" column="18" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,9 +245,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -272,7 +271,7 @@
       <file leaf-file-name="GuiceModuleBounds.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="1.0665281">
+            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.26812586">
               <folding />
             </state>
           </provider>
@@ -344,7 +343,7 @@
       <file leaf-file-name="ResourcesUnitTestSuite.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/ResourcesUnitTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+            <state line="11" column="21" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -377,7 +376,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../parent/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/WorkSpaceDaoTest.java" />
@@ -391,8 +389,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
       </list>
     </option>
   </component>
@@ -493,6 +492,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -658,6 +675,44 @@
               <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkSpaceServiceImpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -761,51 +816,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="153" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="177" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="153" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="177" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="172" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="172" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="179" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="847" />
@@ -821,9 +848,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/feature/resources/server" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -831,11 +858,11 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="project.structure.side.proportion" value="0.3682664" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -884,37 +911,7 @@
       <recent name="F:\workspaces\idea\resources\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GraphicDaoTest.testFindAllByCreateAtTime">
-    <configuration default="false" name="TestSuite" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.feature.resources.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="resources" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.feature.resources.server" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.TestSuite" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ResourcesUnitTestSuite">
     <configuration default="false" name="StringUtilTest.should_get_fileextension_fail" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1035,6 +1032,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ResourcesUnitTestSuite" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.feature.resources.server.resources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="resources" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.feature.resources.server.resources" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.resources.ResourcesUnitTestSuite" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1101,24 +1126,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1152,19 +1159,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
       <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1284,11 +1289,42 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1318,17 +1354,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1788,17 +1813,17 @@
       <method />
     </configuration>
     <list size="11">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestSuite" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StringUtilTest.should_get_fileextension_fail" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StringUtilTest.should_get_fileextension_fail2" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Jetty JavaScript" />
-      <item index="4" class="java.lang.String" itemvalue="Jetty Server.Jetty" />
-      <item index="5" class="java.lang.String" itemvalue="Maven.jetty_compile" />
-      <item index="6" class="java.lang.String" itemvalue="Maven.clean_compile" />
-      <item index="7" class="java.lang.String" itemvalue="Maven.jetty_run" />
-      <item index="8" class="java.lang.String" itemvalue="Maven.javadoc" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.testFindAllByCreateAtTime" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.StringUtilTest.should_get_fileextension_fail" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StringUtilTest.should_get_fileextension_fail2" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.Jetty JavaScript" />
+      <item index="3" class="java.lang.String" itemvalue="Jetty Server.Jetty" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.jetty_compile" />
+      <item index="5" class="java.lang.String" itemvalue="Maven.clean_compile" />
+      <item index="6" class="java.lang.String" itemvalue="Maven.jetty_run" />
+      <item index="7" class="java.lang.String" itemvalue="Maven.javadoc" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.testFindAllByCreateAtTime" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.ResourcesUnitTestSuite" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1974,7 +1999,11 @@
       <created>1340173743497</created>
       <updated>1340173743497</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="update">
+      <created>1340174438313</created>
+      <updated>1340174438313</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2001,19 +2030,19 @@
     <frame x="1358" y="-78" width="1456" height="916" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263839" sideWeight="0.66490763" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49604222" sideWeight="0.4946082" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32614943" sideWeight="0.18601583" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7097625" sideWeight="0.4946082" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2585752" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32717678" sideWeight="0.49748382" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24928162" sideWeight="0.20844327" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.49472296" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.13852243" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5686016" sideWeight="0.4920977" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20689656" sideWeight="0.82453823" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5659631" sideWeight="0.50287354" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5804749" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298153" sideWeight="0.49748382" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.49748382" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5580475" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="BuildWatcher" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41688654" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -2021,8 +2050,8 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23563218" sideWeight="0.5237467" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49734244" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20617816" sideWeight="0.43139842" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29597703" sideWeight="0.5646438" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.6701847" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.31134564" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.6794195" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6899736" sideWeight="0.49173257" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1458" y="22" width="1256" height="716" />
@@ -2160,6 +2189,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="24" selection-start="6547" selection-end="6568" vertical-scroll-proportion="-0.6785714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/WorkSpaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/BasicJerseyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="13" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
@@ -2190,79 +2275,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/ResourcesUnitTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+        <state line="11" column="21" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../parent/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="24" selection-start="6547" selection-end="6568" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/WorkSpaceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+        <state line="14" column="18" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="1.0665281">
+        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.26812586">
           <folding />
         </state>
       </provider>
