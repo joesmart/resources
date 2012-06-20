@@ -10,9 +10,9 @@ import com.google.inject.Inject;
  * User: ZouYanjian
  * Date: 12-6-18
  * Time: 下午4:23
- * FileName:WorkspaceServiceImpl
+ * FileName:WorkSpaceServiceImpl
  */
-public class WorkspaceServiceImpl implements WorkSpaceService {
+public class WorkSpaceServiceImpl implements WorkSpaceService {
     @Inject
     private WorkSpaceDao workSpaceDao;
 
