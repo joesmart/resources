@@ -7,6 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" />
     </list>
     <list id="21d2d47e-2f45-4a30-b088-714d10784fd2" name="Rejected commit: Default" comment="main page modified" />
     <ignored path="resources.iws" />
@@ -207,9 +211,7 @@
     </ui_properties>
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="resources">
-      <favorite_root url="com.feature.resources.server.service.impl.WorkSpaceServiceImpl" module="resources" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
-    </favorites_list>
+    <favorites_list name="resources" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -222,10 +224,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkSpaceServiceImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java">
+      <file leaf-file-name="WorkspaceServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.44186047">
+            <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -269,10 +271,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuiceModuleBounds.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GuiceModuleBounds.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.0">
+            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.7017784">
               <folding />
             </state>
           </provider>
@@ -391,8 +393,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -657,6 +659,108 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuiceModuleBounds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1897,7 +2001,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-78" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263839" sideWeight="0.66490763" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49604222" sideWeight="0.4946082" order="7" side_tool="false" content_ui="tabs" />
@@ -1920,7 +2024,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49734244" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20617816" sideWeight="0.43139842" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29597703" sideWeight="0.5646438" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.5039578" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.6728232" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6899736" sideWeight="0.49173257" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1458" y="22" width="1256" height="716" />
@@ -2121,13 +2225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
@@ -2158,9 +2255,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.44186047">
+        <state line="23" column="5" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.7017784">
           <folding />
         </state>
       </provider>

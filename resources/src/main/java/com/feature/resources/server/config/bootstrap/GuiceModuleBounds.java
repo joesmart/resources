@@ -10,7 +10,7 @@ import com.feature.resources.server.service.WorkSpaceService;
 import com.feature.resources.server.service.impl.GraphicServiceImpl;
 import com.feature.resources.server.service.impl.PropertiesServiceImpl;
 import com.feature.resources.server.service.impl.TagServiceImpl;
-import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
+import com.feature.resources.server.service.impl.WorkspaceServiceImpl;
 import com.feature.resources.server.servlet.URIServlet;
 import com.google.code.morphia.logging.MorphiaLoggerFactory;
 import com.google.code.morphia.logging.slf4j.SLF4JLogrImplFactory;
@@ -51,7 +51,7 @@ public class GuiceModuleBounds extends GuiceServletContextListener {
             protected void configure() {
                 install(new MorphiaGuiceModule());
                 bind(GraphicService.class).to(GraphicServiceImpl.class).in(Scopes.SINGLETON);
-                bind(WorkSpaceService.class).to(WorkSpaceServiceImpl.class).in(Scopes.SINGLETON);
+                bind(WorkSpaceService.class).to(WorkspaceServiceImpl.class).in(Scopes.SINGLETON);
                 bind(PropertiesService.class).to(PropertiesServiceImpl.class).in(Scopes.SINGLETON);
                 bind(TagService.class).to(TagServiceImpl.class).in(Scopes.SINGLETON);
                 bind(DomainObjectFactory.class).in(Scopes.SINGLETON);
