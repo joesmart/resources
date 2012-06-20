@@ -17,4 +17,5 @@ import org.junit.runners.Suite;
         WorkspaceResourceTest.class
 })
 public class ResourcesUnitTestSuite {
+
 }

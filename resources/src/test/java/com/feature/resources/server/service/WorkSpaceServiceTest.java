@@ -3,7 +3,7 @@ package com.feature.resources.server.service;
 import com.feature.resources.server.dao.WorkSpaceDao;
 import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.WorkspaceDTO;
-import com.feature.resources.server.service.impl.WorkspaceServiceImpl;
+import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
 import com.google.code.morphia.Datastore;
 import com.google.inject.Inject;
 import org.jukito.JukitoModule;
@@ -36,7 +36,7 @@ public class WorkSpaceServiceTest {
         protected void configureTest() {
             forceMock(Datastore.class);
             bindMock(WorkSpaceDao.class).in(TestSingleton.class);
-            bind(WorkSpaceService.class).to(WorkspaceServiceImpl.class).in(TestSingleton.class);
+            bind(WorkSpaceService.class).to(WorkSpaceServiceImpl.class).in(TestSingleton.class);
         }
     }
 

@@ -21,4 +21,5 @@ import org.junit.runners.Suite;
         StringUtilTest.class
 })
 public class TestSuite {
+
 }

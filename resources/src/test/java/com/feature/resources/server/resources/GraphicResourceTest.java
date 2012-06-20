@@ -2,7 +2,6 @@ package com.feature.resources.server.resources;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.representation.Form;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -17,11 +16,6 @@ public class GraphicResourceTest extends BasicJerseyTest {
 
     public GraphicResourceTest() {
         super();
-    }
-
-    @Before
-    public  void setup() {
-        resource = resource();
     }
 
     @Test

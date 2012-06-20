@@ -41,6 +41,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         List<String> collectionLists = getResourceStringList(collectionName);
         DBCollection workSpacesColloection = getDatastore().getDB().getCollection(collectionName);
         for (String json : collectionLists) {
+            System.out.println(json);
             DBObject dbObject = (DBObject) JSON.parse(json);
             workSpacesColloection.insert(dbObject);
         }

@@ -9,7 +9,6 @@ import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.test.framework.AppDescriptor;
 import org.jukito.JukitoRunner;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,10 +46,6 @@ public class FileResourceTest extends BasicJerseyTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @After
-    public void tearDown() throws Exception {
-
-    }
 
     @Test
     public void testHead() throws Exception {

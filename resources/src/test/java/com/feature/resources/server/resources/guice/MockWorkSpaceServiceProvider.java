@@ -1,7 +1,7 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.service.WorkSpaceService;
-import com.feature.resources.server.service.impl.WorkspaceServiceImpl;
+import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -23,7 +23,7 @@ public class MockWorkSpaceServiceProvider implements Provider<WorkSpaceService> 
     @Inject
     public MockWorkSpaceServiceProvider(TestDataObjectFactory testDataObjectFactory){
         this.testDataObjectFactory = testDataObjectFactory;
-        workSpaceService = Mockito.mock(WorkspaceServiceImpl.class);
+        workSpaceService = Mockito.mock(WorkSpaceServiceImpl.class);
         Mockito.when(workSpaceService.exists("test")).thenReturn(true);
         Mockito.when(workSpaceService.exists("xxx")).thenReturn(false);
 

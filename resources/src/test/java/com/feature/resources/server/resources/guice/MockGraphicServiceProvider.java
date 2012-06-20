@@ -1,9 +1,12 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.feature.resources.server.service.GraphicService;
-import com.google.common.collect.*;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
+import com.google.common.collect.ContiguousSet;
+import com.google.common.collect.DiscreteDomains;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Ranges;
 import com.google.common.io.Resources;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -17,6 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -49,9 +53,10 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         byte[] bytes = Resources.toByteArray(url);
         when(graphicService.saveGraphic(bytes, graphic)).thenReturn(afterSaveGraphic);
         when(graphicService.getGraphicsTotalCount()).thenReturn(100L);
-
-        when(graphicService.get(idString)).thenReturn(afterSaveGraphic);
-        generateGraphicListTestFixture(graphic, graphics);
+        LOGGER.info("Mock IdString:" + idString);
+        when(graphicService.get(anyString())).thenReturn(afterSaveGraphic);
+//        when(graphicService.saveGraphic(bytes,any(Graphic.class))).thenReturn(afterSaveGraphic);
+        generateGraphicListTestFixture(afterSaveGraphic, graphics);
         when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);
     }
 
