@@ -41,10 +41,6 @@
         <jdk.version>1.7</jdk.version>
     </properties>
     <repositories>
-        <repository>
-            <id>Java.Net</id>
-            <url>http://download.java.net/maven/2/</url>
-        </repository>
 
         <repository>
             <id>maven-mongodb-plugin-repo</id>
