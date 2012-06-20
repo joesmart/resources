@@ -7,8 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99b820e0-1524-4979-a34d-2d26796aaada" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkspaceServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" />
     </list>
@@ -274,7 +272,7 @@
       <file leaf-file-name="GuiceModuleBounds.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.7017784">
+            <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="1.0665281">
               <folding />
             </state>
           </provider>
@@ -2001,7 +1999,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-78" width="1456" height="916" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263839" sideWeight="0.66490763" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49604222" sideWeight="0.4946082" order="7" side_tool="false" content_ui="tabs" />
@@ -2015,7 +2013,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20689656" sideWeight="0.82453823" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5659631" sideWeight="0.50287354" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5804749" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.49748382" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298153" sideWeight="0.49748382" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5580475" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="BuildWatcher" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41688654" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -2024,7 +2022,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49734244" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20617816" sideWeight="0.43139842" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29597703" sideWeight="0.5646438" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.6728232" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
+      <window_info id="Project" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29597703" sideWeight="0.6701847" order="8" side_tool="true" content_ui="combo" x="2322" y="77" width="371" height="758" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6899736" sideWeight="0.49173257" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1458" y="22" width="1256" height="716" />
@@ -2264,7 +2262,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.7017784">
+        <state line="53" column="68" selection-start="2706" selection-end="2706" vertical-scroll-proportion="1.0665281">
           <folding />
         </state>
       </provider>
