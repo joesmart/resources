@@ -23,6 +23,6 @@ public class MockTagServiceProvider implements Provider<TagService> {
 
     @Override
     public TagService get() {
-        return tagService;  //To change body of implemented methods use File | Settings | File Templates.
+        return tagService;
     }
 }

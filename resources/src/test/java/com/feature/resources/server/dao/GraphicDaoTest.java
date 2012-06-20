@@ -14,6 +14,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.Date;
 import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -58,7 +59,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
             List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.defaultCharset());
             return  collectionLists;
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
         return null;
     }
@@ -71,10 +72,12 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
 
     @Test
     public void testFindAllByCreateAtTime() throws Exception {
-
         List<Graphic> graphicList = graphicDao.findAllByCreateAtTime();
         assertThat(graphicList).isNotNull();
         assertThat(graphicList.size()).isEqualTo(resourceDataSize("Graphic"));
+        Date maxDate = graphicList.get(0).getCreateDate();
+        Date secondDate = graphicList.get(1).getCreateDate();
+        assertThat(maxDate.after(secondDate)).isTrue();
     }
 
     @Test

@@ -4,6 +4,7 @@ import com.google.code.morphia.annotations.Id;
 import com.google.code.morphia.annotations.PrePersist;
 import com.google.code.morphia.annotations.Transient;
 import com.google.code.morphia.annotations.Version;
+import lombok.Getter;
 import org.bson.types.ObjectId;
 
 import java.util.Date;
@@ -15,6 +16,7 @@ public class BaseEntity {
     @Transient
     private String idString;
     private Date updateDate;
+    @Getter
     private Date createDate;
     @Version
     private Long version;

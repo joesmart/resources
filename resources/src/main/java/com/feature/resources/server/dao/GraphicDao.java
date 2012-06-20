@@ -21,7 +21,7 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
 
     public List<Graphic> findAllByCreateAtTime(){
         List<Graphic> graphics = null;
-        graphicQuery.order("-updateDate");
+        graphicQuery.order("-createDate");
         graphics = Lists.newArrayList(graphicQuery.iterator());
         return graphics;
     }

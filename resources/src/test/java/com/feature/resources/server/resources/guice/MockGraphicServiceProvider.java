@@ -45,8 +45,6 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
 
         List<Graphic> graphics = Lists.newArrayList();
 
-
-
         URL url=  Resources.getResource("com/feature/resources/server/resources/graphics.png");
         byte[] bytes = Resources.toByteArray(url);
         when(graphicService.saveGraphic(bytes, graphic)).thenReturn(afterSaveGraphic);
