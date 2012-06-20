@@ -25,7 +25,6 @@ import static org.fest.assertions.Assertions.assertThat;
  * FileName:GraphicDaoTest
  */
 public class GraphicDaoTest extends BasicMongoUnitTest {
-
     private GraphicDao graphicDao;
 
     @Before
@@ -54,7 +53,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
 
     public List<String> getResourceStringList(String collectionName) {
         try {
-            String resourceURL = "com/feature/resources/server/testdata/" + collectionName + ".xml";
+            String resourceURL = "com/feature/resources/server/testdata/" + collectionName + ".json";
             URL workSpaceUrl = Resources.getResource(resourceURL);
             List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.defaultCharset());
             return  collectionLists;
