@@ -32,7 +32,7 @@
         <guiceberry.version>3.1.0</guiceberry.version>
         <guice.version>3.0</guice.version>
         <morphia.version>0.99</morphia.version>
-        <mongodb.version>2.8.0-SNAPSHOT</mongodb.version>
+        <mongodb.version>2.8.0-RC1</mongodb.version>
         <thumbnailator.version>0.4.2</thumbnailator.version>
         <commons-fileupload.version>1.2.2</commons-fileupload.version>
         <jodd.version>3.3.3</jodd.version>
