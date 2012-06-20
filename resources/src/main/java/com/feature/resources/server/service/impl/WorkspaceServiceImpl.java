@@ -22,4 +22,9 @@ public class WorkspaceServiceImpl implements WorkSpaceService {
         workSpace.setName(workspaceDTO.getName());
         workSpaceDao.save(workSpace);
     }
+
+    @Override
+    public boolean exists(String name) {
+        return  workSpaceDao.isAreadyExists(name);
+    }
 }
