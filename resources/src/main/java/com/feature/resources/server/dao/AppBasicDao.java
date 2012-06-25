@@ -39,7 +39,6 @@ public class AppBasicDao<T, K> extends BasicDAO<T, K> {
             gridFSDBFile.writeTo(out);
         } catch (IOException e) {
             LOGGER.info("Find attachment Error",e);
-            e.printStackTrace();
         }
     }
 

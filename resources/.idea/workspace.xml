@@ -212,7 +212,7 @@
       <file leaf-file-name="AppBasicDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="20" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.90957445">
+            <state line="41" column="9" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.6569149">
               <folding />
             </state>
           </provider>
@@ -2182,7 +2182,11 @@
       <created>1340602260072</created>
       <updated>1340602260072</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Rename findAttachment method">
+      <created>1340606086643</created>
+      <updated>1340606086643</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2285,7 +2289,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="It support to get Tag and WorkSpace List" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename findAttachment method" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2315,6 +2319,7 @@
     <MESSAGE value="git rename WorkSpaceDTO" />
     <MESSAGE value="update" />
     <MESSAGE value="It support to get Tag and WorkSpace List" />
+    <MESSAGE value="Rename findAttachment method" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -2444,7 +2449,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="20" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.90957445">
+        <state line="41" column="9" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.6569149">
           <folding />
         </state>
       </provider>
