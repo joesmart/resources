@@ -4,8 +4,13 @@ import com.feature.resources.server.dao.TagDao;
 import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.dto.TagDTO;
 import com.feature.resources.server.service.TagService;
+import com.google.common.base.Function;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * User: ZouYanjian
@@ -29,5 +34,19 @@ public class TagServiceImpl implements TagService {
     @Override
     public boolean exists(String tag) {
         return  tagDao.isAlreadyExists(tag);
+    }
+
+    @Override
+    public List<TagDTO> getCurrentTagList() {
+        List<TagDescription> tagDescriptions  = tagDao.getAllTagDescription();
+        List<TagDTO> tagDTOList = Lists.transform(tagDescriptions,new Function<TagDescription, TagDTO>() {
+            @Override
+            public TagDTO apply(@Nullable TagDescription input) {
+                TagDTO tagDTO  = new TagDTO();
+                tagDTO.setId(input.getIdString());
+                return tagDTO;
+            }
+        });
+        return tagDTOList;
     }
 }

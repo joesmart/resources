@@ -7,6 +7,8 @@ import com.google.code.morphia.query.Query;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
 
+import java.util.List;
+
 /**
  * User: ZouYanjian
  * Date: 12-6-18
@@ -14,6 +16,7 @@ import org.bson.types.ObjectId;
  * FileName:TagDao
  */
 public class TagDao extends BasicDAO<TagDescription,ObjectId> {
+
     @Inject
     protected TagDao(Datastore ds) {
         super(ds);
@@ -23,5 +26,10 @@ public class TagDao extends BasicDAO<TagDescription,ObjectId> {
         Query<TagDescription> query = createQuery();
         query.field("tag").equal(tag);
         return  exists(query);
+    }
+
+    public List<TagDescription> getAllTagDescription() {
+        List<TagDescription> tagDescriptionList  = find().asList();
+        return tagDescriptionList;
     }
 }

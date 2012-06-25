@@ -5,12 +5,15 @@ import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
 import com.google.code.morphia.Datastore;
+import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+import org.bson.types.ObjectId;
 import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -76,8 +79,18 @@ public class WorkSpaceServiceTest {
         assertThat(result).isEqualTo(false);
     }
 
+    @Test
     public void should_return_workspace_list(WorkSpaceDao mockDao){
+        List<WorkSpace> workSpaces = Lists.newArrayList();
+        WorkSpace workSpace = new WorkSpace();
+        workSpace.setName("text");
+        ObjectId id = new ObjectId();
+        workSpace.setId(id);
+        workSpaces.add(workSpace);
+        when(mockDao.getAllWorkSpace()).thenReturn(workSpaces);
         List<WorkSpaceDTO> workSpaceList =  workSpaceService.getCurrentWorkSpaceList();
-        Assertions.assertThat(workSpaceList).isNotNull();
+        Assert.assertNotNull(workSpaceList);
+        Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
+        verify(mockDao).getAllWorkSpace();
     }
 }

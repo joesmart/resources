@@ -7,6 +7,8 @@ import com.google.code.morphia.query.Query;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
 
+import java.util.List;
+
 /**
  * User: ZouYanjian
  * Date: 12-6-18
@@ -23,5 +25,10 @@ public class WorkSpaceDao extends BasicDAO<WorkSpace,ObjectId> {
         Query<WorkSpace> existsQuery = createQuery();
         existsQuery.field("name").equal(name);
         return  exists(existsQuery);
+    }
+
+    public List<WorkSpace> getAllWorkSpace(){
+        List<WorkSpace> workSpaceList = find().asList();
+        return workSpaceList;
     }
 }

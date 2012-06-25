@@ -99,18 +99,6 @@ public class Properties extends BaseEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = uuid.hashCode();
-        result = 31 * result + name.hashCode();
-        result = 31 * result + (path != null ? path.hashCode() : 0);
-        result = 31 * result + size.hashCode();
-        result = 31 * result + create.hashCode();
-        result = 31 * result + (modified != null ? modified.hashCode() : 0);
-        result = 31 * result + mimeType.hashCode();
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        return result;
-    }
 
     @Override
     public String toString() {

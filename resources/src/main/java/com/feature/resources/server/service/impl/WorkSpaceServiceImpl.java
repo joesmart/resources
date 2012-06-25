@@ -4,8 +4,11 @@ import com.feature.resources.server.dao.WorkSpaceDao;
 import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.service.WorkSpaceService;
+import com.google.common.base.Function;
+import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -30,6 +33,16 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
 
     @Override
     public List<WorkSpaceDTO> getCurrentWorkSpaceList() {
-        return null;
+        List<WorkSpace> workSpaces =  workSpaceDao.getAllWorkSpace();
+        List<WorkSpaceDTO> workSpaceDTOList = Lists.transform(workSpaces,new Function<WorkSpace, WorkSpaceDTO>() {
+            @Override
+            public WorkSpaceDTO apply(@Nullable WorkSpace input) {
+                WorkSpaceDTO workSpaceDTO = new WorkSpaceDTO();
+                workSpaceDTO.setId(input.getIdString());
+                workSpaceDTO.setName(input.getName());
+                return workSpaceDTO;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+        });
+        return workSpaceDTOList;
     }
 }

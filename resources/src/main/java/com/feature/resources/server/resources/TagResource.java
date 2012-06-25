@@ -4,12 +4,10 @@ import com.feature.resources.server.dto.TagDTO;
 import com.feature.resources.server.service.TagService;
 import com.google.inject.Inject;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/tag")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
@@ -27,6 +25,12 @@ public class TagResource {
         } else {
             return Response.status(Response.Status.NOT_MODIFIED).build();
         }
+    }
 
+    @Path("/all")
+    @GET
+    public List<TagDTO> getAllTags(){
+        List<TagDTO> tagDTOList = tagService.getCurrentTagList();
+        return tagDTOList;
     }
 }

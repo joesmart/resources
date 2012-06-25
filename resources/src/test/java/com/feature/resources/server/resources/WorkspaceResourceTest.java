@@ -4,13 +4,16 @@ import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
-import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
+import java.util.Map;
+
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * User: ZouYanjian
@@ -38,7 +41,7 @@ public class WorkspaceResourceTest extends BasicJerseyTest {
 
         ClientResponse response = resource.path("workspace/add").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, json);
-        Assertions.assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
+        assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
     }
 
     @Test
@@ -47,6 +50,15 @@ public class WorkspaceResourceTest extends BasicJerseyTest {
         dto.setName("test");
         ClientResponse response = resource.path("workspace/add").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, dto);
-        Assertions.assertThat(response.getStatus()).isEqualTo(Response.Status.NOT_MODIFIED.getStatusCode());
+        assertThat(response.getStatus()).isEqualTo(Response.Status.NOT_MODIFIED.getStatusCode());
+    }
+
+    @Test
+    public void should_get_workspaceDTO_list(){
+        List<Map> workSpaceDTOList = resource.path("workspace/all").accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON).get(List.class);
+        assertThat(workSpaceDTOList).isNotNull();
+        assertThat(workSpaceDTOList.size()).isEqualTo(1);
+        assertThat(workSpaceDTOList.get(0).get("name")).isEqualTo("mock");
     }
 }
