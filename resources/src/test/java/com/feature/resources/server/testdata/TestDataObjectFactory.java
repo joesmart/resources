@@ -5,7 +5,6 @@ import com.feature.resources.server.domain.Properties;
 import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.io.Resources;
 import com.google.inject.Singleton;
-import lombok.Data;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +18,6 @@ import static org.fest.assertions.Assertions.assertThat;
  * Time: 下午6:21
  * FileName:TestDataObjectFactory
  */
-@Data
 @Singleton
 public class TestDataObjectFactory {
     private Graphic graphic;
@@ -56,5 +54,21 @@ public class TestDataObjectFactory {
 
     public void setWorkSpaceService(WorkSpaceService workSpaceService){
         this.workSpaceService = workSpaceService;
+    }
+
+    public Graphic getGraphic() {
+        return graphic;
+    }
+
+    public void setGraphic(Graphic graphic) {
+        this.graphic = graphic;
+    }
+
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
     }
 }

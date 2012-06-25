@@ -2,10 +2,11 @@ package com.feature.resources.server.service;
 
 import com.feature.resources.server.dao.WorkSpaceDao;
 import com.feature.resources.server.domain.WorkSpace;
-import com.feature.resources.server.dto.WorkspaceDTO;
+import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
 import com.google.code.morphia.Datastore;
 import com.google.inject.Inject;
+import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
@@ -14,6 +15,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
@@ -52,7 +55,7 @@ public class WorkSpaceServiceTest {
 
     @Test
     public void should_add_new_workspace_successful(WorkSpaceDao workSpaceDao){
-        WorkspaceDTO workspaceDTO = new WorkspaceDTO();
+        WorkSpaceDTO workspaceDTO = new WorkSpaceDTO();
         workspaceDTO.setName("hello");
         workSpaceService.addNewWorkspace(workspaceDTO);
         verify(workSpaceDao).save(Mockito.any(WorkSpace.class));
@@ -71,5 +74,10 @@ public class WorkSpaceServiceTest {
         boolean result =workSpaceService.exists("xxxx");
         verify(mockDao).isAreadyExists("xxxx");
         assertThat(result).isEqualTo(false);
+    }
+
+    public void should_return_workspace_list(WorkSpaceDao mockDao){
+        List<WorkSpaceDTO> workSpaceList =  workSpaceService.getCurrentWorkSpaceList();
+        Assertions.assertThat(workSpaceList).isNotNull();
     }
 }

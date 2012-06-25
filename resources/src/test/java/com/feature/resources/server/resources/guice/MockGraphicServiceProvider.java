@@ -11,7 +11,6 @@ import com.google.common.io.Resources;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.name.Named;
-import lombok.Data;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +29,6 @@ import static org.mockito.Mockito.when;
  * Time: 下午3:16
  * FileName:MockGraphicServiceProvider
  */
-@Data
 public class MockGraphicServiceProvider implements Provider<GraphicService> {
     public static final Logger LOGGER = LoggerFactory.getLogger(MockGraphicServiceProvider.class);
 

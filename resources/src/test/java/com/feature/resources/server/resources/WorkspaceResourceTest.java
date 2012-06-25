@@ -1,6 +1,6 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.dto.WorkspaceDTO;
+import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
@@ -43,7 +43,7 @@ public class WorkspaceResourceTest extends BasicJerseyTest {
 
     @Test
     public void should_add_exists_WorkSpace_fail() {
-        WorkspaceDTO dto = new WorkspaceDTO();
+        WorkSpaceDTO dto = new WorkSpaceDTO();
         dto.setName("test");
         ClientResponse response = resource.path("workspace/add").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, dto);

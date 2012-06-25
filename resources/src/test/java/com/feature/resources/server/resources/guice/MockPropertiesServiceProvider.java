@@ -12,7 +12,6 @@ import org.mockito.Mockito;
  * Time: 下午3:30
  * FileName:MockPropertiesServiceProvider
  */
-@Data
 @Singleton
 public class MockPropertiesServiceProvider implements Provider<PropertiesService> {
     PropertiesService propertiesService = Mockito.mock(PropertiesService.class);

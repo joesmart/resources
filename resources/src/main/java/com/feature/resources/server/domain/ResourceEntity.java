@@ -1,12 +1,18 @@
 package com.feature.resources.server.domain;
 
-import lombok.Data;
-@Data
 public class ResourceEntity extends BaseEntity {
+    public String getType() {
+        return type;
+    }
 
-  private String type;
+    public void setType(String type) {
+        this.type = type;
+    }
 
-  public ResourceEntity() {
-       type = "Base";
-  }
+    private String type;
+
+    public ResourceEntity() {
+        type = "Base";
+    }
+
 }

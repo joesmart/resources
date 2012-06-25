@@ -9,7 +9,6 @@ import de.flapdoodle.embedmongo.MongodProcess;
 import de.flapdoodle.embedmongo.config.MongodConfig;
 import de.flapdoodle.embedmongo.distribution.Version;
 import de.flapdoodle.embedmongo.runtime.Network;
-import lombok.Getter;
 import lombok.ToString;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -31,7 +30,6 @@ public class BasicMongoUnitTest {
     private static final MongoDBRuntime runtime = MongoDBRuntime.getDefaultInstance();
 
     private static Mongo mongo;
-    @Getter
     private static Datastore datastore = null;
 
     @BeforeClass
@@ -53,5 +51,7 @@ public class BasicMongoUnitTest {
         if (mongodProcess != null) mongodProcess.stop();
     }
 
-
+    public static Datastore getDatastore() {
+        return datastore;
+    }
 }

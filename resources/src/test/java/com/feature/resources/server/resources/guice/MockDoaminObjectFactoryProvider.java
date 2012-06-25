@@ -14,7 +14,6 @@ import org.mockito.Mockito;
  * Time: 下午3:32
  * FileName:MockDoaminObjectFactoryProvider
  */
-@Data
 public class MockDoaminObjectFactoryProvider implements Provider<DomainObjectFactory> {
     DomainObjectFactory domainObjectFactory;
     @Inject @Named("abc")

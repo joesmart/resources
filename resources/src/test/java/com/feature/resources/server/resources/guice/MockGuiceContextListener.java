@@ -2,11 +2,11 @@ package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.DomainObjectFactory;
 import com.feature.resources.server.resources.context.resolver.JacksonContextResolver;
+import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.service.PropertiesService;
 import com.feature.resources.server.service.TagService;
 import com.feature.resources.server.service.WorkSpaceService;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
-import com.feature.resources.server.service.GraphicService;
-import com.feature.resources.server.service.PropertiesService;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.inject.*;

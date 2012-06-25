@@ -1,6 +1,8 @@
 package com.feature.resources.server.service;
 
-import com.feature.resources.server.dto.WorkspaceDTO;
+import com.feature.resources.server.dto.WorkSpaceDTO;
+
+import java.util.List;
 
 /**
  * User: ZouYanjian
@@ -9,7 +11,9 @@ import com.feature.resources.server.dto.WorkspaceDTO;
  * FileName:WorkSpaceService
  */
 public interface WorkSpaceService {
-    public void addNewWorkspace(WorkspaceDTO workspaceDTO);
+    public void addNewWorkspace(WorkSpaceDTO workspaceDTO);
 
     public boolean exists(String name);
+
+    public List<WorkSpaceDTO> getCurrentWorkSpaceList();
 }
