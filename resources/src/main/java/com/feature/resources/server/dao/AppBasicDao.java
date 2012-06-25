@@ -7,6 +7,8 @@ import com.mongodb.gridfs.GridFS;
 import com.mongodb.gridfs.GridFSDBFile;
 import com.mongodb.gridfs.GridFSInputFile;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,41 +16,41 @@ import java.io.OutputStream;
 
 
 public class AppBasicDao<T, K> extends BasicDAO<T, K> {
+    public static final Logger LOGGER = LoggerFactory.getLogger(AppBasicDao.class);
+    protected GridFS gridFSStore;
 
-  protected GridFS gridFSStore;
-
-  @Inject
-  protected AppBasicDao(Datastore ds) {
-    super(ds);
-    gridFSStore = new GridFS(ds.getDB(), "file_store");
-  }
-
-  public Object create(String fileName, String mimeType, InputStream fileStream) throws IOException {
-    GridFSInputFile localFile = gridFSStore.createFile(fileStream, fileName);
-    localFile.setContentType(mimeType);
-    localFile.save();
-    return localFile.getId();
-  }
-
-  public void findeAttachement(Object id, OutputStream out) {
-    ObjectId objectId = new ObjectId(id.toString());
-    GridFSDBFile gridFSDBFile = gridFSStore.find(objectId);
-    try {
-      gridFSDBFile.writeTo(out);
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+    @Inject
+    protected AppBasicDao(Datastore ds) {
+        super(ds);
+        gridFSStore = new GridFS(ds.getDB(), "file_store");
     }
-  }
 
-  public GridFSDBFile getGridFSDBFile(Object id) {
-    ObjectId objectId = new ObjectId(id.toString());
-    GridFSDBFile gridFSDBFile = gridFSStore.find(objectId);
-    return gridFSDBFile;
-  }
+    public Object create(String fileName, String mimeType, InputStream fileStream) throws IOException {
+        GridFSInputFile localFile = gridFSStore.createFile(fileStream, fileName);
+        localFile.setContentType(mimeType);
+        localFile.save();
+        return localFile.getId();
+    }
 
-  public boolean deleteGridFSDBFile(Object id) {
-    gridFSStore.remove(new ObjectId(id.toString()));
-    return true;
-  }
+    public void findAttachment(Object id, OutputStream out) {
+        ObjectId objectId = new ObjectId(id.toString());
+        GridFSDBFile gridFSDBFile = gridFSStore.find(objectId);
+        try {
+            gridFSDBFile.writeTo(out);
+        } catch (IOException e) {
+            LOGGER.info("Find attachment Error",e);
+            e.printStackTrace();
+        }
+    }
+
+    public GridFSDBFile getGridFSDBFile(Object id) {
+        ObjectId objectId = new ObjectId(id.toString());
+        GridFSDBFile gridFSDBFile = gridFSStore.find(objectId);
+        return gridFSDBFile;
+    }
+
+    public boolean deleteGridFSDBFile(Object id) {
+        gridFSStore.remove(new ObjectId(id.toString()));
+        return true;
+    }
 }
