@@ -7,6 +7,7 @@ import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+import org.bson.types.ObjectId;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -45,4 +46,11 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
         });
         return workSpaceDTOList;
     }
+
+    @Override
+    public WorkSpace getWorkSpaceById(String id) {
+        WorkSpace workSpace =  workSpaceDao.findOne("id",new ObjectId(id));
+        return workSpace;
+    }
+
 }

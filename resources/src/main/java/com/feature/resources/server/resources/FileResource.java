@@ -3,10 +3,13 @@ package com.feature.resources.server.resources;
 import com.feature.resources.server.domain.DomainObjectFactory;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
+import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
+import com.feature.resources.server.service.TagService;
+import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.apache.commons.fileupload.FileItem;
@@ -34,9 +37,17 @@ public class FileResource {
     @Inject
     GraphicService graphicService;
     @Inject
+    WorkSpaceService workSpaceService;
+    @Inject
+    TagService tagService;
+
+    @Inject
     PropertiesService propertiesService;
     @Inject
     DomainObjectFactory objectFactory;
+
+    private String tagId;
+    private String workspaceId;
 
     /* step 1. get a unique url */
     @GET
@@ -63,9 +74,23 @@ public class FileResource {
                 byte[] bytes = fileItem.get();
                 LOGGER.info("fileName:" + fileName + " size:" + size + " contentType:" + contentType);
                 key = dealUploadDataToCreateNewGraphic(fileName, size, contentType, bytes);
+            }else{
+                getWorkSpaceAndTagIdInfoFromUPloadFormData(fileItem);
             }
         }
         res.sendRedirect("file/" + key + "/meta");
+    }
+
+    private void getWorkSpaceAndTagIdInfoFromUPloadFormData(FileItem fileItem) {
+        String itemName =  fileItem.getName();
+        if("tag".equals(itemName)){
+            tagId = fileItem.getString();
+            LOGGER.info(tagId);
+        }
+        if("workspace".equals(itemName)){
+            workspaceId = fileItem.getString();
+            LOGGER.info(workspaceId);
+        }
     }
 
     private String dealUploadDataToCreateNewGraphic(String fileName, long size, String contentType, byte[] contents) {
@@ -73,6 +98,7 @@ public class FileResource {
         Properties properties = objectFactory.createProperties(fileName, size, contentType);
         storeProperties(properties);
         graphic.setProperties(properties);
+        TagDescription tag = tagService.getTagDescriptionById(tagId);
         graphic = graphicService.saveGraphic(contents, graphic);
         return graphic.getId().toString();
     }

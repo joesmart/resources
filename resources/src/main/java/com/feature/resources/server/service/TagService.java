@@ -1,5 +1,6 @@
 package com.feature.resources.server.service;
 
+import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.dto.TagDTO;
 
 import java.util.List;
@@ -14,4 +15,5 @@ public interface TagService {
     public void addNewTag(TagDTO tagDTO);
     public boolean exists(String tag);
     public List<TagDTO> getCurrentTagList();
+    public TagDescription getTagDescriptionById(String id);
 }

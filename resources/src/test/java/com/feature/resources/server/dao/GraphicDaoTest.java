@@ -2,18 +2,11 @@ package com.feature.resources.server.dao;
 
 import com.feature.resources.server.domain.Graphic;
 import com.google.code.morphia.query.Query;
-import com.google.common.base.Preconditions;
-import com.google.common.io.Resources;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import com.mongodb.util.JSON;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.List;
 
@@ -35,34 +28,6 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
             initData(string);
         }
         graphicDao = new GraphicDao(getDatastore());
-    }
-
-    public void initData(String collectionName) throws IOException {
-        List<String> collectionLists = getResourceStringList(collectionName);
-        DBCollection workSpacesColloection = getDatastore().getDB().getCollection(collectionName);
-        for (String json : collectionLists) {
-            System.out.println(json);
-            DBObject dbObject = (DBObject) JSON.parse(json);
-            workSpacesColloection.insert(dbObject);
-        }
-    }
-
-    public int resourceDataSize(String collectionName) {
-        List<String> collections = getResourceStringList(collectionName);
-        Preconditions.checkNotNull(collections);
-        return collections.size();
-    }
-
-    public List<String> getResourceStringList(String collectionName) {
-        try {
-            String resourceURL = "com/feature/resources/server/testdata/" + collectionName + ".json";
-            URL workSpaceUrl = Resources.getResource(resourceURL);
-            List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.defaultCharset());
-            return  collectionLists;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     @After

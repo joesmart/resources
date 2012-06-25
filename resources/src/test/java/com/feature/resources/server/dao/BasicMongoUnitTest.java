@@ -2,7 +2,12 @@ package com.feature.resources.server.dao;
 
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.Morphia;
+import com.google.common.base.Preconditions;
+import com.google.common.io.Resources;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
 import com.mongodb.Mongo;
+import com.mongodb.util.JSON;
 import de.flapdoodle.embedmongo.MongoDBRuntime;
 import de.flapdoodle.embedmongo.MongodExecutable;
 import de.flapdoodle.embedmongo.MongodProcess;
@@ -14,7 +19,10 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 import java.io.IOException;
+import java.net.URL;
 import java.net.UnknownHostException;
+import java.nio.charset.Charset;
+import java.util.List;
 
 /**
  * User: ZouYanjian
@@ -53,5 +61,33 @@ public class BasicMongoUnitTest {
 
     public static Datastore getDatastore() {
         return datastore;
+    }
+
+    public void initData(String collectionName) throws IOException {
+        List<String> collectionLists = getResourceStringList(collectionName);
+        DBCollection workSpacesColloection = getDatastore().getDB().getCollection(collectionName);
+        for (String json : collectionLists) {
+            System.out.println(json);
+            DBObject dbObject = (DBObject) JSON.parse(json);
+            workSpacesColloection.insert(dbObject);
+        }
+    }
+
+    public List<String> getResourceStringList(String collectionName) {
+        try {
+            String resourceURL = "com/feature/resources/server/testdata/" + collectionName + ".json";
+            URL workSpaceUrl = Resources.getResource(resourceURL);
+            List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.defaultCharset());
+            return  collectionLists;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public int resourceDataSize(String collectionName) {
+        List<String> collections = getResourceStringList(collectionName);
+        Preconditions.checkNotNull(collections);
+        return collections.size();
     }
 }

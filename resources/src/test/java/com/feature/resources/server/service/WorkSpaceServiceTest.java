@@ -36,7 +36,7 @@ public class WorkSpaceServiceTest {
     @Inject
     WorkSpaceService workSpaceService;
 
-    public static class Module extends JukitoModule{
+    public static class Module extends JukitoModule {
 
         @Override
         protected void configureTest() {
@@ -57,7 +57,7 @@ public class WorkSpaceServiceTest {
     }
 
     @Test
-    public void should_add_new_workspace_successful(WorkSpaceDao workSpaceDao){
+    public void should_add_new_workspace_successful(WorkSpaceDao workSpaceDao) {
         WorkSpaceDTO workspaceDTO = new WorkSpaceDTO();
         workspaceDTO.setName("hello");
         workSpaceService.addNewWorkspace(workspaceDTO);
@@ -65,22 +65,22 @@ public class WorkSpaceServiceTest {
     }
 
     @Test
-    public void should_return_true(WorkSpaceDao mockDao){
-        boolean result =workSpaceService.exists("test");
+    public void should_return_true(WorkSpaceDao mockDao) {
+        boolean result = workSpaceService.exists("test");
         verify(mockDao).isAreadyExists("test");
         assertThat(result).isEqualTo(true);
     }
 
     @Test
-    public void should_return_false(WorkSpaceDao mockDao){
+    public void should_return_false(WorkSpaceDao mockDao) {
         when(mockDao.isAreadyExists("xxxx")).thenReturn(false);
-        boolean result =workSpaceService.exists("xxxx");
+        boolean result = workSpaceService.exists("xxxx");
         verify(mockDao).isAreadyExists("xxxx");
         assertThat(result).isEqualTo(false);
     }
 
     @Test
-    public void should_return_workspace_list(WorkSpaceDao mockDao){
+    public void should_return_workspace_list(WorkSpaceDao mockDao) {
         List<WorkSpace> workSpaces = Lists.newArrayList();
         WorkSpace workSpace = new WorkSpace();
         workSpace.setName("text");
@@ -88,9 +88,23 @@ public class WorkSpaceServiceTest {
         workSpace.setId(id);
         workSpaces.add(workSpace);
         when(mockDao.getAllWorkSpace()).thenReturn(workSpaces);
-        List<WorkSpaceDTO> workSpaceList =  workSpaceService.getCurrentWorkSpaceList();
+        List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceList();
         Assert.assertNotNull(workSpaceList);
         Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
         verify(mockDao).getAllWorkSpace();
+    }
+
+    @Test
+    public void should_get_workspace_By_id(WorkSpaceDao mockDao) {
+        WorkSpace workSpace = new WorkSpace();
+        ObjectId id = new ObjectId();
+        workSpace.setId(id);
+        workSpace.setName("test");
+        when(mockDao.findOne("id", id)).thenReturn(workSpace);
+
+        WorkSpace workSpace1 = workSpaceService.getWorkSpaceById(id.toString());
+        assertThat(workSpace1).isNotNull();
+        assertThat(workSpace1.getName()).isEqualTo("test");
+        verify(mockDao).findOne("id", id);
     }
 }

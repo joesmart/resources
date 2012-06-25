@@ -14,7 +14,6 @@
 
 $(function () {
     'use strict';
-
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload();
 
@@ -27,12 +26,13 @@ $(function () {
             '/cors/result.html?%s'
         )
     );
+    var formdata = {workSpace:"",tag:""};
 
     $('#fileupload').fileupload('option', {
         url: '../rs/file',
         maxFileSize: 5000000,
         acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-        formData:{abcd:"test"},
+        formData:formdata,
         process: [
             {
                 action: 'load',
@@ -62,6 +62,37 @@ $(function () {
             });
     }
 
+    $.ajax({
+        url:"../rs/workspace/all",
+        type:'GET'
+    }).success(function(data){
+            $.each(data,function(index,value){
+                var option = $("<option/>").val(value.id).text(value.name);
+                $("#workspace").append(option);
+            });
+            console.log(data);
+        });
+
+    $.ajax({
+        url:"../rs/tag/all",
+        type:'GET'
+    }).success(function(data){
+            console.log(data);
+            $.each(data,function(index,value){
+                var option = $("<option/>").val(value.id).text(value.tag);
+                $("#tag").append(option);
+            });
+        });
+
+    $("#workspace").change(function(event){
+        console.log($(this).val());
+        formdata.workSpace = $(this).val();
+    });
+
+    $("#tag").change(function(event){
+        console.log($(this).val());
+        formdata.tag = $(this).val();
+    });
    /* if (window.location.hostname === 'blueimp.github.com') {
         // Demo settings:
         $('#fileupload').fileupload('option', {

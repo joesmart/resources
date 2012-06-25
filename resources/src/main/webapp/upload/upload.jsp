@@ -17,14 +17,25 @@
 
 <div class="container">
 
-        <h1>文件上传</h1>
-
-
+    <h1>文件上传</h1>
     <br>
+    <label>工作空间</label>
+    <select id="workspace">
+        <option value="">选择...</option>
+    </select>
+
+    <label>标签</label>
+    <select id="tag">
+        <option value="">选择...</option>
+    </select>
+
+
+
     <!-- The file upload form used as target for the file upload widget -->
     <form id="fileupload" action="server/php/" method="POST" enctype="multipart/form-data">
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-        <input type="hidden" name="example" value="test"/>
+        <input type="hidden" id="workspace_value" name="workspace"/>
+        <input type="hidden" id ="tag_value" name="tag"/>
 
         <div class="row fileupload-buttonbar">
             <div class="span7">
