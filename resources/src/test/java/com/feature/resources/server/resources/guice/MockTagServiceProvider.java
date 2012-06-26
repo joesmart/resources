@@ -1,5 +1,6 @@
 package com.feature.resources.server.resources.guice;
 
+import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.dto.TagDTO;
 import com.feature.resources.server.service.TagService;
 import com.feature.resources.server.service.impl.TagServiceImpl;
@@ -29,7 +30,11 @@ public class MockTagServiceProvider implements Provider<TagService> {
         tagDTO.setTag("mock");
         List<TagDTO> tagDTOList = Lists.newArrayList();
         tagDTOList.add(tagDTO);
+        TagDescription tagDescription = new TagDescription();
+        tagDescription.setId(id);
+        tagDescription.setTag("xxxx");
         tagService = Mockito.mock(TagServiceImpl.class);
+        when(tagService.getTagDescriptionById("xxxx")).thenReturn(tagDescription);
         when(tagService.exists("test")).thenReturn(false);
         when(tagService.exists("xxx")).thenReturn(true);
         when(tagService.getCurrentTagList()).thenReturn(tagDTOList);

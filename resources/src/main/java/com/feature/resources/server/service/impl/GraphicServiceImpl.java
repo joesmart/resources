@@ -2,9 +2,12 @@ package com.feature.resources.server.service.impl;
 
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
-import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.domain.*;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.service.PropertiesService;
+import com.feature.resources.server.service.TagService;
+import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
 import com.mongodb.gridfs.GridFSDBFile;
@@ -28,6 +31,14 @@ public class GraphicServiceImpl implements GraphicService {
     GraphicDao graphicDao;
     @Inject
     PropertiesDao propertiesDao;
+    @Inject
+    DomainObjectFactory objectFactory;
+    @Inject
+    PropertiesService propertiesService;
+    @Inject
+    private TagService tagService;
+    @Inject
+    private WorkSpaceService workSpaceService;
 
     private Integer width = 40;
     private Integer height = 40;
@@ -172,5 +183,23 @@ public class GraphicServiceImpl implements GraphicService {
         graphic.setName(graphicDTO.getName());
         graphic.setDescription(graphicDTO.getDescription());
         graphicDao.save(graphic);
+    }
+
+    public String dealUploadDataToCreateNewGraphic(byte[] contents, Graphic graphic) {
+        graphic = saveGraphic(contents, graphic);
+        return graphic.getId().toString();
+    }
+
+    public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId) {
+        Graphic graphic = objectFactory.createGraphic(fileName, contentType);
+        TagDescription tagDescription = tagService.getTagDescriptionById(tagId);
+        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
+
+        Properties properties = objectFactory.createProperties(fileName, size, contentType);
+        propertiesService.addNewProperties(properties);
+        graphic.setProperties(properties);
+        graphic.setWorkSpace(workSpace);
+        graphic.setTag(tagDescription);
+        return graphic;
     }
 }

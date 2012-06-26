@@ -1,5 +1,6 @@
 package com.feature.resources.server.resources;
 
+import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
@@ -29,6 +30,8 @@ public class FileResourceTest extends BasicJerseyTest {
 
     @Inject
     private TestDataObjectFactory testDataObjectFactory;
+    @Inject
+    private GraphicService graphicService;
 
     public FileResourceTest() {
         super();
@@ -68,5 +71,20 @@ public class FileResourceTest extends BasicJerseyTest {
         WebResource webResource = resource().path("file");
         webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE).post(mp);
     }
+
+    @Test
+    public void should_post_tag_and_workspace_info_success() {
+        final InputStream inputStream = testDataObjectFactory.getTestGraphicResource();
+        FormDataMultiPart mp = new FormDataMultiPart();
+        FormDataBodyPart tag = new FormDataBodyPart(FormDataContentDisposition.name("tag").build(), "xxxx");
+        FormDataBodyPart workSpace = new FormDataBodyPart(FormDataContentDisposition.name("workSpace").build(), "123456");
+        FormDataBodyPart inputStreamBody = new FormDataBodyPart(FormDataContentDisposition.name("file").fileName("graphics.png").size(1000L).build(), inputStream, MediaType.APPLICATION_OCTET_STREAM_TYPE);
+        mp.bodyPart(tag);
+        mp.bodyPart(workSpace);
+        mp.bodyPart(inputStreamBody);
+        WebResource webResource = resource().path("file");
+        webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE).post(mp);
+    }
+
 
 }

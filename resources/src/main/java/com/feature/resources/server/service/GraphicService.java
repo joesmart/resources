@@ -32,4 +32,8 @@ public interface GraphicService {
     public long getGraphicsTotalCount();
 
     public void updateGraphic(GraphicDTO graphicDTO);
+
+    public String dealUploadDataToCreateNewGraphic(byte[] contents, Graphic graphic);
+
+    public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId);
 }

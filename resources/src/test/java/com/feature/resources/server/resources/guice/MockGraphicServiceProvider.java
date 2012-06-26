@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -53,6 +54,7 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         when(graphicService.getGraphicsTotalCount()).thenReturn(100L);
         LOGGER.info("Mock IdString:" + idString);
         when(graphicService.get(anyString())).thenReturn(afterSaveGraphic);
+        when(graphicService.generateGraphic(anyString(),anyLong(),anyString(),anyString(),anyString())).thenReturn(afterSaveGraphic);
 //        when(graphicService.saveGraphic(bytes,any(Graphic.class))).thenReturn(afterSaveGraphic);
         generateGraphicListTestFixture(afterSaveGraphic, graphics);
         when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);

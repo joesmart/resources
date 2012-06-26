@@ -68,15 +68,29 @@ public class FileResource {
                 String fileName = fileItem.getName();
                 long size = fileItem.getSize();
                 String contentType = fileItem.getContentType();
-                byte[] bytes = fileItem.get();
                 LOGGER.info("fileName:" + fileName + " size:" + size + " contentType:" + contentType);
-                key = dealUploadDataToCreateNewGraphic(fileName, size, contentType, bytes);
+                Graphic graphic = graphicService.generateGraphic(fileName, size, contentType,tagId,workspaceId);
+                byte[] bytes = fileItem.get();
+                key = graphicService.dealUploadDataToCreateNewGraphic(bytes, graphic );
             }else{
                 getWorkSpaceAndTagIdInfoFromUPloadFormData(fileItem);
             }
         }
         res.sendRedirect("file/" + key + "/meta");
     }
+/*
+    private Graphic generateGraphic(String fileName, long size, String contentType) {
+        Graphic graphic = objectFactory.createGraphic(fileName, contentType);
+        TagDescription tagDescription = tagService.getTagDescriptionById(tagId);
+        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
+
+        Properties properties = objectFactory.createProperties(fileName, size, contentType);
+        propertiesService.addNewProperties(properties);
+        graphic.setProperties(properties);
+        graphic.setWorkSpace(workSpace);
+        graphic.setTag(tagDescription);
+        return graphic;
+    }*/
 
     private void getWorkSpaceAndTagIdInfoFromUPloadFormData(FileItem fileItem) {
         String fieldName =  fileItem.getFieldName();
@@ -90,25 +104,6 @@ public class FileResource {
         }
     }
 
-    private String dealUploadDataToCreateNewGraphic(String fileName, long size, String contentType, byte[] contents) {
-        Graphic graphic = objectFactory.createGraphic(fileName, contentType);
-        Properties properties = objectFactory.createProperties(fileName, size, contentType);
-        storeProperties(properties);
-        graphic.setProperties(properties);
-        TagDescription tag = tagService.getTagDescriptionById(tagId);
-        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
-        graphic.setWorkSpace(workSpace);
-        graphic.setTag(tag);
-        graphic = graphicService.saveGraphic(contents, graphic);
-        return graphic.getId().toString();
-    }
-    /**
-     * MongoDb must store Properties first then the Graphics and properties can setup relationship.
-     */
-
-    private void storeProperties(Properties properties) {
-        propertiesService.addNewProperties(properties);
-    }
 
     /* step 3. redirected to the meta info */
     @GET
