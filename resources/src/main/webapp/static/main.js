@@ -36,8 +36,19 @@ $(document).ready(function () {
 
         dialog.find("#name").addClass("disabled").css("width", text_length).val("");
         dialog.find("#name").addClass("disabled").css("width", text_length).attr("value", graphic.name);
+
         dialog.find("#description").addClass("disabled").css("width", text_length).val();
         dialog.find("#description").addClass("disabled").css("width", text_length).val(graphic.description);
+
+        dialog.find("#tag").addClass("disabled").css("width", text_length).val();
+        if(graphic.tag){
+            console.log(dialog.find("#tag"));
+            dialog.find("#tag").text(graphic.tag.tag);
+        }
+        if(graphic.workSpace){
+            console.log(dialog.find("#xxxx"));
+            dialog.find("#xxxx").text(graphic.workSpace.name);
+        }
 
         dialog.find("#uuid").text(graphic.properties.uuid);
         dialog.find("#path").text(graphic.properties.path);
@@ -159,8 +170,6 @@ $(document).ready(function () {
             tr.append(td);
         }
     };
-
-
 
     $.ajax(
         {

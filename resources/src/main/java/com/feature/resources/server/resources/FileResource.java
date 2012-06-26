@@ -1,9 +1,6 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.domain.DomainObjectFactory;
-import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.domain.Properties;
-import com.feature.resources.server.domain.TagDescription;
+import com.feature.resources.server.domain.*;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
 import com.feature.resources.server.service.GraphicService;
@@ -82,12 +79,12 @@ public class FileResource {
     }
 
     private void getWorkSpaceAndTagIdInfoFromUPloadFormData(FileItem fileItem) {
-        String itemName =  fileItem.getName();
-        if("tag".equals(itemName)){
+        String fieldName =  fileItem.getFieldName();
+        if("tag".equals(fieldName)){
             tagId = fileItem.getString();
             LOGGER.info(tagId);
         }
-        if("workspace".equals(itemName)){
+        if("workSpace".equals(fieldName)){
             workspaceId = fileItem.getString();
             LOGGER.info(workspaceId);
         }
@@ -99,6 +96,9 @@ public class FileResource {
         storeProperties(properties);
         graphic.setProperties(properties);
         TagDescription tag = tagService.getTagDescriptionById(tagId);
+        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
+        graphic.setWorkSpace(workSpace);
+        graphic.setTag(tag);
         graphic = graphicService.saveGraphic(contents, graphic);
         return graphic.getId().toString();
     }

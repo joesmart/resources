@@ -29,6 +29,10 @@
                     <input type="text" id="name"/>
                     <label>描述:</label>
                     <textarea rows="4" cols="10" id="description"></textarea>
+                    <label>类型信息:</label>
+                    <span id="tag"/>
+                    <label>工作空间:</label>
+                    <span id="xxxx" />
                     <br/>
                     <a id="properties" href="#" class="btn btn-large"><i class="icon-forward"></i>属性详情</a>
                 </form>
