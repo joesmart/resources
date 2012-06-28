@@ -4,6 +4,7 @@ import com.feature.resources.server.dao.TagDao;
 import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.dto.TagDTO;
 import com.feature.resources.server.service.impl.TagServiceImpl;
+import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
@@ -12,6 +13,8 @@ import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Matchers.any;
@@ -29,6 +32,9 @@ public class TagServiceTest {
 
     @Inject
     private TagService tagService;
+
+    @Inject
+    private TestDataObjectFactory taTestDataObjectFactory;
 
     public static class Module extends JukitoModule {
 
@@ -49,23 +55,23 @@ public class TagServiceTest {
     }
 
     @Test
-    public void should_return_true(TagDao tagDao) {
+    public void should_return_true_when_tag_already_exists(TagDao tagDao) {
         String str = "test";
-        when(tagDao.isAlreadyExists(str)).thenReturn(true);
+        when(tagDao.isAlreadyExists("tag", str)).thenReturn(true);
         boolean result = tagService.exists(str);
         assertThat(result).isTrue();
     }
 
     @Test
-    public void should_return_false(TagDao tagDao) {
+    public void should_return_false_when_tag_not_exists(TagDao tagDao) {
         String str = "xxx";
-        when(tagDao.isAlreadyExists(str)).thenReturn(false);
+        when(tagDao.isAlreadyExists("tag", str)).thenReturn(false);
         boolean result = tagService.exists(str);
         assertThat(result).isFalse();
     }
 
     @Test
-    public void should_get_tagDescription_byId(TagDao tagDao) {
+    public void should_get_tagDescription_successful_when_get_byId(TagDao tagDao) {
         TagDescription tagDescription = new TagDescription();
         ObjectId id = new ObjectId();
         tagDescription.setId(id);
@@ -76,4 +82,22 @@ public class TagServiceTest {
         assertThat(tag.getTag()).isEqualTo("test");
         verify(tagDao).findOne("id", id);
     }
+
+    @Test
+    public void should_get_all_entity_successful(TagDao tagDao){
+        List<TagDTO> tagDTOList;
+        String tag = "Test";
+        List<TagDescription> tagDescriptionList = taTestDataObjectFactory.createTagDescriptionList();
+        when(tagDao.getEntityList()).thenReturn(tagDescriptionList);
+        tagDTOList = tagService.getCurrentTagList();
+        assertThat(tagDTOList).isNotNull();
+        assertThat(tagDTOList.size()>0).isTrue();
+        assertThat(tagDTOList.size()).isEqualTo(tagDescriptionList.size());
+        for(int i=0;i<tagDTOList.size();i++){
+            tagDTOList.get(i);
+            assertThat(tagDTOList.get(i).getId()).isEqualTo(tagDescriptionList.get(i).getIdString());
+            assertThat(tagDTOList.get(i).getTag()).isEqualTo(tagDescriptionList.get(i).getTag());
+        }
+    }
+
 }

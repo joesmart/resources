@@ -29,12 +29,12 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
     }
 
     public boolean exists(String name) {
-        return  workSpaceDao.isAreadyExists(name);
+        return  workSpaceDao.isAlreadyExists("name", name);
     }
 
     @Override
     public List<WorkSpaceDTO> getCurrentWorkSpaceList() {
-        List<WorkSpace> workSpaces =  workSpaceDao.getAllWorkSpace();
+        List<WorkSpace> workSpaces =  workSpaceDao.getEntityList();
         List<WorkSpaceDTO> workSpaceDTOList = Lists.transform(workSpaces,new Function<WorkSpace, WorkSpaceDTO>() {
             @Override
             public WorkSpaceDTO apply(@Nullable WorkSpace input) {

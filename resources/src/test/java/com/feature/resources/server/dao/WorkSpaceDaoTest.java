@@ -3,10 +3,14 @@ package com.feature.resources.server.dao;
 import com.feature.resources.server.domain.WorkSpace;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.query.Query;
-import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.util.List;
+
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * User: ZouYanjian
@@ -16,11 +20,15 @@ import org.junit.Test;
  */
 public class WorkSpaceDaoTest extends BasicMongoUnitTest {
 
+
     @Before
-    public void setUp() {
-        WorkSpace workSpace = new WorkSpace();
-        workSpace.setName("test");
-        getDatastore().save(workSpace);
+    public void setUp() throws IOException {
+
+        String[] strings = {"WorkSpace"};
+        for (String string : strings) {
+            initData(string);
+        }
+
     }
 
     @After
@@ -30,16 +38,26 @@ public class WorkSpaceDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_return_true() throws Exception {
+    public void should_return_true_when_workspace_exists() throws Exception {
         Datastore ds = getDatastore();
         WorkSpaceDao dao = new WorkSpaceDao(ds);
-        Assertions.assertThat(dao.isAreadyExists("test")).isTrue();
+        assertThat(dao.isAlreadyExists("name", "test")).isTrue();
     }
 
     @Test
-    public void should_return_false() {
+    public void should_return_false_when_workspace_not_exists() {
         WorkSpaceDao dao = new WorkSpaceDao(getDatastore());
-        Assertions.assertThat(dao.isAreadyExists("xxx")).isFalse();
+        assertThat(dao.isAlreadyExists("name", "xxx")).isFalse();
+    }
+
+    @Test
+    public void should_return_all_entity(){
+        List<String> workspaceStringList = getResourceStringList("WorkSpace");
+
+        WorkSpaceDao workSpaceDao = new WorkSpaceDao(getDatastore());
+        List<WorkSpace> workSpaceList =workSpaceDao.getEntityList();
+        assertThat(workSpaceList).isNotNull();
+        assertThat(workSpaceList.size()).isEqualTo(workspaceStringList.size());
     }
 
 }

@@ -1,14 +1,19 @@
 package com.feature.resources.server.testdata;
 
+import com.feature.resources.server.domain.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
+import com.feature.resources.server.domain.TagDescription;
 import com.feature.resources.server.service.WorkSpaceService;
+import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
 import com.google.inject.Singleton;
+import org.bson.types.ObjectId;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -70,5 +75,41 @@ public class TestDataObjectFactory {
 
     public void setProperties(Properties properties) {
         this.properties = properties;
+    }
+
+    public TagDescription createTagDescription(String tag) {
+        TagDescription tagDescription = new TagDescription();
+        tagDescription.setId(new ObjectId());
+        tagDescription.setTag(tag);
+        return tagDescription;
+    }
+
+    public List<TagDescription> createTagDescriptionList(){
+        List<TagDescription> tagDescriptionList = Lists.newArrayList();
+        for(Integer i:new Integer[]{1,2,3,4,5}){
+            TagDescription tagDescription = createTagDescription(String.valueOf(i));
+            tagDescriptionList.add(tagDescription);
+        }
+        return tagDescriptionList;
+    }
+
+    public Graphic createGraphicByCheckStatusDesc(CheckStatusDesc checkStatusDesc) {
+        Graphic graphic = new Graphic();
+        graphic.setId(new ObjectId());
+        graphic.setName("hello");
+        graphic.setCheckStatus(checkStatusDesc.getValue());
+        graphic.setDescription("test");
+        return graphic;
+    }
+
+    public List<Graphic> createGraphicList(CheckStatusDesc checkStatusDesc,int listSize){
+        List<Graphic> graphics = Lists.newArrayList();
+        Graphic graphic;
+        for(int i=0;i<listSize;i++){
+            graphic = createGraphicByCheckStatusDesc(checkStatusDesc);
+            graphics.add(graphic);
+        }
+
+        return graphics;
     }
 }

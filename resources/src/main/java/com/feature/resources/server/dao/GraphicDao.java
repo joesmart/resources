@@ -20,7 +20,7 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         graphicQuery = createQuery();
     }
 
-    public List<Graphic> findAllByCreateAtTime(){
+    public List<Graphic> findAllByCreateAtTime() {
         List<Graphic> graphics = null;
         graphicQuery.order("-createDate");
         graphics = Lists.newArrayList(graphicQuery.iterator());
@@ -29,10 +29,10 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
 
     public List<Graphic> findByPage(int requestpage, int pageSize) {
         List<Graphic> graphics = null;
-        if(requestpage <1){
+        if (requestpage < 1) {
             requestpage = 1;
         }
-        int offset = (requestpage-1) * pageSize;
+        int offset = (requestpage - 1) * pageSize;
         ds.getMapper().createEntityCache();
         graphicQuery = createQuery();
         graphicQuery.order("-createDate");
@@ -40,9 +40,17 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         return graphics;
     }
 
-    public List<Graphic> findByPageAndQueryType(int requestpage,int pageSize,CheckStatusDesc desc){
-
-        return  null;
+    public List<Graphic> findByPageAndQueryType(int requestpage, int pageSize, CheckStatusDesc desc) {
+        List<Graphic> graphics = null;
+        if (requestpage < 1) {
+            requestpage = 1;
+        }
+        int offset = (requestpage - 1) * pageSize;
+        graphicQuery = createQuery();
+        if (!desc.equals(CheckStatusDesc.ALL))
+            graphicQuery.field("checkStatus").equal(desc.getValue());
+        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
+        return graphics;
     }
 
     public long getTotalRecordCount() {

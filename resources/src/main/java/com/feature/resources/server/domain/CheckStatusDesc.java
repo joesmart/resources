@@ -7,7 +7,8 @@ package com.feature.resources.server.domain;
  * FileName:CheckStatusDesc
  */
 public enum CheckStatusDesc {
-    CHECED,
+    ALL,
+    CHECKED,
     UNCHECKED;
 
     public String getValue(){

@@ -210,6 +210,6 @@ public class GraphicServiceImpl implements GraphicService {
 
     @Override
     public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
-        return null;
+        return  graphicDao.findByPageAndQueryType(requestPage,pageSize,CheckStatusDesc.valueOf(queryType));
     }
 }

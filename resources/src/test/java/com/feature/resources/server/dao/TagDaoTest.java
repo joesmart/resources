@@ -49,11 +49,11 @@ public class TagDaoTest extends BasicMongoUnitTest{
             DBObject object = (DBObject) JSON.parse(jsonStrings.get(0));
             value = (String) object.get("tag");
         }
-        assertThat(tagDao.isAlreadyExists(value)).isTrue();
+        assertThat(tagDao.isAlreadyExists("tag", value)).isTrue();
     }
     @Test
     public void should_return_false() throws Exception {
-        assertThat(tagDao.isAlreadyExists("xxxxxx")).isFalse();
+        assertThat(tagDao.isAlreadyExists("tag", "xxxxxx")).isFalse();
     }
 
     @Test

@@ -3,15 +3,11 @@ package com.feature.resources.server.dao;
 import com.feature.resources.server.domain.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.google.code.morphia.query.Query;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
 import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -69,17 +65,46 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
 
     @Test
     public void should_get_checked_graphic_when_it_checked(){
-        List<String> allGraphic = getResourceStringList("Graphic");
-        List<String> checkedList = Lists.newArrayList(Iterables.filter(allGraphic,new Predicate<String>() {
-            @Override
-            public boolean apply(@Nullable String input) {
-                boolean conditions =  input.contains("\"checkStatus\":\"CHECKED\"");
-                return conditions;
+        final  String statusDesc = CheckStatusDesc.CHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECKED);
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(checkedList.size());
+        for(Graphic graphic:graphics){
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+    }
 
-            }
-        }) );
-        System.out.println(checkedList.size());
-        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECED);
-        Assertions.assertThat(graphics).isNotNull();
+    @Test
+    public void should_get_checked_graphic_when_it_checked_and_pageSizeIs_less_than_7(){
+        final  String statusDesc = CheckStatusDesc.CHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.CHECKED);
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(checkedList.size()<4?checkedList.size():4);
+        for(Graphic graphic:graphics){
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+    }
+
+    @Test
+    public void should_get_unchecked_graphic_when_it_is_unchecked(){
+        final  String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.UNCHECKED);
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(checkedList.size()<4?checkedList.size():4);
+        for(Graphic graphic:graphics){
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
+        }
+    }
+
+    @Test
+    public void should_get_page_graphic_when_it_is_all(){
+        final  String statusDesc = CheckStatusDesc.ALL.getValue();
+        List<String> graphicList = getResourceStringList("Graphic");
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.ALL);
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(graphicList.size() < 4 ? graphicList.size() : 4);
     }
 }

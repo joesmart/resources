@@ -48,7 +48,7 @@ public class WorkSpaceServiceTest {
 
     @Before
     public void setUp(WorkSpaceDao workSpaceDao) throws Exception {
-        Mockito.when(workSpaceDao.isAreadyExists("test")).thenReturn(true);
+        Mockito.when(workSpaceDao.isAlreadyExists("name", "test")).thenReturn(true);
     }
 
     @After
@@ -67,15 +67,15 @@ public class WorkSpaceServiceTest {
     @Test
     public void should_return_true(WorkSpaceDao mockDao) {
         boolean result = workSpaceService.exists("test");
-        verify(mockDao).isAreadyExists("test");
+        verify(mockDao).isAlreadyExists("name", "test");
         assertThat(result).isEqualTo(true);
     }
 
     @Test
     public void should_return_false(WorkSpaceDao mockDao) {
-        when(mockDao.isAreadyExists("xxxx")).thenReturn(false);
+        when(mockDao.isAlreadyExists("name", "xxxx")).thenReturn(false);
         boolean result = workSpaceService.exists("xxxx");
-        verify(mockDao).isAreadyExists("xxxx");
+        verify(mockDao).isAlreadyExists("name", "xxxx");
         assertThat(result).isEqualTo(false);
     }
 
@@ -87,11 +87,11 @@ public class WorkSpaceServiceTest {
         ObjectId id = new ObjectId();
         workSpace.setId(id);
         workSpaces.add(workSpace);
-        when(mockDao.getAllWorkSpace()).thenReturn(workSpaces);
+        when(mockDao.getEntityList()).thenReturn(workSpaces);
         List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceList();
         Assert.assertNotNull(workSpaceList);
         Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
-        verify(mockDao).getAllWorkSpace();
+        verify(mockDao).getEntityList();
     }
 
     @Test

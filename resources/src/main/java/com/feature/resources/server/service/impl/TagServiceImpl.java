@@ -34,12 +34,12 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public boolean exists(String tag) {
-        return  tagDao.isAlreadyExists(tag);
+        return  tagDao.isAlreadyExists("tag", tag);
     }
 
     @Override
     public List<TagDTO> getCurrentTagList() {
-        List<TagDescription> tagDescriptions  = tagDao.getAllTagDescription();
+        List<TagDescription> tagDescriptions  = tagDao.getEntityList();
         List<TagDTO> tagDTOList = Lists.transform(tagDescriptions,new Function<TagDescription, TagDTO>() {
             @Override
             public TagDTO apply(@Nullable TagDescription input) {

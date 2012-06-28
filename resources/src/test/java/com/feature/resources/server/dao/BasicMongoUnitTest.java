@@ -3,6 +3,9 @@ package com.feature.resources.server.dao;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.Morphia;
 import com.google.common.base.Preconditions;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
@@ -18,6 +21,7 @@ import lombok.ToString;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.net.URL;
 import java.net.UnknownHostException;
@@ -89,5 +93,21 @@ public class BasicMongoUnitTest {
         List<String> collections = getResourceStringList(collectionName);
         Preconditions.checkNotNull(collections);
         return collections.size();
+    }
+
+    protected List<String> getGraphicStringListByCheckStatus(final String statusDesc) {
+        List<String> allGraphic = getResourceStringList("Graphic");
+        List<String> checkedList = Lists.newArrayList(Iterables.filter(allGraphic, new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String input) {
+                boolean conditions = input.contains("\"checkStatus\":" +
+                        "\"" +
+                        statusDesc +
+                        "\"");
+                return conditions;
+            }
+        }));
+        System.out.println(checkedList.size());
+        return checkedList;
     }
 }
