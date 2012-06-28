@@ -1,11 +1,17 @@
 package com.feature.resources.server.dao;
 
+import com.feature.resources.server.domain.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.google.code.morphia.query.Query;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
+import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -59,6 +65,21 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         long  totalRecordCount  = graphicDao.getTotalRecordCount();
         int graphicSize = resourceDataSize("Graphic");
         assertThat(totalRecordCount).isEqualTo(graphicSize);
+    }
 
+    @Test
+    public void should_get_checked_graphic_when_it_checked(){
+        List<String> allGraphic = getResourceStringList("Graphic");
+        List<String> checkedList = Lists.newArrayList(Iterables.filter(allGraphic,new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String input) {
+                boolean conditions =  input.contains("\"checkStatus\":\"CHECKED\"");
+                return conditions;
+
+            }
+        }) );
+        System.out.println(checkedList.size());
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECED);
+        Assertions.assertThat(graphics).isNotNull();
     }
 }

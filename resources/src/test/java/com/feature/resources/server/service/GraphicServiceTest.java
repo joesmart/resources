@@ -11,6 +11,7 @@ import com.google.inject.Inject;
 import com.google.inject.Scopes;
 import com.mongodb.gridfs.GridFSDBFile;
 import org.bson.types.ObjectId;
+import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
@@ -148,5 +149,11 @@ public class GraphicServiceTest {
         List<Graphic> graphics = graphicService.findGraphicByPage(1,10);
         verify(graphicDao,only()).findByPage(1,10);
         assertThat(graphics.size()).isEqualTo(10);
+    }
+
+    @Test
+    public void should_return_all_Graphic_when_queryType_is_all(){
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,"all");
+        Assertions.assertThat(pageGraphic).isNotNull();
     }
 }

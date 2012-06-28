@@ -1,6 +1,7 @@
 package com.feature.resources.server.domain;
 
 import com.google.code.morphia.annotations.Entity;
+import com.google.common.base.Objects;
 
 /**
  * User: ZouYanjian
@@ -18,5 +19,10 @@ public class WorkSpace extends ResourceEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this).add("id",getId().toString()).add("name",name).toString();
     }
 }

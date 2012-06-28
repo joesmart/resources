@@ -21,7 +21,7 @@ public class Graphic extends ResourceEntity {
     @Reference
     private WorkSpace workSpace;
     private TagDescription tag;
-
+    private String checkStatus;
 
     public  Graphic(){
         super.setType("Graphic");
@@ -97,11 +97,22 @@ public class Graphic extends ResourceEntity {
     public void setWorkSpace(WorkSpace workSpace) {
         this.workSpace = workSpace;
     }
+
+    public String getCheckStatus() {
+        return checkStatus;
+    }
+
+    public void setCheckStatus(String checkStatus) {
+        this.checkStatus = checkStatus;
+    }
+
     public String toString(){
         return  Objects.toStringHelper(this)
-                 .add("name",getName())
-                .add("description",getDescription())
+                 .add("name", getName())
+                .add("description", getDescription())
                 .add("tag",getTag())
+                .add("workspace",getWorkSpace())
+                .add("checkStatus",getCheckStatus())
                 .toString();
     }
 }

@@ -36,4 +36,6 @@ public interface GraphicService {
     public String dealUploadDataToCreateNewGraphic(byte[] contents, Graphic graphic);
 
     public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId);
+
+    List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType);
 }

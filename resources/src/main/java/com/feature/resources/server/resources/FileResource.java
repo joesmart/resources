@@ -1,6 +1,7 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.domain.*;
+import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
 import com.feature.resources.server.service.GraphicService;

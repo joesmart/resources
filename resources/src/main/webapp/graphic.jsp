@@ -7,6 +7,8 @@
 <c:set var="request" value="${pageContext.request}"/>
 <c:set var="graphics" value="${requestScope.graphics}"/>
 
+
+
 <html>
 <head>
     <title>资源列表</title>
@@ -14,10 +16,7 @@
 </head>
 <body>
 
-    <div id="dataTable" class="container" style="width: 900px;">
-
-    </div>
-
+    <input id="queryType" type="hidden" value="<c:out value="${param.type}" />" />
     <div id="detail_panel" class="container-fluid" style="display:none;">
         <div class="row-fluid">
             <div class="span6">
@@ -30,9 +29,12 @@
                     <label>描述:</label>
                     <textarea rows="4" cols="10" id="description"></textarea>
                     <label>类型信息:</label>
-                    <span id="tag"/>
+                    <span id="tag"></span>
+                    <select id="tag_selector" style="display: none;">
+                    </select>
+                    <br/>
                     <label>工作空间:</label>
-                    <span id="xxxx" />
+                    <span id="workSpace"></span>
                     <br/>
                     <a id="properties" href="#" class="btn btn-large"><i class="icon-forward"></i>属性详情</a>
                 </form>

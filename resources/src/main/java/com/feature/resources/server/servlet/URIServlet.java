@@ -25,7 +25,8 @@ public class URIServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse response) throws ServletException, IOException {
-        httpServletRequest.getRequestDispatcher("/graphic.jsp").forward(httpServletRequest, response);
+        String type = httpServletRequest.getParameter("type");
+        httpServletRequest.getRequestDispatcher("/graphic.jsp?type="+type).forward(httpServletRequest, response);
     }
 
     @Override

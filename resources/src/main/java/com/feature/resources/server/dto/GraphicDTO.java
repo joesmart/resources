@@ -10,6 +10,7 @@ public class GraphicDTO {
     private String id;
     private String name;
     private String description;
+    private String tagId;
     private String size;
     private String url;
 
@@ -51,5 +52,13 @@ public class GraphicDTO {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getTagId() {
+        return tagId;
+    }
+
+    public void setTagId(String tagId) {
+        this.tagId = tagId;
     }
 }

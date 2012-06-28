@@ -179,9 +179,14 @@ public class GraphicServiceImpl implements GraphicService {
 
     @Override
     public void updateGraphic(GraphicDTO graphicDTO) {
+        TagDescription tagDescription = tagService.getTagDescriptionById(graphicDTO.getTagId());
+
         Graphic graphic  = get(graphicDTO.getId());
         graphic.setName(graphicDTO.getName());
         graphic.setDescription(graphicDTO.getDescription());
+        if(tagDescription != null){
+            graphic.setTag(tagDescription);
+        }
         graphicDao.save(graphic);
     }
 
@@ -201,5 +206,10 @@ public class GraphicServiceImpl implements GraphicService {
         graphic.setWorkSpace(workSpace);
         graphic.setTag(tagDescription);
         return graphic;
+    }
+
+    @Override
+    public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
+        return null;
     }
 }

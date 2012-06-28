@@ -1,5 +1,6 @@
 package com.feature.resources.server.dao;
 
+import com.feature.resources.server.domain.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.query.Query;
@@ -37,6 +38,11 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         graphicQuery.order("-createDate");
         graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
         return graphics;
+    }
+
+    public List<Graphic> findByPageAndQueryType(int requestpage,int pageSize,CheckStatusDesc desc){
+
+        return  null;
     }
 
     public long getTotalRecordCount() {

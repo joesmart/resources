@@ -40,14 +40,14 @@ $(document).ready(function () {
         dialog.find("#description").addClass("disabled").css("width", text_length).val();
         dialog.find("#description").addClass("disabled").css("width", text_length).val(graphic.description);
 
-        dialog.find("#tag").addClass("disabled").css("width", text_length).val();
+
         if(graphic.tag){
-            console.log(dialog.find("#tag"));
-            dialog.find("#tag").text(graphic.tag.tag);
+            dialog.find("#tag").addClass("disabled").css("width", text_length).text();
+            dialog.find("#tag").addClass("disabled").css("width", text_length).text(graphic.tag.tag);
         }
         if(graphic.workSpace){
-            console.log(dialog.find("#xxxx"));
-            dialog.find("#xxxx").text(graphic.workSpace.name);
+            dialog.find("#workSpace").addClass("disabled").css("width", text_length).text();
+            dialog.find("#workSpace").addClass("disabled").css("width", text_length).text(graphic.workSpace.name);
         }
 
         dialog.find("#uuid").text(graphic.properties.uuid);
@@ -56,6 +56,17 @@ $(document).ready(function () {
         dialog.find("#createTime").text(new Date(graphic.properties.updateDate));
         dialog.find("#save_button").css("display", "none");
     }
+
+    $.ajax({
+        url:"../rs/tag/all",
+        type:'GET'
+    }).success(function(data){
+            console.log(data);
+            $.each(data,function(index,value){
+                var option = $("<option/>").val(value.id).text(value.tag);
+                $("#tag_selector").append(option);
+            });
+        });
 
     var options = {
         header:header,
@@ -86,6 +97,8 @@ $(document).ready(function () {
             };
             var dialog = $("#detail_panel").dialog(detail_option);
             dialog.dialog("close");
+            dialog.find("#tag").css("display","block");
+            dialog.find("#tag_selector").css("display","none");
             populateDetailPanelData(dialog,detail_option, graphic);
             dialog.dialog("open");
         },
@@ -101,16 +114,28 @@ $(document).ready(function () {
             var dialog = $("#detail_panel").dialog(detail_option);
             dialog.dialog("close");
             populateDetailPanelData(dialog,detail_option, graphic);
+            dialog.find("#tag").css("display","none");
+            dialog.find("#tag_selector").css("display","block");
             dialog.find("#save_button").css("display","block");
+            if(graphic.tag){
+                $("#tag_selector option[value='"+graphic.tag.idString+"']").attr("selected","selected");
+            }
+//            $("#tag_selector option[value='"+graphic.tag.id+"']");
             dialog.dialog("open");
+            var tagId;
             var context = $(this);
-            $("#save_button").live("click",function(){
+            $("#save_button").click(function(){
                 graphic.name =   dialog.find("#name").val();
                 graphic.description =  dialog.find("#description").val();
+                tagId = $("#tag_selector option:selected").attr("value");
+//                console.log($("#tag_selector option:selected"));
+//                console.log($("#tag_selector option:selected").attr("value"));
+                console.log("xxx");
+
                 $.ajax({
                     type:"POST",
                     url:"../rs/graphics/update",
-                    data:JSON.stringify({id:graphic.idString,name:graphic.name,description:graphic.description}),
+                    data:JSON.stringify({id:graphic.idString,name:graphic.name,description:graphic.description,tagId:tagId}),
                     dataType:"json",
                     contentType:"application/json; charset=UTF-8",
                     beforeSend: function(x) {
@@ -171,6 +196,7 @@ $(document).ready(function () {
         }
     };
 
+    var queryType = $("#queryType").val();
     $.ajax(
         {
             url:"/resources/rs/graphics/pageinfo",
@@ -181,7 +207,7 @@ $(document).ready(function () {
             $.ajax({
                 url:"/resources/rs/graphics/page",
                 type:"GET",
-                data:"requestPage=0&pageSize=" + options.page_info.pageSize
+                data:"requestPage=0&pageSize=" + options.page_info.pageSize+"&queryType="+queryType
             }).success(function (data) {
                     console.log(data);
                     options.data = data.dataList;
