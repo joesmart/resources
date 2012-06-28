@@ -295,7 +295,7 @@
 
     <build>
         <plugins>
-           <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
@@ -306,6 +306,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
+                            <encoding>utf-8</encoding>
                             <outputDirectory>${basedir}/target/classes</outputDirectory>
                             <resources>
                                 <resource>
@@ -316,7 +317,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -344,6 +345,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
+                    <encoding>utf-8</encoding>
                     <source>1.6</source>
                     <target>1.6</target>
                     <compilerArguments>

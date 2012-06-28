@@ -1,7 +1,6 @@
 package com.feature.resources.server.dao;
 
-import com.feature.resources.server.domain.CheckStatusDesc;
-import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.domain.*;
 import com.google.code.morphia.query.Query;
 import org.fest.assertions.Assertions;
 import org.junit.After;
@@ -25,6 +24,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
 
     @Before
     public void setUp() throws IOException {
+        tearDown();
         String[] strings = {"WorkSpace", "TagDescription", "Properties", "Graphic"};
         for (String string : strings) {
             initData(string);
@@ -36,6 +36,12 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     public void tearDown() {
         Query<Graphic> query = getDatastore().createQuery(Graphic.class);
         getDatastore().delete(query);
+        Query<Properties> propertiesQuery = getDatastore().createQuery(Properties.class);
+        getDatastore().delete(propertiesQuery);
+        Query<TagDescription> tagDescriptionQuery = getDatastore().createQuery(TagDescription.class);
+        getDatastore().delete(tagDescriptionQuery);
+        Query<WorkSpace> workSpaceQuery = getDatastore().createQuery(WorkSpace.class);
+        getDatastore().delete(workSpaceQuery);
     }
 
     @Test

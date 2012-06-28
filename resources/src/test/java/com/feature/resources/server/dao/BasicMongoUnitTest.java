@@ -81,7 +81,7 @@ public class BasicMongoUnitTest {
         try {
             String resourceURL = "com/feature/resources/server/testdata/" + collectionName + ".json";
             URL workSpaceUrl = Resources.getResource(resourceURL);
-            List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.defaultCharset());
+            List<String> collectionLists = Resources.readLines(workSpaceUrl, Charset.forName("UTF-8"));
             return  collectionLists;
         } catch (IOException e) {
             e.printStackTrace();
