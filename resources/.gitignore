@@ -1,2 +1,8 @@
 /logs
 /target
+/.settings
+/.classpath
+/.project
+/resources.iml
+/resources.ipr
+/resources.iws
