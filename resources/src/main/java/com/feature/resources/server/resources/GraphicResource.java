@@ -87,7 +87,8 @@ public class GraphicResource {
                                                            @QueryParam("queryType") String queryType
                                                             ) {
         LOGGER.info("Query Type:"+queryType);
-        List<Graphic> graphics = graphicService.findGraphicByPage(requestPage,pageSize);
+//        List<Graphic> graphics = graphicService.findGraphicByPage(requestPage,pageSize);
+        List<Graphic> graphics = graphicService.findGraphicByPageAndQueryType(requestPage,pageSize,queryType);
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
         dataListInfo.setDataList(graphics);
         dataListInfo.setName("Graphics");

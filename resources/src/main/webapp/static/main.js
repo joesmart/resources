@@ -204,6 +204,7 @@ $(document).ready(function () {
         }
     ).success(function (data) {
             options.page_info = data;
+            options.queryType=queryType;
             $.ajax({
                 url:"/resources/rs/graphics/page",
                 type:"GET",

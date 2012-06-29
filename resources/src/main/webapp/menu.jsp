@@ -6,7 +6,7 @@
     <a style="width: 80px" href="${ctx}/servlet/menu?type=all" class="btn btn-primary btn-large btn">全部</a>
     <br/>
     <br/>
-    <a style="width: 80px" href="${ctx}/servlet/menu?type=uncheck" class="btn btn-primary btn-large btn">未审核</a>
+    <a style="width: 80px" href="${ctx}/servlet/menu?type=unchecked" class="btn btn-primary btn-large btn">未审核</a>
     <br/>
     <br/>
     <a style="width: 80px" href="${ctx}/servlet/menu?type=latest" class="btn btn-primary btn-large btn">最近上传</a>

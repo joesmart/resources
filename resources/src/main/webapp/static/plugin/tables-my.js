@@ -15,17 +15,6 @@
                 var id_array = [];
                 if ($(event.target).prop("checked") == true) {
                     $("table input:checkbox").prop("checked", true);
-                    /* console.log($("table input:checkbox").length);
-                     var checkboxes = $("table input:checkbox");
-                     if(checkboxes.length > 0){
-                     checkboxes.each(function(index){
-                     if($(this).attr("id")){
-                     id_array.push($(this).attr("id"));
-                     }
-                     })
-                     }
-                     console.log();
-                     options.myMethod(checkboxes,id_array.join(","));*/
                 } else {
                     $("table input:checkbox").prop("checked", false);
                 }
@@ -259,9 +248,9 @@
                 ).success(function (data) {
                         options.page_info = data;
                         $.ajax({
-                            url:"/resources/rs/graphics/page",
+                            url:options.page_request_url,
                             type:"GET",
-                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize
+                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize+"&queryType="+options.queryType
                         }).success(function (data) {
                                 console.log(data);
                                 options.data = data.dataList;
@@ -289,9 +278,9 @@
                 ).success(function (data) {
                         options.page_info = data;
                         $.ajax({
-                            url:"/resources/rs/graphics/page",
+                            url:options.page_request_url,
                             type:"GET",
-                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize
+                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize+"&queryType="+options.queryType
                         }).success(function (data) {
                                 console.log(data);
                                 options.data = data.dataList;
@@ -338,9 +327,10 @@
                 console.log("randomNum:"+randomNum);
                 current_page = paginationItemClick.call(this, current_page, options);
                 $.ajax(
-                    {url:options.page_request_url,
+                    {
+                    url:options.page_request_url,
                     type:'GET',
-                    data:"requestPage="+current_page+"&pageSize="+options.page_info.pageSize
+                    data:"requestPage="+current_page+"&pageSize="+options.page_info.pageSize+"&queryType="+options.queryType
                     }).success(
                     function(data){
                         console.log("data_update");

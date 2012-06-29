@@ -9,7 +9,8 @@ package com.feature.resources.server.domain;
 public enum CheckStatusDesc {
     ALL,
     CHECKED,
-    UNCHECKED;
+    UNCHECKED,
+    LATEST;
 
     public String getValue(){
         return  this.toString();
