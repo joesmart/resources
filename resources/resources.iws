@@ -863,7 +863,11 @@
       <created>1341011664544</created>
       <updated>1341011664544</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update readme.md">
+      <created>1341011710712</created>
+      <updated>1341011710712</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
