@@ -82,12 +82,12 @@ public class GraphicResource {
     @GET
     @Path("/page")
     @Produces({MediaType.APPLICATION_JSON})
-    public DataListInfo<Graphic> getGraphicsPage(@QueryParam("requestPage")int requestPage,
-                                                           @QueryParam("pageSize") int pageSize,
-                                                           @QueryParam("queryType") String queryType
-                                                            ) {
+    public DataListInfo<Graphic> getGraphicsPage(
+    											 @QueryParam("requestPage")int requestPage,
+                                                 @QueryParam("pageSize") int pageSize,
+                                                 @QueryParam("queryType") String queryType
+                                                ){
         LOGGER.info("Query Type:"+queryType);
-//        List<Graphic> graphics = graphicService.findGraphicByPage(requestPage,pageSize);
         List<Graphic> graphics = graphicService.findGraphicByPageAndQueryType(requestPage,pageSize,queryType);
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
         dataListInfo.setDataList(graphics);
