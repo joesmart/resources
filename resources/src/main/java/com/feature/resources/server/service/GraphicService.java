@@ -1,6 +1,7 @@
 package com.feature.resources.server.service;
 
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 
 import java.io.InputStream;
@@ -37,5 +38,7 @@ public interface GraphicService {
 
     public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId);
 
-    List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType);
+    public  List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType);
+
+    public void checkGraphics(GraphicCheckDTO graphicCheckDTO);
 }

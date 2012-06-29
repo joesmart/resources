@@ -61,7 +61,6 @@ $(document).ready(function () {
         url:"../rs/tag/all",
         type:'GET'
     }).success(function(data){
-            console.log(data);
             $.each(data,function(index,value){
                 var option = $("<option/>").val(value.id).text(value.tag);
                 $("#tag_selector").append(option);
@@ -179,6 +178,49 @@ $(document).ready(function () {
                 }
             };
             dialog = $('<div/>').append($('<h3/>').text("是否确认删除?")).addClass("container");
+            dialog.dialog(detail_option);
+            dialog.dialog('open');
+
+        },
+        batch_check_confirm:function (parent, graphic_id_array) {
+            var form = $("<form/>").append($("<label/>").text("审核结果:"));
+            var checkResult = $("<select>" +
+                "<option value='checked'>审核通过</option>" +
+                "<option value='unchecked'>审核不通过</option>" +
+                "</select>");
+            form.append(checkResult);
+            form.css("display","block");
+            var flashMessage = $("<div/>").css("display","none");
+
+            var detail_option = {
+                width:300,
+                height:200,
+                position:'center',
+                title:"审核",
+                buttons:{
+                    "确定":function () {
+                      if(graphic_id_array.length == 0){
+                          form.css("display","none");
+                          flashMessage.css("display","block").addClass("alert").html("<span>未选择审核条目</span>");
+                      }else{
+                          console.log(checkResult.find("option:selected").attr("value"));
+                          var checkResultValue = checkResult.find("option:selected").attr("value");
+                          var data = {};
+                          data.checkResult=checkResultValue;
+                          data.list = graphic_id_array;
+
+                          //TODO 提交服务器审核.
+                      }
+
+                    },
+                    "取消":function () {
+                        $(this).dialog("close");
+                    }
+                }
+            };
+
+            dialog = $('<div/>').append(form).addClass("container").append(flashMessage);
+
             dialog.dialog(detail_option);
             dialog.dialog('open');
 

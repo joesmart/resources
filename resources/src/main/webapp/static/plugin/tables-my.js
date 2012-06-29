@@ -227,98 +227,96 @@
         options.map = map;
     }
 
+    function updateServerData(data, options, current_page) {
+        if (data.message == "success") {
+            $.ajax(
+                {
+                    url:"/resources/rs/graphics/pageinfo",
+                    type:"GET"
+                }
+            ).success(function (data) {
+                    options.page_info = data;
+                    $.ajax({
+                        url:options.page_request_url,
+                        type:"GET",
+                        data:"requestPage=" + current_page + "&pageSize=" + options.page_info.pageSize + "&queryType=" + options.queryType
+                    }).success(function (data) {
+                            console.log(data);
+                            options.data = data.dataList;
+                            generateClientCache(options);
+                            $('#dataContainer tbody tr').remove();
+                            var _table_body = $('#dataContainer tbody ');
+                            if (_table_body) {
+                                crateTableBody(options, _table_body);
+                            }
+                        });
+                }).fail(function (data) {
+                    console.log(data);
+                });
+
+        }
+    }
+
+    function dataDeleteListener(options, current_page) {
+        $.subscribe("/data/delete", function (topic, data) {
+           updateServerData(data,options,current_page);
+        });
+    }
+
+    function dataSaveListener(options, current_page) {
+        $.subscribe("/data/saved", function (topic, data) {
+            updateServerData(data, options, current_page);
+        });
+    }
+
     $.fn.myTables = function (options) {
         var current_page = 0;
-        // Here's a best practice for overriding 'defaults'
-        // with specified options. Note how, rather than a
-        // regular defaults object being passed as the second
-        // parameter, we instead refer to $.fn.pluginName.options
-        // explicitly, merging it with the options passed directly
-        // to the plugin. This allows us to override options both
-        // globally and on a per-call level.
-
         var tables;
-        $.subscribe("/data/delete",function(topic,data){
-            if(data.message == "success"){
-                $.ajax(
-                    {
-                        url:"/resources/rs/graphics/pageinfo",
-                        type:"GET"
-                    }
-                ).success(function (data) {
-                        options.page_info = data;
-                        $.ajax({
-                            url:options.page_request_url,
-                            type:"GET",
-                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize+"&queryType="+options.queryType
-                        }).success(function (data) {
-                                console.log(data);
-                                options.data = data.dataList;
-                                generateClientCache(options);
-                                $('#dataContainer tbody tr').remove();
-                                var _table_body = $('#dataContainer tbody ');
-                                if(_table_body){
-                                    crateTableBody(options,_table_body);
-                                }
-                            });
-                    }).fail(function (data) {
-                        console.log(data);
-                    });
+        dataDeleteListener(options, current_page);
 
-            }
-        });
-
-        $.subscribe("/data/saved",function(topic,data){
-            if(data.message == "success"){
-                $.ajax(
-                    {
-                        url:"/resources/rs/graphics/pageinfo",
-                        type:"GET"
-                    }
-                ).success(function (data) {
-                        options.page_info = data;
-                        $.ajax({
-                            url:options.page_request_url,
-                            type:"GET",
-                            data:"requestPage="+current_page+"&pageSize=" + options.page_info.pageSize+"&queryType="+options.queryType
-                        }).success(function (data) {
-                                console.log(data);
-                                options.data = data.dataList;
-                                generateClientCache(options);
-                                $('#dataContainer tbody tr').remove();
-                                var _table_body = $('#dataContainer tbody ');
-                                if(_table_body){
-                                    crateTableBody(options,_table_body);
-                                }
-                            });
-                    }).fail(function (data) {
-                        console.log(data);
-                    });
-
-            }
-        });
+        dataSaveListener(options, current_page);
 
         $.subscribe("/data/initialize",function(topic,data){
-            console.log(topic);
-            console.log(data);
             updateTable(options, data);
         });
 
         options = $.extend({}, $.fn.myTables.options, options);
 
         generateClientCache(options);
+        var batchDeleteButton = $("<a/>").addClass("btn btn-small btn-danger pull-right")
+                                    .attr('href', 'javascript:void(0)')
+                                    .text("删除");
+
+        var batchCheckButton = $("<a/>").addClass("btn btn-small btn-info pull-right")
+                                         .attr('href', 'javascript:void(0)')
+                                         .text("审核");
+
+        batchCheckButton.click(function(event){
+            var id_array = new Array();
+            var checkboxes = $("table input:checked");
+            if(checkboxes.length > 0){
+                checkboxes.each(function(index){
+                    if($(this).attr("id")){
+                        id_array.push($(this).attr("id"));
+                    }
+                });
+            }
+            options.batch_check_confirm(this,id_array);
+        });
+
+        var buttons = $("<div/>").append(batchDeleteButton).append(batchCheckButton);
 
         return this.each(function () {
             current_page = 1;
             var filter_array = ["first","next","prev","last"];
-            console.log("xxx");
             tables = createTable(options);
+
             //把table 放到 Div 里.
             var pagination = createPagination(options,current_page);
             //把pagination 放到div 中去.
             var _div_pagination = $("<div/>").addClass("pagination").append(pagination);
             //添加 table 和 pagination
-            $(this).addClass("well container well-large").append(tables).append(_div_pagination);
+            $(this).addClass("well container well-large").append(buttons).append(tables).append(_div_pagination);
 
             updatePaginationToolbarStatus(options,current_page);
             $(".pagination ul li a").live("click",function(){

@@ -4,6 +4,7 @@ import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.service.impl.GraphicServiceImpl;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.code.morphia.Datastore;
@@ -187,5 +188,19 @@ public class GraphicServiceTest {
         List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.UNCHECKED.getValue());
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size()<10?uncheckedList.size():10);
+    }
+
+    @Test
+    public void should_call_graphicDao_updateCheckStatus_method_when_check_graphics(GraphicDao graphicDao){
+        GraphicCheckDTO graphicCheckDTO = new GraphicCheckDTO();
+        graphicCheckDTO.setCheckResult("checked");
+        List<String> graphicIDList = Lists.newArrayList();
+        for(int i=0;i<10;i++){
+            graphicIDList.add(new ObjectId().toString());
+        }
+        graphicCheckDTO.setGraphicIds(graphicIDList);
+        when(graphicDao.updateCheckStatus(graphicIDList,CheckStatusDesc.valueOf(graphicCheckDTO.getCheckResult()))).thenReturn(10);
+        graphicService.checkGraphics(graphicCheckDTO);
+        verify(graphicDao).updateCheckStatus(graphicIDList,CheckStatusDesc.CHECKED);
     }
 }

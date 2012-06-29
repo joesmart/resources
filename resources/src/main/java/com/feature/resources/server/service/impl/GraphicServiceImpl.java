@@ -3,6 +3,7 @@ package com.feature.resources.server.service.impl;
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.*;
+import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
@@ -212,5 +213,11 @@ public class GraphicServiceImpl implements GraphicService {
     public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
         String uppcaseQueryType = queryType.toUpperCase();
         return  graphicDao.findByPageAndQueryType(requestPage,pageSize,CheckStatusDesc.valueOf(uppcaseQueryType));
+    }
+
+    @Override
+    public void checkGraphics(GraphicCheckDTO graphicCheckDTO) {
+        int row =graphicDao.updateCheckStatus(graphicCheckDTO.getGraphicIds(),CheckStatusDesc.valueOf(graphicCheckDTO.getCheckResult()));
+        LOGGER.info("Check status updated row:"+row);
     }
 }

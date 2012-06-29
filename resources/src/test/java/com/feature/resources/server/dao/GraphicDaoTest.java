@@ -2,10 +2,17 @@ package com.feature.resources.server.dao;
 
 import com.feature.resources.server.domain.*;
 import com.google.code.morphia.query.Query;
+import com.google.common.collect.Lists;
+import com.mongodb.DBObject;
+import com.mongodb.util.JSON;
+import org.bson.types.ObjectId;
 import org.fest.assertions.Assertions;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Date;
@@ -20,6 +27,8 @@ import static org.fest.assertions.Assertions.assertThat;
  * FileName:GraphicDaoTest
  */
 public class GraphicDaoTest extends BasicMongoUnitTest {
+    public static final Logger LOGGER = LoggerFactory.getLogger(GraphicDaoTest.class);
+
     private GraphicDao graphicDao;
 
     @Before
@@ -45,7 +54,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void testFindAllByCreateAtTime() throws Exception {
+    public void should_FindAllByCreateAtTime_return_correct_order() throws Exception {
         List<Graphic> graphicList = graphicDao.findAllByCreateAtTime();
         assertThat(graphicList).isNotNull();
         assertThat(graphicList.size()).isEqualTo(resourceDataSize("Graphic"));
@@ -55,62 +64,148 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void testFindByPage() throws Exception {
-        List<Graphic> graphics =  graphicDao.findByPage(1,10);
+    public void should_FindByPage_return_a_page() throws Exception {
+        List<Graphic> graphics = graphicDao.findByPage(1, 10);
         assertThat(graphics).isNotNull();
         int graphicSize = resourceDataSize("Graphic");
-        assertThat(graphics.size()).isEqualTo(graphicSize>=10?10:graphicSize);
+        assertThat(graphics.size()).isEqualTo(graphicSize >= 10 ? 10 : graphicSize);
     }
 
     @Test
-    public void testGetTotalRecordCount() throws Exception {
-        long  totalRecordCount  = graphicDao.getTotalRecordCount();
+    public void should_FindByPage_return_a_page_when_requestPage_is_zero() throws Exception {
+        List<Graphic> graphics = graphicDao.findByPage(0, 10);
+        assertThat(graphics).isNotNull();
+        int graphicSize = resourceDataSize("Graphic");
+        assertThat(graphics.size()).isEqualTo(graphicSize >= 10 ? 10 : graphicSize);
+    }
+
+    @Test
+    public void should_GetTotalRecordCount_return_correct_size() throws Exception {
+        long totalRecordCount = graphicDao.getTotalRecordCount();
         int graphicSize = resourceDataSize("Graphic");
         assertThat(totalRecordCount).isEqualTo(graphicSize);
     }
 
     @Test
-    public void should_get_checked_graphic_when_it_checked(){
-        final  String statusDesc = CheckStatusDesc.CHECKED.getValue();
+    public void should_get_checked_graphic_when_it_checked() {
+        final String statusDesc = CheckStatusDesc.CHECKED.getValue();
         List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
         List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECKED);
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(checkedList.size());
-        for(Graphic graphic:graphics){
+        for (Graphic graphic : graphics) {
             Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
     }
 
     @Test
-    public void should_get_checked_graphic_when_it_checked_and_pageSizeIs_less_than_7(){
-        final  String statusDesc = CheckStatusDesc.CHECKED.getValue();
+    public void should_get_checked_graphic_first_page_when_it_checked_when_request_page_is_zero() {
+        final String statusDesc = CheckStatusDesc.CHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryType(0, 10, CheckStatusDesc.CHECKED);
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(checkedList.size());
+        for (Graphic graphic : graphics) {
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+    }
+
+    @Test
+    public void should_get_checked_graphic_when_it_checked_and_pageSizeIs_less_than_7() {
+        final String statusDesc = CheckStatusDesc.CHECKED.getValue();
         List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
         List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.CHECKED);
         assertThat(graphics).isNotNull();
-        assertThat(graphics.size()).isEqualTo(checkedList.size()<4?checkedList.size():4);
-        for(Graphic graphic:graphics){
+        assertThat(graphics.size()).isEqualTo(checkedList.size() < 4 ? checkedList.size() : 4);
+        for (Graphic graphic : graphics) {
             Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
     }
 
     @Test
-    public void should_get_unchecked_graphic_when_it_is_unchecked(){
-        final  String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+    public void should_get_unchecked_graphic_when_it_is_unchecked() {
+        final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
         List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
         List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.UNCHECKED);
         assertThat(graphics).isNotNull();
-        assertThat(graphics.size()).isEqualTo(checkedList.size()<4?checkedList.size():4);
-        for(Graphic graphic:graphics){
+        assertThat(graphics.size()).isEqualTo(checkedList.size() < 4 ? checkedList.size() : 4);
+        for (Graphic graphic : graphics) {
             Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
         }
     }
 
     @Test
-    public void should_get_page_graphic_when_it_is_all(){
-        final  String statusDesc = CheckStatusDesc.ALL.getValue();
+    public void should_get_page_graphic_when_it_is_all() {
+        final String statusDesc = CheckStatusDesc.ALL.getValue();
         List<String> graphicList = getResourceStringList("Graphic");
         List<Graphic> graphics = graphicDao.findByPageAndQueryType(1, 4, CheckStatusDesc.ALL);
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(graphicList.size() < 4 ? graphicList.size() : 4);
     }
+
+    @Test
+    public void should_update_graphic_check_status_successful() {
+        final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+
+        ObjectId objectId = null;
+        String checkStatus = null;
+        if(checkedList.size()>0){
+            String tempJson = checkedList.get(0);
+            DBObject dbObject = (DBObject) JSON.parse(tempJson);
+            objectId = (ObjectId) dbObject.get("_id");
+            checkStatus = (String) dbObject.get("checkStatus");
+        }
+
+        List<String> ids = Lists.newArrayList(objectId.toString());
+        int row = graphicDao.updateCheckStatus(ids, CheckStatusDesc.CHECKED);
+        Graphic graphic = graphicDao.findOne("id",objectId);
+        assertThat(graphic).isNotNull();
+        assertThat(row).isEqualTo(1);
+        assertThat(graphic.getIdString()).isEqualTo(objectId.toString());
+        assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        assertThat(graphic.getCheckStatus()).isNotEqualTo(checkStatus);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void should_update_graphic_check_status_throw_exception_when_id_string_list_is_empty(){
+        List<String> ids = Lists.newArrayList();
+        int row = graphicDao.updateCheckStatus(ids, CheckStatusDesc.CHECKED);
+        Assert.fail("shouldn't run to here");
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void should_update_graphic_check_status_throw_exception_when_id_string_list_is_null(){
+        List<String> ids = null;
+        int row = graphicDao.updateCheckStatus(ids, CheckStatusDesc.CHECKED);
+        Assert.fail("shouldn't run to here");
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void should_update_graphic_check_status_throw_exception_when_CheckStatusDesc_is_null(){
+        List<String> ids = Lists.newArrayList("xxxxx");
+        int row = graphicDao.updateCheckStatus(ids, null);
+        Assert.fail("shouldn't run to here");
+    }
+
+    @Test
+    public void should_update_graphic_check_status_get_only_one_row_when_id_contain_null_or_empty_string(){
+        final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+
+        ObjectId objectId = null;
+        String checkStatus = null;
+        if(checkedList.size()>0){
+            String tempJson = checkedList.get(0);
+            DBObject dbObject = (DBObject) JSON.parse(tempJson);
+            objectId = (ObjectId) dbObject.get("_id");
+            checkStatus = (String) dbObject.get("checkStatus");
+        }
+
+        List<String> ids = Lists.newArrayList(objectId.toString(),null,"");
+        int row = graphicDao.updateCheckStatus(ids, CheckStatusDesc.CHECKED);
+        assertThat(row).isEqualTo(1);
+
+    }
+
 }

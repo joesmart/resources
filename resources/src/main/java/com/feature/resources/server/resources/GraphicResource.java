@@ -2,6 +2,7 @@ package com.feature.resources.server.resources;
 
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.DataListInfo;
+import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.dto.PageInfo;
 import com.feature.resources.server.service.GraphicService;
@@ -101,5 +102,11 @@ public class GraphicResource {
     public Response deteleGraphic(@FormParam("id") String id){
         graphicService.delete(id);
         return Response.ok().build();
+    }
+
+    public Response checkGraphics(GraphicCheckDTO graphicCheckDTO){
+        LOGGER.info("GraphicCheckDTO"+graphicCheckDTO.toString());
+        graphicService.checkGraphics(graphicCheckDTO);
+        return null;
     }
 }

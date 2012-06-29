@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">提交</button>
+            <button type="submit" class="btn btn-info">提交</button>
             <button class="btn">取消</button>
         </div>
     </fieldset>
