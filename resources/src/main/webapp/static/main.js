@@ -120,7 +120,7 @@ $(document).ready(function () {
             if(graphic.tag){
                 $("#tag_selector option[value='"+graphic.tag.idString+"']").attr("selected","selected");
             }
-//            $("#tag_selector option[value='"+graphic.tag.id+"']");
+
             dialog.dialog("open");
             var tagId;
             var context = $(this);
@@ -128,9 +128,6 @@ $(document).ready(function () {
                 graphic.name =   dialog.find("#name").val();
                 graphic.description =  dialog.find("#description").val();
                 tagId = $("#tag_selector option:selected").attr("value");
-//                console.log($("#tag_selector option:selected"));
-//                console.log($("#tag_selector option:selected").attr("value"));
-                console.log("xxx");
 
                 $.ajax({
                     type:"POST",

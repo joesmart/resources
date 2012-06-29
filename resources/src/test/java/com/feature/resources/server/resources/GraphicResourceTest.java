@@ -28,7 +28,7 @@ public class GraphicResourceTest extends BasicJerseyTest {
 
     @Test
     public void should_request_a_graphics_page_successful(){
-        String dataJson = resource.path("graphics").path("page").queryParam("requestPage","1").queryParam("pageSize","10").get(String.class);
+        String dataJson = resource.path("graphics").path("page").queryParam("requestPage","1").queryParam("pageSize","10").queryParam("queryType", "all").get(String.class);
         LOGGER.info(dataJson);
         assertThat(dataJson).isNotNull();
         assertThat(dataJson.contains("\"dataSize\":10")).isTrue();
