@@ -1,6 +1,7 @@
 package com.feature.resources.server.testdata;
 
-import com.feature.resources.server.domain.CheckStatusDesc;
+import com.feature.resources.server.domain.WorkSpace;
+import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
 import com.feature.resources.server.domain.TagDescription;
@@ -111,5 +112,12 @@ public class TestDataObjectFactory {
         }
 
         return graphics;
+    }
+
+    public WorkSpace createWorkSpace(String name) {
+        WorkSpace workSpace = new WorkSpace();
+        workSpace.setId(new ObjectId());
+        workSpace.setName(name);
+        return  workSpace;
     }
 }

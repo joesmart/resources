@@ -1,5 +1,6 @@
 package com.feature.resources.server.domain;
 
+import com.feature.resources.server.dto.CheckStatusDesc;
 import junit.framework.Assert;
 import org.bson.types.ObjectId;
 import org.junit.Test;

@@ -91,6 +91,7 @@ public class WorkSpaceServiceTest {
         List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceList();
         Assert.assertNotNull(workSpaceList);
         Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
+        Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
         verify(mockDao).getEntityList();
     }
 

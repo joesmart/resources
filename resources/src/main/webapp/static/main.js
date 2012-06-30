@@ -54,6 +54,20 @@ $(document).ready(function () {
         dialog.find("#path").text(graphic.properties.path);
         dialog.find("#size").text(graphic.properties.size + "B");
         dialog.find("#createTime").text(new Date(graphic.properties.updateDate));
+        if(graphic.checkStatus == "UNCHECKED"){
+            dialog.find("#checkStatus").text("未审核");
+            dialog.find("#checkResult").css("display","none");
+        }
+        if(graphic.checkStatus == "CHECKED"){
+            dialog.find("#checkStatus").text("已审核");
+            dialog.find("#checkResult").css("display","block");
+            if(graphic.checkResult == "PASS"){
+                dialog.find("#checkResult").text("通过");
+            }
+            if(graphic.checkResult == "UNPASS"){
+                dialog.find("#checkResult").text("未通过");
+            }
+        }
         dialog.find("#save_button").css("display", "none");
     }
 
@@ -185,8 +199,8 @@ $(document).ready(function () {
         batch_check_confirm:function (parent, graphic_id_array) {
             var form = $("<form/>").append($("<label/>").text("审核结果:"));
             var checkResult = $("<select>" +
-                "<option value='checked'>审核通过</option>" +
-                "<option value='unchecked'>审核不通过</option>" +
+                "<option value='pass'>审核通过</option>" +
+                "<option value='unpass'>审核不通过</option>" +
                 "</select>");
             form.append(checkResult);
             form.css("display","block");
@@ -199,17 +213,38 @@ $(document).ready(function () {
                 title:"审核",
                 buttons:{
                     "确定":function () {
+
                       if(graphic_id_array.length == 0){
                           form.css("display","none");
                           flashMessage.css("display","block").addClass("alert").html("<span>未选择审核条目</span>");
                       }else{
+                          var context = $(this);
                           console.log(checkResult.find("option:selected").attr("value"));
                           var checkResultValue = checkResult.find("option:selected").attr("value");
                           var data = {};
                           data.checkResult=checkResultValue;
-                          data.list = graphic_id_array;
+                          data.graphicIds = graphic_id_array;
 
                           //TODO 提交服务器审核.
+                          $.ajax({
+                              context:context,
+                              type:"POST",
+                              url:"../rs/graphics/checks",
+                              data:JSON.stringify(data),
+                              dataType:"json",
+                              contentType:"application/json; charset=UTF-8",
+                              beforeSend: function(x) {
+                                  if (x && x.overrideMimeType) {
+                                      x.overrideMimeType("application/j-son;charset=UTF-8");
+                                  }
+                              },
+                              success:function(){
+                                  console.log("data check success");
+                                  $.publish("/data/saved", {message:"success"});
+                                  $(this).dialog("close");
+                              }
+
+                          });
                       }
 
                     },

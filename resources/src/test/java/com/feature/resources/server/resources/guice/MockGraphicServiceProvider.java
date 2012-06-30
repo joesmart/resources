@@ -1,6 +1,7 @@
 package com.feature.resources.server.resources.guice;
 
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.common.collect.ContiguousSet;
@@ -12,6 +13,8 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.name.Named;
 import org.bson.types.ObjectId;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,10 +22,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 /**
  * User: ZouYanjian
@@ -59,6 +62,13 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         generateGraphicListTestFixture(afterSaveGraphic, graphics);
         when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);
         when(graphicService.findGraphicByPageAndQueryType(1, 10, "all")).thenReturn(graphics);
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                Object[] objects = invocation.getArguments();
+                return "called with arguments: " + objects;
+            }
+        }).when(graphicService).checkGraphics(any(GraphicCheckDTO.class));
     }
 
     private void generateGraphicListTestFixture(Graphic graphic, List<Graphic> graphics) {

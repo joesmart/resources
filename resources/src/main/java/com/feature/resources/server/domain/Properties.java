@@ -80,24 +80,6 @@ public class Properties extends BaseEntity {
         this.uuid = uuid;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Properties that = (Properties) o;
-
-        if (!create.equals(that.create)) return false;
-        if (!mimeType.equals(that.mimeType)) return false;
-        if (modified != null ? !modified.equals(that.modified) : that.modified != null) return false;
-        if (!name.equals(that.name)) return false;
-        if (path != null ? !path.equals(that.path) : that.path != null) return false;
-        if (!size.equals(that.size)) return false;
-        if (status != null ? !status.equals(that.status) : that.status != null) return false;
-        if (!uuid.equals(that.uuid)) return false;
-
-        return true;
-    }
 
 
     @Override
