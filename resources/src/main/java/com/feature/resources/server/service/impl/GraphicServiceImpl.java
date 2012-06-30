@@ -3,6 +3,8 @@ package com.feature.resources.server.service.impl;
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
 import com.feature.resources.server.domain.*;
+import com.feature.resources.server.dto.CheckResult;
+import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.GraphicService;
@@ -212,12 +214,13 @@ public class GraphicServiceImpl implements GraphicService {
     @Override
     public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
         String uppcaseQueryType = queryType.toUpperCase();
-        return  graphicDao.findByPageAndQueryType(requestPage,pageSize,CheckStatusDesc.valueOf(uppcaseQueryType));
+        return  graphicDao.findByPageAndQueryType(requestPage,pageSize, CheckStatusDesc.valueOf(uppcaseQueryType));
     }
 
     @Override
     public void checkGraphics(GraphicCheckDTO graphicCheckDTO) {
-        int row =graphicDao.updateCheckStatus(graphicCheckDTO.getGraphicIds(),CheckStatusDesc.valueOf(graphicCheckDTO.getCheckResult()));
+        CheckResult checkResult = CheckResult.valueOf(graphicCheckDTO.getCheckResult());
+        int row =graphicDao.updateCheckStatus(graphicCheckDTO.getGraphicIds(),CheckStatusDesc.CHECKED, checkResult);
         LOGGER.info("Check status updated row:"+row);
     }
 }

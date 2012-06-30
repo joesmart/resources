@@ -104,9 +104,12 @@ public class GraphicResource {
         return Response.ok().build();
     }
 
+    @POST
+    @Path("/checks")
+    @Produces({MediaType.APPLICATION_JSON})
     public Response checkGraphics(GraphicCheckDTO graphicCheckDTO){
         LOGGER.info("GraphicCheckDTO"+graphicCheckDTO.toString());
         graphicService.checkGraphics(graphicCheckDTO);
-        return null;
+        return Response.ok().build();
     }
 }

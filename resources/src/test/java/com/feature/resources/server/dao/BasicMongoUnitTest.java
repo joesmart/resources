@@ -110,4 +110,17 @@ public class BasicMongoUnitTest {
         System.out.println(checkedList.size());
         return checkedList;
     }
+
+    protected List<String> getGraphicStringListByNullCheckStatus() {
+        List<String> allGraphic = getResourceStringList("Graphic");
+        List<String> checkedList = Lists.newArrayList(Iterables.filter(allGraphic, new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String input) {
+                boolean conditions = !input.contains("\"checkStatus\":" );
+                return conditions;
+            }
+        }));
+        System.out.println(checkedList.size());
+        return checkedList;
+    }
 }

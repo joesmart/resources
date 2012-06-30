@@ -53,6 +53,10 @@
                     <span id="size"></span>
                     <label>创建时间:</label>
                     <span id="createTime"></span>
+                    <label>审核状态:</label>
+                    <span id="checkStatus"></span>
+                    <label>审核结果:</label>
+                    <span id="checkResult"></span>
                     <br/>
                     <br/>
                     <a id="back" href="#" class="btn btn-large"><i class="icon-backward"></i>返回</a>

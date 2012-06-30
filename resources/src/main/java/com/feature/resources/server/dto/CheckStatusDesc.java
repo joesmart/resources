@@ -1,4 +1,4 @@
-package com.feature.resources.server.domain;
+package com.feature.resources.server.dto;
 
 /**
  * User: ZouYanjian
