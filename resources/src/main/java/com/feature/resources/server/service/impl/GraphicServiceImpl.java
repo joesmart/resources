@@ -31,13 +31,13 @@ public class GraphicServiceImpl implements GraphicService {
     public static final Logger LOGGER = LoggerFactory.getLogger(GraphicServiceImpl.class);
 
     @Inject
-    GraphicDao graphicDao;
+    private GraphicDao graphicDao;
     @Inject
-    PropertiesDao propertiesDao;
+    private PropertiesDao propertiesDao;
     @Inject
-    DomainObjectFactory objectFactory;
+    private DomainObjectFactory objectFactory;
     @Inject
-    PropertiesService propertiesService;
+    private PropertiesService propertiesService;
     @Inject
     private TagService tagService;
     @Inject
@@ -75,8 +75,7 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     public List<Graphic> findAll() {
-        List<Graphic> graphicList = graphicDao.findAllByCreateAtTime();
-        return graphicList;
+        return graphicDao.findAllByCreateAtTime();
     }
 
     public Graphic add(Graphic graphic) {
@@ -125,7 +124,7 @@ public class GraphicServiceImpl implements GraphicService {
             try {
                 displayOriginalImageContent(outputStream, gridFSDBFile);
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.error("Display Image error:", e);
             } finally {
                 closeIOStream(outputStream, input);
             }
@@ -171,8 +170,7 @@ public class GraphicServiceImpl implements GraphicService {
 
     @Override
     public List<Graphic> findGraphicByPage(int requestpage, int pageSize) {
-        List<Graphic> graphics =  graphicDao.findByPage(requestpage,pageSize);
-        return graphics;
+        return graphicDao.findByPage(requestpage,pageSize);
     }
 
     @Override
@@ -194,8 +192,8 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     public String dealUploadDataToCreateNewGraphic(byte[] contents, Graphic graphic) {
-        graphic = saveGraphic(contents, graphic);
-        return graphic.getId().toString();
+        Graphic afterSaveGraphic = saveGraphic(contents, graphic);
+        return afterSaveGraphic.getIdString();
     }
 
     public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId) {

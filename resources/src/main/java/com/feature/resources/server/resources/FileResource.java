@@ -5,9 +5,6 @@ import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
 import com.feature.resources.server.service.GraphicService;
-import com.feature.resources.server.service.PropertiesService;
-import com.feature.resources.server.service.TagService;
-import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.apache.commons.fileupload.FileItem;
@@ -33,16 +30,10 @@ public class FileResource {
     public static final Logger LOGGER = LoggerFactory.getLogger(FileResource.class);
 
     @Inject
-    GraphicService graphicService;
-    @Inject
-    WorkSpaceService workSpaceService;
-    @Inject
-    TagService tagService;
+    private GraphicService graphicService;
 
     @Inject
-    PropertiesService propertiesService;
-    @Inject
-    DomainObjectFactory objectFactory;
+    private DomainObjectFactory objectFactory;
 
     private String tagId;
     private String workspaceId;
@@ -79,19 +70,7 @@ public class FileResource {
         }
         res.sendRedirect("file/" + key + "/meta");
     }
-/*
-    private Graphic generateGraphic(String fileName, long size, String contentType) {
-        Graphic graphic = objectFactory.createGraphic(fileName, contentType);
-        TagDescription tagDescription = tagService.getTagDescriptionById(tagId);
-        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
 
-        Properties properties = objectFactory.createProperties(fileName, size, contentType);
-        propertiesService.addNewProperties(properties);
-        graphic.setProperties(properties);
-        graphic.setWorkSpace(workSpace);
-        graphic.setTag(tagDescription);
-        return graphic;
-    }*/
 
     private void getWorkSpaceAndTagIdInfoFromUPloadFormData(FileItem fileItem) {
         String fieldName =  fileItem.getFieldName();

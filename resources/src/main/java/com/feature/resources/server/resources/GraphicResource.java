@@ -31,7 +31,7 @@ public class GraphicResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(GraphicResource.class);
 
     @Inject
-    GraphicService graphicService;
+    private GraphicService graphicService;
 
     @GET
     @Produces({"image/png"})
@@ -73,8 +73,8 @@ public class GraphicResource {
     public PageInfo getGraphicPageInfo() {
         long totalRecords = graphicService.getGraphicsTotalCount();
         int pageSize = 10;
-        int max_page = (int)(totalRecords/pageSize);
-        int totalPages = (int)(((double)totalRecords/pageSize)>max_page?max_page+1:max_page);
+        int maxPage = (int)(totalRecords/pageSize);
+        int totalPages = (int)(((double)totalRecords/pageSize)>maxPage?maxPage+1:maxPage);
         PageInfo pageInfo = new PageInfo(totalPages, pageSize);
         LOGGER.info("Current Graphics Size:"+ totalRecords);
         return pageInfo;

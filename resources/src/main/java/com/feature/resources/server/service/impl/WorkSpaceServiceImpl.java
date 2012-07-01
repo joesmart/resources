@@ -49,8 +49,7 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
 
     @Override
     public WorkSpace getWorkSpaceById(String id) {
-        WorkSpace workSpace =  workSpaceDao.findOne("id",new ObjectId(id));
-        return workSpace;
+        return workSpaceDao.findOne("id",new ObjectId(id));
     }
 
 }

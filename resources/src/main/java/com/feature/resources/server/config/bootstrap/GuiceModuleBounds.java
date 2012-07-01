@@ -67,7 +67,6 @@ public class GuiceModuleBounds extends GuiceServletContextListener {
         moudles.add(jerseyServletModule);
         moudles.add(abstractModule);
         moudles.add(servletModule);
-        Injector injector = Guice.createInjector(Stage.PRODUCTION, moudles);
-        return injector;
+        return Guice.createInjector(Stage.PRODUCTION, moudles);
     }
 }

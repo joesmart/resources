@@ -36,11 +36,12 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
     }
 
     public List<Graphic> findByPage(int requestpage, int pageSize) {
+        int innerRequestPage = requestpage;
         List<Graphic> graphics;
-        if (requestpage < 1) {
-            requestpage = 1;
+        if (innerRequestPage < 1) {
+            innerRequestPage = 1;
         }
-        int offset = (requestpage - 1) * pageSize;
+        int offset = (innerRequestPage - 1) * pageSize;
         ds.getMapper().createEntityCache();
         graphicQuery = createQuery();
         graphicQuery.order("-createDate");
@@ -49,20 +50,23 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
     }
 
     public List<Graphic> findByPageAndQueryType(int requestPage, int pageSize, CheckStatusDesc desc) {
+
+        int innerRequestPage = requestPage;
         List<Graphic> graphics;
-        if (requestPage < 1) {
-            requestPage = 1;
+        if (innerRequestPage < 1) {
+            innerRequestPage = 1;
         }
-        int offset = (requestPage - 1) * pageSize;
+        int offset = (innerRequestPage - 1) * pageSize;
         graphicQuery = createQuery();
+        String checkStatus = "checkStatus";
         if (desc.equals(CheckStatusDesc.UNCHECKED)) {
             graphicQuery.or(
-                    graphicQuery.criteria("checkStatus").equal(desc.getValue()),
-                    graphicQuery.criteria("checkStatus").equal(null)
+                    graphicQuery.criteria(checkStatus).equal(desc.getValue()),
+                    graphicQuery.criteria(checkStatus).equal(null)
             );
         }
         if (desc.equals(CheckStatusDesc.CHECKED)) {
-            graphicQuery.field("checkStatus").equal(desc.getValue());
+            graphicQuery.field(checkStatus).equal(desc.getValue());
         }
 
         if(desc.equals(CheckStatusDesc.LATEST)){

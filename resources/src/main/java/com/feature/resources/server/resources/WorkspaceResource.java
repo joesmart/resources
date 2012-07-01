@@ -38,8 +38,7 @@ public class WorkspaceResource {
     @Path("/all")
     @GET
     public List<WorkSpaceDTO> getAllWorkSpace(){
-        List<WorkSpaceDTO> workSpaceDTOs  = workSpaceService.getCurrentWorkSpaceList();
-        return workSpaceDTOs;
+        return workSpaceService.getCurrentWorkSpaceList();
     }
 
 }

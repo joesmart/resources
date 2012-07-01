@@ -54,7 +54,6 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public TagDescription getTagDescriptionById(String id) {
-        TagDescription tag = tagDao.findOne("id",new ObjectId(id) );
-        return tag;
+        return tagDao.findOne("id",new ObjectId(id) );
     }
 }

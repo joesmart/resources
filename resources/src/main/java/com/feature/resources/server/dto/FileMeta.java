@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class FileMeta {
-    String name;
-    long size;
-    String url;
-    String thumbnail_url;
-    String delete_url;
-    String delete_type;
+    private String name;
+    private long size;
+    private String url;
+    private String thumbnail_url;
+    private String delete_url;
+    private String delete_type;
 
     public FileMeta(String fileName,long size,String url,String thumbnailUrl,String delete_url){
         this.name = fileName;

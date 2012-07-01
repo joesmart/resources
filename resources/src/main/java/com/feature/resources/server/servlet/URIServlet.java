@@ -1,7 +1,5 @@
 package com.feature.resources.server.servlet;
 
-import com.feature.resources.server.service.GraphicService;
-import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 import javax.servlet.ServletException;
@@ -20,9 +18,6 @@ import java.io.IOException;
 @Singleton
 @WebServlet(asyncSupported = false, name = "URIServlet", urlPatterns = {"/servlet/menu"})
 public class URIServlet extends HttpServlet {
-    @Inject
-    GraphicService graphicService;
-
     @Override
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse response) throws ServletException, IOException {
         String type = httpServletRequest.getParameter("type");
@@ -31,6 +26,6 @@ public class URIServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse response) throws ServletException, IOException {
-        super.doPost(httpServletRequest, response);    //To change body of overridden methods use File | Settings | File Templates.
+        super.doPost(httpServletRequest, response);
     }
 }

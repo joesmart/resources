@@ -13,7 +13,7 @@ import com.google.inject.Inject;
  */
 public class PropertiesServiceImpl implements PropertiesService {
     @Inject
-    PropertiesDao propertiesDao;
+    private PropertiesDao propertiesDao;
     @Override
     public void addNewProperties(Properties properties) {
         propertiesDao.save(properties);

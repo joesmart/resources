@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FileUrl {
-    String url;
+    private String url;
     public FileUrl(String url){
         this.url = url;
     }

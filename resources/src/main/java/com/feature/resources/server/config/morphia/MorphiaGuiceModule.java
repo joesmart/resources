@@ -8,10 +8,14 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.UnknownHostException;
 
 public class MorphiaGuiceModule extends AbstractModule {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(MorphiaGuiceModule.class);
 
     @Override
     protected void configure() {
@@ -33,9 +37,9 @@ public class MorphiaGuiceModule extends AbstractModule {
             ds.ensureCaps();
             return ds;
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            LOGGER.error("UnKnowHostException:",e);
         } catch (MongoException e) {
-            e.printStackTrace();
+            LOGGER.error("MongoException:",e);
         }
         return null;
     }

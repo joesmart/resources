@@ -24,8 +24,7 @@ public class SimpleDomainObjectOperateDao<T,K> extends BasicDAO<T,K> {
     }
 
     public List<T> getEntityList(){
-        List<T> entityList = find().asList();
-        return entityList;
+        return find().asList();
     }
 
     public boolean isAlreadyExists(String propertyName, String propertyValue) {

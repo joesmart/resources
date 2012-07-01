@@ -30,7 +30,6 @@ public class TagResource {
     @Path("/all")
     @GET
     public List<TagDTO> getAllTags(){
-        List<TagDTO> tagDTOList = tagService.getCurrentTagList();
-        return tagDTOList;
+        return tagService.getCurrentTagList();
     }
 }
