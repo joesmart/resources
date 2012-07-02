@@ -67,7 +67,7 @@ public class GraphicResourceTest extends BasicJerseyTest {
     @Test
     public void should_batch_delete_graphic_successful() throws IOException {
         List<String> idString = Lists.newArrayList("a","b","c");
-
+        //Update
         ObjectMapper objectMapper = new ObjectMapper();
         String json = objectMapper.writeValueAsString(idString);
 
