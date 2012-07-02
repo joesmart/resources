@@ -221,4 +221,9 @@ public class GraphicServiceImpl implements GraphicService {
         int row =graphicDao.updateCheckStatus(graphicCheckDTO.getGraphicIds(),CheckStatusDesc.CHECKED, checkResult);
         LOGGER.info("Check status updated row:"+row);
     }
+
+    @Override
+    public void batchDelete(List<String> idString) {
+        graphicDao.batchDelete(idString);
+    }
 }

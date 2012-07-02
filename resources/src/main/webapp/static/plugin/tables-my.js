@@ -304,6 +304,19 @@
             options.batch_check_confirm(this,id_array);
         });
 
+        batchDeleteButton.click(function(event){
+            var id_array = new Array();
+            var checkboxes = $("table input:checked");
+            if(checkboxes.length > 0){
+                checkboxes.each(function(index){
+                    if($(this).attr("id")){
+                        id_array.push($(this).attr("id"));
+                    }
+                });
+            }
+            options.batch_delete_confirm(this,id_array);
+        });
+
         var buttons = $("<div/>").append(batchDeleteButton).append(batchCheckButton);
 
         return this.each(function () {

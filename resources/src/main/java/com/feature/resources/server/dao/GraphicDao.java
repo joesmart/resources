@@ -3,24 +3,27 @@ package com.feature.resources.server.dao;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
+import com.feature.resources.server.util.SystemFunctions;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.query.Query;
 import com.google.code.morphia.query.UpdateOperations;
 import com.google.code.morphia.query.UpdateResults;
-import com.google.common.base.Function;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+import com.mongodb.WriteResult;
 import org.bson.types.ObjectId;
 import org.joda.time.DateTime;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
 
     private Query<Graphic> graphicQuery;
     private int minusDays = 2;
+
+    @Inject
+    private SystemFunctions functions;
 
     @Inject
     protected GraphicDao(Datastore ds) {
@@ -94,15 +97,7 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
             throw new IllegalStateException("Empty Id string List");
         }
         Query<Graphic> query = createQuery();
-        List<ObjectId> objectIdList = Lists.transform(ids, new Function<String, ObjectId>() {
-            @Override
-            public ObjectId apply(@Nullable String input) {
-                if (input == null || "".equals(input)) {
-                    return new ObjectId();
-                }
-                return new ObjectId(input);
-            }
-        });
+        List<ObjectId> objectIdList = convertIdStringListToObjectIdList(ids);
         query.field("id").in(objectIdList);
         UpdateOperations<Graphic> graphicUpdateOperations = createUpdateOperations();
         graphicUpdateOperations.set("checkStatus", desc.getValue()).set("checkResult", checkResult.getValue());
@@ -112,7 +107,32 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         return updateRow;
     }
 
+    private List<ObjectId> convertIdStringListToObjectIdList(List<String> ids) {
+        return Lists.transform(ids, functions.convertIdStringToObjectId());
+    }
+
     public void setMinusDays(int minusDays) {
         this.minusDays = minusDays;
+    }
+
+    public int batchDelete(List<String> idStringList) {
+        Preconditions.checkNotNull(idStringList);
+        if (idStringList.size() == 0) {
+            throw new IllegalStateException("Empty Id string List");
+        }
+        List<ObjectId> objectIdList = convertIdStringListToObjectIdList(idStringList);
+        graphicQuery = createQuery();
+        graphicQuery.field("id").in(objectIdList);
+        List<Graphic> graphics = (List<Graphic>) graphicQuery.asList();
+        WriteResult result = deleteByQuery(graphicQuery);
+        return result.getN();
+    }
+
+    public SystemFunctions getFunctions() {
+        return functions;
+    }
+
+    public void setFunctions(SystemFunctions functions) {
+        this.functions = functions;
     }
 }

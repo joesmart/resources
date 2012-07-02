@@ -20,6 +20,7 @@ import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -270,23 +271,32 @@ public class GraphicServiceTest {
         when(workSpaceService.getWorkSpaceById("default")).thenReturn(workSpace);
 
         Properties properties = domainObjectFactory.createProperties("abc.png", 100L, "image/png");
-//        when(domainObjectFactory.createProperties("abc.png", 100L, "image/png")).thenReturn(properties);
         doAnswer(new Answer() {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {
                 Properties properties1 = (Properties) invocation.getArguments()[0];
-                properties1.setId(new ObjectId());
                 return properties1;
             }
         }).when(propertiesService).addNewProperties(properties);
         Graphic graphic1 = graphicService.generateGraphic("abc.png",100L,"image/png","abcd","default");
-//        verify(propertiesService).addNewProperties(properties);
-//        verify(domainObjectFactory).createGraphic("abc.png","image/png");
-//        verify(tagService).getTagDescriptionById("abcd");
-//        verify(domainObjectFactory).createProperties("abc.png", 100L, "image/png");
         tempGraphic.setTag(tagDescription);
         tempGraphic.setProperties(properties);
         tempGraphic.setWorkSpace(workSpace);
         assertThat(graphic1.getTag()).isEqualTo(tempGraphic.getTag());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void batchDeleteGraphic(GraphicDao graphicDao){
+        when(graphicDao.batchDelete(null)).thenThrow(NullPointerException.class);
+
+        graphicService.batchDelete(null);
+        Assert.fail("Shouldn't go to here!");
+    }
+
+    @Test
+    public void should_batchDeleteGraphic_successful(GraphicDao graphicDao){
+        when(graphicDao.batchDelete(any(List.class))).thenReturn(10);
+        graphicService.batchDelete(Lists.newArrayList("asfasdfasdf"));
+        verify(graphicDao).batchDelete(any(List.class));
     }
 }

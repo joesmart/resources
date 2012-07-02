@@ -112,4 +112,13 @@ public class GraphicResource {
         graphicService.checkGraphics(graphicCheckDTO);
         return Response.ok().build();
     }
+
+    @POST
+    @Path("/batch_delete")
+    @Produces({MediaType.APPLICATION_JSON})
+    public Response deleteGraphics(List<String> idString){
+        LOGGER.info("GraphicCheckDTO"+idString.toString());
+        graphicService.batchDelete(idString);
+        return Response.ok().build();
+    }
 }
