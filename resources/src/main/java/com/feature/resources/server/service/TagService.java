@@ -12,8 +12,11 @@ import java.util.List;
  * FileName:TagService
  */
 public interface TagService {
-    public void addNewTag(TagDTO tagDTO);
-    public boolean exists(String tag);
-    public List<TagDTO> getCurrentTagList();
-    public TagDescription getTagDescriptionById(String id);
+    void addNewTag(TagDTO tagDTO);
+
+    boolean exists(String tag);
+
+    List<TagDTO> getCurrentTagList();
+
+    TagDescription getTagDescriptionById(String id);
 }

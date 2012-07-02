@@ -2,7 +2,6 @@ package com.feature.resources.server.dao;
 
 import com.feature.resources.server.domain.TagDescription;
 import com.google.code.morphia.Datastore;
-import com.google.code.morphia.query.Query;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
 

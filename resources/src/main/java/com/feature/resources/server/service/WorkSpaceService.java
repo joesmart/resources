@@ -12,8 +12,11 @@ import java.util.List;
  * FileName:WorkSpaceService
  */
 public interface WorkSpaceService {
-    public void addNewWorkspace(WorkSpaceDTO workspaceDTO);
-    public boolean exists(String name);
-    public List<WorkSpaceDTO> getCurrentWorkSpaceList();
-    public WorkSpace getWorkSpaceById(String id);
+    void addNewWorkspace(WorkSpaceDTO workspaceDTO);
+
+    boolean exists(String name);
+
+    List<WorkSpaceDTO> getCurrentWorkSpaceList();
+
+    WorkSpace getWorkSpaceById(String id);
 }
