@@ -196,6 +196,40 @@ $(document).ready(function () {
             dialog.dialog('open');
 
         },
+        batch_delete_confirm:function (elem, idList) {
+            var detail_option = {
+                width:300,
+                height:200,
+                position:'center',
+                buttons:{
+                    "删除":function () {
+                        var context = $(this);
+                        $.ajax({
+                            context:context,
+                            type:"POST",
+                            url:"../rs/graphics/batch_delete",
+                            data:JSON.stringify(idList),
+                            dataType:"json",
+                            contentType:"application/json; charset=UTF-8",
+                            success:function(){
+                                console.log("success");
+                                $.publish("/data/delete", {message:"success"});
+                                $(this).dialog("close");
+                            }
+                        }).fail(function(data){
+                                console.log("done");
+                            });
+                    },
+                    "取消":function () {
+                        $(this).dialog("close");
+                    }
+                }
+            };
+            dialog = $('<div/>').append($('<h3/>').text("是否确认删除?")).addClass("container");
+            dialog.dialog(detail_option);
+            dialog.dialog('open');
+
+        },
         batch_check_confirm:function (parent, graphic_id_array) {
             var form = $("<form/>").append($("<label/>").text("审核结果:"));
             var checkResult = $("<select>" +

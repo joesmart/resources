@@ -3,6 +3,7 @@ package com.feature.resources.server.dao;
 import com.feature.resources.server.domain.*;
 import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
+import com.feature.resources.server.util.SystemFunctions;
 import com.google.code.morphia.query.Query;
 import com.google.common.collect.Lists;
 import com.mongodb.DBObject;
@@ -41,6 +42,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
             initData(string);
         }
         graphicDao = new GraphicDao(getDatastore());
+        graphicDao.setFunctions(new SystemFunctions());
     }
 
     @After
@@ -255,6 +257,23 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         int row = graphicDao.updateCheckStatus(ids, CheckStatusDesc.CHECKED, CheckResult.PASS);
         assertThat(row).isEqualTo(1);
 
+    }
+
+    @Test
+    public void should_delet_grahic_successful_when_idStringList_is_not_null(){
+        final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+        List<String> graphicList = getResourceStringList("Graphic");
+        ObjectId objectId = null;
+        String checkStatus = null;
+        List<String> idStringList = Lists.newArrayList();
+        for(String tempJson:graphicList){
+            DBObject dbObject = (DBObject) JSON.parse(tempJson);
+            objectId = (ObjectId) dbObject.get("_id");
+            idStringList.add(objectId.toString());
+        }
+        int row = graphicDao.batchDelete(idStringList);
+        assertThat(row).isGreaterThan(0);
+        assertThat(row).isEqualTo(idStringList.size());
     }
 
 }

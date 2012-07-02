@@ -10,6 +10,7 @@ import org.junit.Test;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
+import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -58,6 +59,19 @@ public class GraphicResourceTest extends BasicJerseyTest {
         String json = objectMapper.writeValueAsString(graphicCheckDTO);
 
         ClientResponse response = resource.path("graphics").path("checks").accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, json);
+        assertThat(response).isNotNull();
+        assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
+    }
+
+    @Test
+    public void should_batch_delete_graphic_successful() throws IOException {
+        List<String> idString = Lists.newArrayList("a","b","c");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(idString);
+
+        ClientResponse response = resource.path("graphics").path("batch_delete").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, json);
         assertThat(response).isNotNull();
         assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
