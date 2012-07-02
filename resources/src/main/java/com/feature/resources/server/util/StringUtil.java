@@ -8,7 +8,7 @@ import java.util.List;
 
 public class StringUtil {
     private StringUtil(){
-        
+
     }
     public static String getFileExtensionName(String fileName) {
 

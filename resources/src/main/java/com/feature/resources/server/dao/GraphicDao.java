@@ -123,7 +123,6 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         List<ObjectId> objectIdList = convertIdStringListToObjectIdList(idStringList);
         graphicQuery = createQuery();
         graphicQuery.field("id").in(objectIdList);
-        List<Graphic> graphics = (List<Graphic>) graphicQuery.asList();
         WriteResult result = deleteByQuery(graphicQuery);
         return result.getN();
     }
