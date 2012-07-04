@@ -40,8 +40,20 @@
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
-	</properties>
+        <shiro.version>1.2.0</shiro.version>
+    </properties>
 	<repositories>
+        <repository>
+            <id>sonatype-third-party</id>
+            <name>Sonatype Third Party Repository</name>
+            <url>http://repository.sonatype.org/content/repositories/third-party</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
 		<repository>
 			<id>maven-mongodb-plugin-repo</id>
@@ -440,6 +452,32 @@
 			</dependency>
 			<!-- OTHER UTILS end -->
 
+            <!-- apache Shiro support
+            Apache Shiro is a powerful and easy-to-use Java security framework that performs authentication,
+            authorization, cryptography, and session management. With Shiro’s easy-to-understand API,
+            you can quickly and easily secure any application –
+            from the smallest mobile applications to the largest web and enterprise applications.
+            -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-guice</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-ehcache</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
 			<!-- TEST begin -->
 			<!-- junit -->
 			<dependency>
