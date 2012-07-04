@@ -16,6 +16,7 @@ import com.google.inject.Inject;
 import com.mongodb.gridfs.GridFSDBFile;
 import net.coobird.thumbnailator.Thumbnails;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -210,9 +211,10 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     @Override
+    @RequiresPermissions(value ={"user:xxx"} )
     public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
-        String uppcaseQueryType = queryType.toUpperCase();
-        return  graphicDao.findByPageAndQueryType(requestPage,pageSize, CheckStatusDesc.valueOf(uppcaseQueryType));
+        String upperCaseQueryType = queryType.toUpperCase();
+        return  graphicDao.findByPageAndQueryType(requestPage,pageSize, CheckStatusDesc.valueOf(upperCaseQueryType));
     }
 
     @Override

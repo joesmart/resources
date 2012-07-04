@@ -25,7 +25,6 @@
     <script src="${ctx}/static/jquery-validation/1.9.0/jquery.validate.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-validation/1.9.0/messages_cn.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-ui-1.8.20/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
-    <script src="${ctx}/static/plugin/jquery.pubsub.min.js" type="text/javascript"></script>
 
     <decorator:head/>
 </head>
@@ -45,37 +44,13 @@
             <div class="nav-collapse collapse">
 
             </div>
-            <div class="pull-right">
-                <h3><a href="${ctx}/logout" class="">登出</a></h3>
-            </div>
         </div>
     </div>
 </div>
 
 <div class="container container-height">
-    <header class="jumbotron subhead" id="overview">
-        <div class="subnav">
-            <ul class="nav nav-pills">
-                <li><a href="${ctx}/index.jsp">首页</a></li>
-                <li><a href="${ctx}/servlet/menu?type=all">图片</a></li>
-                <li><a href="#">文档</a></li>
-                <li><a href="#">视频</a></li>
-                <li><a href="${ctx}/upload/upload.jsp">上传</a></li>
-                <li><a href="${ctx}/other/createWorkspace.jsp">其他</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span2 well leftpanel-height">
-                <page:applyDecorator page="/other/menu.jsp" name="left-panel"/>
-            </div>
-            <div class="span10 well rightpanel-height">
-                <decorator:body/>
-            </div>
-        </div>
-    </div>
+    <decorator:body/>
     <footer>
         <p>&copy; Company 2012</p>
     </footer>

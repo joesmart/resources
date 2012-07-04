@@ -4,9 +4,13 @@
     <!-- Any urls that are excluded will never be decorated by Sitemesh -->
     <excludes>
         <pattern>/static/*</pattern>
+
     </excludes>
+    <decorator name="login" page="login.jsp">
+        <pattern>/login.jsp</pattern>
+    </decorator>
     <decorator name="main" page="decorator.jsp">
-        <pattern>/*</pattern>
+       <pattern>/*</pattern>
     </decorator>
     <decorator name="left-panel" page="panel.jsp"/>
     <decorator name="upload" page="upload.jsp">
