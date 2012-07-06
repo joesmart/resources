@@ -96,6 +96,26 @@ public class WorkSpaceServiceTest {
     }
 
     @Test
+    public void should_return_workspace_list_when_query_by_userId(WorkSpaceDao mockDao) {
+        String userId = "4ff410a897ac21319cf81011";
+
+        List<WorkSpace> workSpaces = Lists.newArrayList();
+        WorkSpace workSpace = new WorkSpace();
+        workSpace.setName("text");
+        ObjectId id = new ObjectId();
+        workSpace.setId(id);
+        workSpace.setUserId(userId);
+        workSpaces.add(workSpace);
+
+        when(mockDao.getEntityListByUserId(userId)).thenReturn(workSpaces);
+        List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceListByUserId(userId);
+        Assert.assertNotNull(workSpaceList);
+        Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
+        Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
+        verify(mockDao).getEntityListByUserId(userId);
+    }
+
+    @Test
     public void should_get_workspace_By_id(WorkSpaceDao mockDao) {
         WorkSpace workSpace = new WorkSpace();
         ObjectId id = new ObjectId();

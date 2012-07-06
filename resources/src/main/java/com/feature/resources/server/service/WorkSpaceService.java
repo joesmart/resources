@@ -18,5 +18,7 @@ public interface WorkSpaceService {
 
     List<WorkSpaceDTO> getCurrentWorkSpaceList();
 
+    List<WorkSpaceDTO> getCurrentWorkSpaceListByUserId(String userId);
+
     WorkSpace getWorkSpaceById(String id);
 }

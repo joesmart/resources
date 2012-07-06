@@ -22,6 +22,14 @@ public class WorkSpace extends ResourceEntity {
         this.name = name;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     @Override
     public String toString() {
         return Objects.toStringHelper(this).add("id",getId().toString()).add("name",name).toString();
