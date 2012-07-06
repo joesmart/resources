@@ -31,4 +31,9 @@ public class SimpleDomainObjectOperateDao<T,K> extends BasicDAO<T,K> {
         Query<T> query = createQueryFromJudgePropertyAndValue(propertyName, propertyValue);
         return  exists(query);
     }
+
+    public List<T> getEntityListByUserId(String userId){
+        Query<T> query = createQueryFromJudgePropertyAndValue("userId",userId);
+        return  find(query).asList();
+    }
 }

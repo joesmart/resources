@@ -17,6 +17,9 @@ public class Role extends ResourceEntity {
     @Reference
     private List<Permission> permissions = Lists.newArrayList();
 
+    public Role(){
+       setType("Role");
+    }
 
     public String getName() {
         return name;

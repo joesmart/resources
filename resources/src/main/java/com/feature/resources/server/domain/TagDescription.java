@@ -5,6 +5,9 @@ import com.google.common.base.Objects;
 
 @Entity
 public class TagDescription extends ResourceEntity {
+    public TagDescription(){
+       setType("TagDescription");
+    }
     private String tag;
     private String userId;
 

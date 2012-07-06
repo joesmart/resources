@@ -7,6 +7,9 @@ package com.feature.resources.server.domain;
  * FileName:Permission
  */
 public class Permission extends ResourceEntity{
+    public Permission(){
+       setType("Permission");
+    }
     private String name;
 
     public String getName() {

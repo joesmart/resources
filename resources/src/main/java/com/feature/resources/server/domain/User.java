@@ -94,9 +94,9 @@ public class User extends ResourceEntity {
 
     @Override
     public String toString() {
-        return Objects.toStringHelper(this).add("id",getId())
-                                            .add("loginName",loginName)
-                                            .add("name",name)
+        return Objects.toStringHelper(this).add("id", getId())
+                                            .add("loginName", loginName)
+                                            .add("name", name)
                                             .add("plainPassword",plainPassword)
                                             .add("password",password)
                                             .add("salt",salt)
