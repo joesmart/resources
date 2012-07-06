@@ -1,7 +1,13 @@
 package com.feature.resources.server.dao;
 
+import com.feature.resources.server.domain.Permission;
+import com.feature.resources.server.domain.Role;
 import com.feature.resources.server.domain.TagDescription;
+import com.feature.resources.server.domain.User;
 import com.google.code.morphia.query.Query;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterators;
+import com.google.common.collect.Lists;
 import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 import org.bson.types.ObjectId;
@@ -9,6 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
 
@@ -27,7 +34,7 @@ public class TagDaoTest extends BasicMongoUnitTest{
 
     @Before
     public void setUp() throws IOException {
-        String[] strings = {"TagDescription"};
+        String[] strings = {"TagDescription","Permission", "Role", "User"};
         for (String string : strings) {
             initData(string);
         }
@@ -39,6 +46,12 @@ public class TagDaoTest extends BasicMongoUnitTest{
     public void tearDown(){
         Query<TagDescription> query =  getDatastore().createQuery(TagDescription.class);
         getDatastore().delete(query);
+        Query<User> userQuery = getDatastore().createQuery(User.class);
+        getDatastore().delete(userQuery);
+        Query<Role> roleQuery = getDatastore().createQuery(Role.class);
+        getDatastore().delete(roleQuery);
+        Query<Permission> permissionQuery = getDatastore().createQuery(Permission.class);
+        getDatastore().delete(permissionQuery);
     }
 
     @Test
@@ -68,5 +81,25 @@ public class TagDaoTest extends BasicMongoUnitTest{
         TagDescription tagDescription = tagDao.findOne("id",new ObjectId(id.toString()));
         assertThat(tagDescription).isNotNull();
         assertThat(tagDescription.getTag()).isEqualTo((String) object.get("tag"));
+    }
+
+    @Test
+    public void should_get_one_size_list_when_get_entityList_by_userId(){
+        List<String> resourceList = getResourceStringList("TagDescription");
+        List<String> userTagList = Lists.newArrayList(Iterators.filter(resourceList.iterator(), new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String input) {
+                return input.contains("userId");
+            }
+        }));
+
+        String json = userTagList.get(0);
+        DBObject dbObject = (DBObject) JSON.parse(json);
+        String userId = (String) dbObject.get("userId");
+
+        assertThat(userTagList.size()).isEqualTo(1);
+        List<TagDescription> tagDescriptionList = tagDao.getEntityListByUserId(userId);
+        assertThat(tagDescriptionList.size()).isEqualTo(1);
+
     }
 }

@@ -24,4 +24,11 @@ public class TagDescription extends ResourceEntity {
         return Objects.toStringHelper(this).add("id",getId().toString()).add("tag",tag).toString();
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }

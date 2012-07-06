@@ -34,7 +34,7 @@ public class TagServiceTest {
     private TagService tagService;
 
     @Inject
-    private TestDataObjectFactory taTestDataObjectFactory;
+    private TestDataObjectFactory testDataObjectFactory;
 
     public static class Module extends JukitoModule {
 
@@ -87,9 +87,27 @@ public class TagServiceTest {
     public void should_get_all_entity_successful(TagDao tagDao){
         List<TagDTO> tagDTOList;
         String tag = "Test";
-        List<TagDescription> tagDescriptionList = taTestDataObjectFactory.createTagDescriptionList();
+        List<TagDescription> tagDescriptionList = testDataObjectFactory.createTagDescriptionList();
         when(tagDao.getEntityList()).thenReturn(tagDescriptionList);
         tagDTOList = tagService.getCurrentTagList();
+        assertThat(tagDTOList).isNotNull();
+        assertThat(tagDTOList.size()>0).isTrue();
+        assertThat(tagDTOList.size()).isEqualTo(tagDescriptionList.size());
+        for(int i=0;i<tagDTOList.size();i++){
+            tagDTOList.get(i);
+            assertThat(tagDTOList.get(i).getId()).isEqualTo(tagDescriptionList.get(i).getIdString());
+            assertThat(tagDTOList.get(i).getTag()).isEqualTo(tagDescriptionList.get(i).getTag());
+        }
+    }
+
+    @Test
+    public void should_get_all_entity_successful_when_query_by_userId(TagDao tagDao){
+        List<TagDTO> tagDTOList;
+        String tag = "Test";
+        List<TagDescription> tagDescriptionList = testDataObjectFactory.createTagDescriptionList();
+        String userId = "4ff410a897ac21319cf81011";
+        when(tagDao.getEntityListByUserId(userId)).thenReturn(tagDescriptionList);
+        tagDTOList = tagService.getCurrentTagListByUserId(userId);
         assertThat(tagDTOList).isNotNull();
         assertThat(tagDTOList.size()>0).isTrue();
         assertThat(tagDTOList.size()).isEqualTo(tagDescriptionList.size());

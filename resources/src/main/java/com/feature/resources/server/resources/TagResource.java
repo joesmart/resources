@@ -21,16 +21,15 @@ public class TagResource {
     public static final Logger LOGGER = LoggerFactory.getLogger(TagResource.class);
     @Inject
     private TagService tagService;
+    private ShiroBaseRealm.ShiroUser shiroUser;
+
 
     @Path("/add")
     @POST
     public Response addNewWorkspace(TagDTO tagDTO) {
-        Subject currentUser =  SecurityUtils.getSubject();
-        if(currentUser != null){
-            ShiroBaseRealm.ShiroUser shiroUser = (ShiroBaseRealm.ShiroUser)currentUser.getPrincipal();
-            LOGGER.info(shiroUser.toString());
+        getCurrentUserFromUserssion();
+        if(shiroUser != null)
             tagDTO.setUserId(shiroUser.getUserId());
-        }
         if (!tagService.exists(tagDTO.getTag())) {
             tagService.addNewTag(tagDTO);
             return Response.ok().build();
@@ -39,9 +38,18 @@ public class TagResource {
         }
     }
 
+    private void getCurrentUserFromUserssion() {
+        Subject currentUser = SecurityUtils.getSubject();
+        if(currentUser != null){
+            shiroUser = (ShiroBaseRealm.ShiroUser) currentUser.getPrincipal();
+            LOGGER.info(shiroUser.toString());
+        }
+    }
+
     @Path("/all")
     @GET
     public List<TagDTO> getAllTags(){
-        return tagService.getCurrentTagList();
+        getCurrentUserFromUserssion();
+        return tagService.getCurrentTagListByUserId(shiroUser.getUserId());
     }
 }

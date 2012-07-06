@@ -18,5 +18,7 @@ public interface TagService {
 
     List<TagDTO> getCurrentTagList();
 
+    List<TagDTO> getCurrentTagListByUserId(String userId);
+
     TagDescription getTagDescriptionById(String id);
 }

@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 
 import java.util.List;
 
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 /**
@@ -38,6 +39,7 @@ public class MockTagServiceProvider implements Provider<TagService> {
         when(tagService.exists("test")).thenReturn(false);
         when(tagService.exists("xxx")).thenReturn(true);
         when(tagService.getCurrentTagList()).thenReturn(tagDTOList);
+        when(tagService.getCurrentTagListByUserId(anyString())).thenReturn(tagDTOList);
     }
 
     @Override
