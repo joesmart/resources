@@ -3,6 +3,7 @@ package com.feature.resources.server.resources;
 import com.feature.resources.server.resources.guice.MockGuiceContextListener;
 import com.google.inject.servlet.GuiceFilter;
 import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 import com.sun.jersey.test.framework.AppDescriptor;
 import com.sun.jersey.test.framework.JerseyTest;
 import com.sun.jersey.test.framework.WebAppDescriptor;
@@ -43,8 +44,8 @@ public class BasicJerseyTest extends JerseyTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
+        client().addFilter(new HTTPBasicAuthFilter("joesmart","123456"));
         resource = resource();
-//        super.setUp();
     }
 
     @After

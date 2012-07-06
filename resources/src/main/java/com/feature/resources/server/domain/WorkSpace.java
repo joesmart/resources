@@ -12,6 +12,7 @@ import com.google.common.base.Objects;
 @Entity
 public class WorkSpace extends ResourceEntity {
     private String name;
+    private String userId;
 
     public String getName() {
         return name;

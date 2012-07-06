@@ -4,8 +4,6 @@ import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import javax.ws.rs.core.MediaType;
@@ -25,15 +23,6 @@ public class WorkspaceResourceTest extends BasicJerseyTest {
     @Inject
     private TestDataObjectFactory testDataObjectFactory;
 
-    @Before
-    public void setUp() {
-        resource = resource();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
-    }
 
     @Test
     public void should_add_a_new_Workspace_successful() throws Exception {

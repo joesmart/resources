@@ -9,6 +9,7 @@ import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.impl.GraphicServiceImpl;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.common.collect.Lists;
 import com.google.common.io.Resources;

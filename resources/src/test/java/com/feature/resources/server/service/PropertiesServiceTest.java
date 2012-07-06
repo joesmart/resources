@@ -1,7 +1,7 @@
 package com.feature.resources.server.service;
 
 import com.feature.resources.server.dao.PropertiesDao;
-import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.feature.resources.server.domain.Properties;
 import com.feature.resources.server.service.impl.PropertiesServiceImpl;
 import com.google.code.morphia.Datastore;

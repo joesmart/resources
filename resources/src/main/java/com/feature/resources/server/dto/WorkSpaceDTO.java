@@ -10,6 +10,8 @@ package com.feature.resources.server.dto;
 public class WorkSpaceDTO {
     private String id;
     private String name;
+    private String userId;
+
 
     public String getId() {
         return id;
@@ -25,5 +27,13 @@ public class WorkSpaceDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

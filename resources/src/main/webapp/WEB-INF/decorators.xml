@@ -8,6 +8,8 @@
     </excludes>
     <decorator name="login" page="login.jsp">
         <pattern>/login.jsp</pattern>
+        <pattern>/register.jsp</pattern>
+        <pattern>/servlet/register</pattern>
     </decorator>
     <decorator name="main" page="decorator.jsp">
        <pattern>/*</pattern>

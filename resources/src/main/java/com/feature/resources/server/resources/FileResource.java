@@ -1,6 +1,6 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
@@ -15,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
@@ -50,7 +51,7 @@ public class FileResource {
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @SuppressWarnings(value = "unchecked")
-    public void post(@Context HttpServletRequest req, @Context HttpServletResponse res) throws IOException, FileUploadException {
+    public void post(@Context HttpServletRequest req, @Context HttpServletResponse res) throws IOException, FileUploadException, ServletException {
 
         String key = "xxx";
         ServletFileUpload uploadHandler = new ServletFileUpload(new DiskFileItemFactory());

@@ -25,10 +25,10 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public void addNewTag(TagDTO tagDTO) {
+
         Preconditions.checkNotNull(tagDTO);
         TagDescription tagDescription = new TagDescription();
         tagDescription.setTag(tagDTO.getTag());
-
         tagDao.save(tagDescription);
     }
 

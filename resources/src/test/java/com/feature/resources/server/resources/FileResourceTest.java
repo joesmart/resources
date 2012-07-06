@@ -5,6 +5,7 @@ import com.feature.resources.server.testdata.TestDataObjectFactory;
 import com.google.inject.Inject;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataBodyPart;
 import com.sun.jersey.multipart.FormDataMultiPart;
@@ -68,6 +69,7 @@ public class FileResourceTest extends BasicJerseyTest {
         FormDataBodyPart inputStreamBody = new FormDataBodyPart(FormDataContentDisposition.name("file").fileName("graphics.png").size(1000L).build(), inputStream, MediaType.APPLICATION_OCTET_STREAM_TYPE);
         mp.bodyPart(p);
         mp.bodyPart(inputStreamBody);
+        client().addFilter(new HTTPBasicAuthFilter("joesmart","123456"));
         WebResource webResource = resource().path("file");
         webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE).post(mp);
     }

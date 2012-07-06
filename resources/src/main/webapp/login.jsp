@@ -54,8 +54,9 @@
                 <br/>
                 <br/>
                 <input id="submit" class="btn" type="submit" value="登录"/>
+                &nbsp;
+                <a href="register.jsp" class="btn">注册</a>
 
-                <p class="help-block">(管理员<b>admin/admin</b>, 普通用户<b>user/user</b>)</p>
             </div>
         </div>
 

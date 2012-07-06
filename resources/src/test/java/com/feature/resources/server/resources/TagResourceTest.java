@@ -1,6 +1,7 @@
 package com.feature.resources.server.resources;
 
 import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 import org.fest.assertions.Assertions;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +23,7 @@ public class TagResourceTest extends BasicJerseyTest {
 
     @Before
     public void setUp() {
+        client().addFilter(new HTTPBasicAuthFilter("joesmart","123456"));
         resource = resource();
     }
 

@@ -1,6 +1,6 @@
 package com.feature.resources.server.resources.inmemory;
 
-import com.feature.resources.server.domain.DomainObjectFactory;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.feature.resources.server.resources.guice.*;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
