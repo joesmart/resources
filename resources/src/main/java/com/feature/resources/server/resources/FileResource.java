@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Path("/file")
-public class FileResource {
+public class FileResource extends Resource{
     public static final Logger LOGGER = LoggerFactory.getLogger(FileResource.class);
 
     @Inject
@@ -56,6 +56,7 @@ public class FileResource {
         String key = "xxx";
         ServletFileUpload uploadHandler = new ServletFileUpload(new DiskFileItemFactory());
         List<FileItem> fileItems = uploadHandler.parseRequest(req);
+        getCurrentUserFromUserssion();
         for (FileItem fileItem : fileItems) {
             if (!fileItem.isFormField()) {
                 String fileName = fileItem.getName();
@@ -63,6 +64,7 @@ public class FileResource {
                 String contentType = fileItem.getContentType();
                 LOGGER.info("fileName:" + fileName + " size:" + size + " contentType:" + contentType);
                 Graphic graphic = graphicService.generateGraphic(fileName, size, contentType,tagId,workspaceId);
+                graphic.setUserId(shiroUser.getUserId());
                 byte[] bytes = fileItem.get();
                 key = graphicService.dealUploadDataToCreateNewGraphic(bytes, graphic );
             }else{

@@ -26,11 +26,12 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
     public void addNewWorkspace(WorkSpaceDTO workspaceDTO) {
         WorkSpace workSpace = new WorkSpace();
         workSpace.setName(workspaceDTO.getName());
+        workSpace.setUserId(workspaceDTO.getUserId());
         workSpaceDao.save(workSpace);
     }
 
-    public boolean exists(String name) {
-        return  workSpaceDao.isAlreadyExists("name", name);
+    public boolean exists(String name, String userId) {
+        return  workSpaceDao.isAlreadyExists("name,userId", name,userId);
     }
 
     @Override

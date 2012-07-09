@@ -4,6 +4,8 @@ import com.feature.resources.server.config.morphia.MorphiaGuiceModule;
 import com.feature.resources.server.domain.Permission;
 import com.feature.resources.server.domain.Role;
 import com.feature.resources.server.domain.User;
+import com.feature.resources.server.dto.UserDTO;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.query.Query;
 import com.google.inject.Inject;
@@ -27,6 +29,8 @@ public class RealtyDataStore {
     private Datastore ds;
     @Inject
     private RoleDao roleDao;
+    @Inject
+    private DomainObjectFactory domainObjectFactory;
 
     @Inject
     private UserDao userDao;
@@ -55,15 +59,12 @@ public class RealtyDataStore {
 
         roleDao.save(role);
 
-        User user = new User();
-        user.setEmail("abc@test.com");
-        user.setLoginName("joesmart");
-        user.setName("abc@test.com");
-        user.setPassword("abcd");
-        user.setPlainPassword("abcd");
-        user.setSalt("123123");
-        user.setStatus("xxx");
-        user.setType("User");
+        UserDTO userDTO = new UserDTO();
+        userDTO.setLoginName("joesmart");
+        userDTO.setPassword("123456");
+        userDTO.setEmail("abc@test.com");
+        userDTO.setName("joesmart");
+        User user = domainObjectFactory.translateToUser(userDTO);
         user.addNewRole(role);
         userDao.save(user);
         Assert.assertNotNull(permissionDao);

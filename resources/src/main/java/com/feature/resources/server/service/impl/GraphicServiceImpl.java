@@ -213,7 +213,7 @@ public class GraphicServiceImpl implements GraphicService {
     @Override
 //    @RequiresPermissions(value ={"user:xxx"} )
 //    @RequiresAuthentication
-    public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
+    public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType, String userId) {
         String upperCaseQueryType = queryType.toUpperCase();
         return  graphicDao.findByPageAndQueryType(requestPage,pageSize, CheckStatusDesc.valueOf(upperCaseQueryType));
     }

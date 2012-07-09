@@ -50,6 +50,7 @@ public class TagServiceTest {
     public void should_add_new_tag_successful(TagDao mockDao) {
         TagDTO tagDTO = new TagDTO();
         tagDTO.setTag("test");
+        tagDTO.setId("xxxxxxxxxxxxx");
         tagService.addNewTag(tagDTO);
         verify(mockDao).save(any(TagDescription.class));
     }
@@ -57,8 +58,9 @@ public class TagServiceTest {
     @Test
     public void should_return_true_when_tag_already_exists(TagDao tagDao) {
         String str = "test";
-        when(tagDao.isAlreadyExists("tag", str)).thenReturn(true);
-        boolean result = tagService.exists(str);
+        String userId = "abc";
+        when(tagDao.isAlreadyExists("tag,userId", str,userId)).thenReturn(true);
+        boolean result = tagService.exists(str, userId);
         assertThat(result).isTrue();
     }
 
@@ -66,7 +68,7 @@ public class TagServiceTest {
     public void should_return_false_when_tag_not_exists(TagDao tagDao) {
         String str = "xxx";
         when(tagDao.isAlreadyExists("tag", str)).thenReturn(false);
-        boolean result = tagService.exists(str);
+        boolean result = tagService.exists(str, null);
         assertThat(result).isFalse();
     }
 

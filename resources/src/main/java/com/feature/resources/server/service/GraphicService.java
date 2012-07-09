@@ -38,7 +38,7 @@ public  interface GraphicService {
 
      Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId);
 
-     List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType);
+     List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType, String userId);
 
     void checkGraphics(GraphicCheckDTO graphicCheckDTO);
 

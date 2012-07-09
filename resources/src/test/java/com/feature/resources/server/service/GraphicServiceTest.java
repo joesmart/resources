@@ -177,7 +177,7 @@ public class GraphicServiceTest {
 
 
         when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.ALL)).thenReturn(uncheckedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,"ALL");
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,"ALL", "should_be_user_id");
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size());
     }
@@ -186,7 +186,7 @@ public class GraphicServiceTest {
     public void should_return_all_Graphic_when_queryType_is_checked(GraphicDao graphicDao){
         List<Graphic> checkedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.CHECKED,3);
         when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECKED)).thenReturn(checkedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.CHECKED.getValue());
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.CHECKED.getValue(), "should_be_user_id");
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(checkedList.size()<10?checkedList.size():10);
     }
@@ -195,7 +195,7 @@ public class GraphicServiceTest {
     public void should_return_all_Graphic_when_queryType_is_unchecked(GraphicDao graphicDao){
         List<Graphic> uncheckedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.UNCHECKED,3);
         when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.UNCHECKED)).thenReturn(uncheckedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.UNCHECKED.getValue());
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.UNCHECKED.getValue(), "should_be_user_id");
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size()<10?uncheckedList.size():10);
     }

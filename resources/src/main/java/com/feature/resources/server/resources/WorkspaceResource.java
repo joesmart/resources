@@ -19,26 +19,33 @@ import java.util.List;
 
 @Path("/workspace")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML,MediaType.APPLICATION_FORM_URLENCODED})
-public class WorkspaceResource {
+@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_FORM_URLENCODED})
+public class WorkspaceResource extends Resource {
     @Inject
     private WorkSpaceService workSpaceService;
 
     @Path("/add")
     @POST
-    public Response addNewWorkspace(WorkSpaceDTO workspaceDTO){
-        if(!workSpaceService.exists(workspaceDTO.getName())){
+    public Response addNewWorkspace(WorkSpaceDTO workspaceDTO) {
+        getCurrentUserFromUserssion();
+        String userId = null;
+        if (shiroUser != null) {
+            userId = shiroUser.getUserId();
+            workspaceDTO.setUserId(userId);
+        }
+        if (!workSpaceService.exists(workspaceDTO.getName(), userId)) {
             workSpaceService.addNewWorkspace(workspaceDTO);
-            return  Response.ok().build();
-        }else{
-            return  Response.status(Response.Status.NOT_MODIFIED).build();
+            return Response.ok().build();
+        } else {
+            return Response.status(Response.Status.NOT_MODIFIED).build();
         }
     }
 
     @Path("/all")
     @GET
-    public List<WorkSpaceDTO> getAllWorkSpace(){
-        return workSpaceService.getCurrentWorkSpaceList();
+    public List<WorkSpaceDTO> getAllWorkSpace() {
+        getCurrentUserFromUserssion();
+        return workSpaceService.getCurrentWorkSpaceListByUserId(shiroUser.getUserId());
     }
 
 }

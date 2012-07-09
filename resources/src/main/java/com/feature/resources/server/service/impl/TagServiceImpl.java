@@ -30,12 +30,13 @@ public class TagServiceImpl implements TagService {
         Preconditions.checkNotNull(tagDTO);
         TagDescription tagDescription = new TagDescription();
         tagDescription.setTag(tagDTO.getTag());
+        tagDescription.setUserId(tagDTO.getUserId());
         tagDao.save(tagDescription);
     }
 
     @Override
-    public boolean exists(String tag) {
-        return  tagDao.isAlreadyExists("tag", tag);
+    public boolean exists(String tag, String userId) {
+        return  tagDao.isAlreadyExists("tag,userId", tag,userId);
     }
 
     @Override

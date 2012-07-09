@@ -14,7 +14,7 @@ import java.util.List;
 public interface TagService {
     void addNewTag(TagDTO tagDTO);
 
-    boolean exists(String tag);
+    boolean exists(String tag, String userId);
 
     List<TagDTO> getCurrentTagList();
 

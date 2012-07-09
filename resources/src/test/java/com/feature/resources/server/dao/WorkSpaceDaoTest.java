@@ -79,7 +79,7 @@ public class WorkSpaceDaoTest extends BasicMongoUnitTest {
         List<String> userTagList = Lists.newArrayList(Iterators.filter(resourceList.iterator(), new Predicate<String>() {
             @Override
             public boolean apply(@Nullable String input) {
-                return input.contains("userId");
+                return input.contains("\"userId\":\"4ff410a897ac21319cf81011\"");
             }
         }));
 
@@ -87,9 +87,9 @@ public class WorkSpaceDaoTest extends BasicMongoUnitTest {
         DBObject dbObject = (DBObject) JSON.parse(json);
         String userId = (String) dbObject.get("userId");
 
-        assertThat(userTagList.size()).isEqualTo(1);
+        assertThat(userTagList.size()).isEqualTo(userTagList.size());
         List<WorkSpace> workSpaceList = workSpaceDao.getEntityListByUserId(userId);
-        assertThat(workSpaceList.size()).isEqualTo(1);
+        assertThat(workSpaceList.size()).isEqualTo(userTagList.size());
 
     }
 }

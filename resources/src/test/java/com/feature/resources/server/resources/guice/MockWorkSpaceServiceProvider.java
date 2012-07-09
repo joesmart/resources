@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 /**
@@ -35,11 +36,13 @@ public class MockWorkSpaceServiceProvider implements Provider<WorkSpaceService> 
         workSpaceDTO.setName("mock");
         List<WorkSpaceDTO> workSpaceDTOList = Lists.newArrayList();
         workSpaceDTOList.add(workSpaceDTO);
+
         this.testDataObjectFactory = testDataObjectFactory;
         workSpaceService = Mockito.mock(WorkSpaceServiceImpl.class);
-        when(workSpaceService.exists("test")).thenReturn(true);
-        when(workSpaceService.exists("xxx")).thenReturn(false);
+        when(workSpaceService.exists("test", "4ff687ae97acbe55b0b3591c")).thenReturn(true);
+        when(workSpaceService.exists("xxx", "4ff687ae97acbe55b0b3591c")).thenReturn(false);
         when(workSpaceService.getCurrentWorkSpaceList()).thenReturn(workSpaceDTOList);
+        when(workSpaceService.getCurrentWorkSpaceListByUserId(anyString())).thenReturn(workSpaceDTOList);
 
     }
     @Override
