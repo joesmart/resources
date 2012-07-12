@@ -4,7 +4,9 @@ import com.google.common.collect.Lists;
 import junit.framework.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -54,5 +56,14 @@ public class StringUtilTest {
         assertThat(sizeList).isNotNull();
         assertThat(sizeList.get(0)).isEqualTo(40);
         assertThat(sizeList.get(1)).isEqualTo(40);
+    }
+
+
+    @Test(expected = NullPointerException.class)
+    public void should_throw_a_nullException_when_cast_null_object(){
+        Map map = new HashMap();
+//        map.put("1",new Integer(1));
+        int integer= (Integer)map.get("1");
+        Assert.fail("Shouldn't get here!");
     }
 }

@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.charset.Charset;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -73,6 +74,7 @@ public class BasicMongoUnitTest {
         for (String json : collectionLists) {
             System.out.println(json);
             DBObject dbObject = (DBObject) JSON.parse(json);
+            dbObject.put("createDate",new Date());
             workSpacesColloection.insert(dbObject);
         }
     }

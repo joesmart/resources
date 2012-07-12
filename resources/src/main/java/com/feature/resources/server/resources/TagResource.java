@@ -12,14 +12,21 @@ import java.util.List;
 @Path("/tag")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_FORM_URLENCODED})
-public class TagResource {
+public class TagResource extends Resource {
     @Inject
     private TagService tagService;
+
 
     @Path("/add")
     @POST
     public Response addNewWorkspace(TagDTO tagDTO) {
-        if (!tagService.exists(tagDTO.getTag())) {
+        getCurrentUserFromUserssion();
+        String userId = "";
+        if(shiroUser != null){
+            userId = shiroUser.getUserId();
+            tagDTO.setUserId(userId);
+        }
+        if (!tagService.exists(tagDTO.getTag(), userId)) {
             tagService.addNewTag(tagDTO);
             return Response.ok().build();
         } else {
@@ -30,6 +37,7 @@ public class TagResource {
     @Path("/all")
     @GET
     public List<TagDTO> getAllTags(){
-        return tagService.getCurrentTagList();
+        getCurrentUserFromUserssion();
+        return tagService.getCurrentTagListByUserId(shiroUser.getUserId());
     }
 }

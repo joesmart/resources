@@ -13,6 +13,7 @@ public class GraphicDTO {
     private String tagId;
     private String size;
     private String url;
+    private String userId;
 
     public String getDescription() {
         return description;
@@ -60,5 +61,13 @@ public class GraphicDTO {
 
     public void setTagId(String tagId) {
         this.tagId = tagId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

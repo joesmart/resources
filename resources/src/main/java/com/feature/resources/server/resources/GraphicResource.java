@@ -26,7 +26,7 @@ import java.util.List;
 @Path("/graphics")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML,MediaType.APPLICATION_FORM_URLENCODED})
-public class GraphicResource {
+public class GraphicResource extends Resource{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GraphicResource.class);
 
@@ -89,7 +89,8 @@ public class GraphicResource {
                                                  @QueryParam("queryType") String queryType
                                                 ){
         LOGGER.info("Query Type:"+queryType);
-        List<Graphic> graphics = graphicService.findGraphicByPageAndQueryType(requestPage,pageSize,queryType);
+        getCurrentUserFromUserssion();
+        List<Graphic> graphics = graphicService.findGraphicByPageAndQueryTypeAndUser(requestPage, pageSize, queryType, shiroUser.getUserId());
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
         dataListInfo.setDataList(graphics);
         dataListInfo.setName("Graphics");

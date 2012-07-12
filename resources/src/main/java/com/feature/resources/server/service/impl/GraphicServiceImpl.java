@@ -11,6 +11,7 @@ import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.service.PropertiesService;
 import com.feature.resources.server.service.TagService;
 import com.feature.resources.server.service.WorkSpaceService;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
 import com.mongodb.gridfs.GridFSDBFile;
@@ -210,9 +211,11 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     @Override
-    public List<Graphic> findGraphicByPageAndQueryType(int requestPage, int pageSize, String queryType) {
-        String uppcaseQueryType = queryType.toUpperCase();
-        return  graphicDao.findByPageAndQueryType(requestPage,pageSize, CheckStatusDesc.valueOf(uppcaseQueryType));
+//    @RequiresPermissions(value ={"user:xxx"} )
+//    @RequiresAuthentication
+    public List<Graphic> findGraphicByPageAndQueryTypeAndUser(int requestPage, int pageSize, String queryType, String userId) {
+        String upperCaseQueryType = queryType.toUpperCase();
+        return graphicDao.findByPageAndQueryTypeAndUserId(requestPage,pageSize, CheckStatusDesc.valueOf(upperCaseQueryType),userId);
     }
 
     @Override

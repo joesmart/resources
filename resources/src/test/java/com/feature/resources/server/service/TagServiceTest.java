@@ -34,7 +34,7 @@ public class TagServiceTest {
     private TagService tagService;
 
     @Inject
-    private TestDataObjectFactory taTestDataObjectFactory;
+    private TestDataObjectFactory testDataObjectFactory;
 
     public static class Module extends JukitoModule {
 
@@ -50,6 +50,7 @@ public class TagServiceTest {
     public void should_add_new_tag_successful(TagDao mockDao) {
         TagDTO tagDTO = new TagDTO();
         tagDTO.setTag("test");
+        tagDTO.setId("xxxxxxxxxxxxx");
         tagService.addNewTag(tagDTO);
         verify(mockDao).save(any(TagDescription.class));
     }
@@ -57,8 +58,9 @@ public class TagServiceTest {
     @Test
     public void should_return_true_when_tag_already_exists(TagDao tagDao) {
         String str = "test";
-        when(tagDao.isAlreadyExists("tag", str)).thenReturn(true);
-        boolean result = tagService.exists(str);
+        String userId = "abc";
+        when(tagDao.isAlreadyExists("tag,userId", str,userId)).thenReturn(true);
+        boolean result = tagService.exists(str, userId);
         assertThat(result).isTrue();
     }
 
@@ -66,7 +68,7 @@ public class TagServiceTest {
     public void should_return_false_when_tag_not_exists(TagDao tagDao) {
         String str = "xxx";
         when(tagDao.isAlreadyExists("tag", str)).thenReturn(false);
-        boolean result = tagService.exists(str);
+        boolean result = tagService.exists(str, null);
         assertThat(result).isFalse();
     }
 
@@ -87,9 +89,27 @@ public class TagServiceTest {
     public void should_get_all_entity_successful(TagDao tagDao){
         List<TagDTO> tagDTOList;
         String tag = "Test";
-        List<TagDescription> tagDescriptionList = taTestDataObjectFactory.createTagDescriptionList();
+        List<TagDescription> tagDescriptionList = testDataObjectFactory.createTagDescriptionList();
         when(tagDao.getEntityList()).thenReturn(tagDescriptionList);
         tagDTOList = tagService.getCurrentTagList();
+        assertThat(tagDTOList).isNotNull();
+        assertThat(tagDTOList.size()>0).isTrue();
+        assertThat(tagDTOList.size()).isEqualTo(tagDescriptionList.size());
+        for(int i=0;i<tagDTOList.size();i++){
+            tagDTOList.get(i);
+            assertThat(tagDTOList.get(i).getId()).isEqualTo(tagDescriptionList.get(i).getIdString());
+            assertThat(tagDTOList.get(i).getTag()).isEqualTo(tagDescriptionList.get(i).getTag());
+        }
+    }
+
+    @Test
+    public void should_get_all_entity_successful_when_query_by_userId(TagDao tagDao){
+        List<TagDTO> tagDTOList;
+        String tag = "Test";
+        List<TagDescription> tagDescriptionList = testDataObjectFactory.createTagDescriptionList();
+        String userId = "4ff410a897ac21319cf81011";
+        when(tagDao.getEntityListByUserId(userId)).thenReturn(tagDescriptionList);
+        tagDTOList = tagService.getCurrentTagListByUserId(userId);
         assertThat(tagDTOList).isNotNull();
         assertThat(tagDTOList.size()>0).isTrue();
         assertThat(tagDTOList.size()).isEqualTo(tagDescriptionList.size());

@@ -46,6 +46,9 @@
             <div class="nav-collapse collapse">
 
             </div>
+            <div class="pull-right">
+                <h3><a href="${ctx}/logout" class="">登出</a></h3>
+            </div>
         </div>
     </div>
 </div>

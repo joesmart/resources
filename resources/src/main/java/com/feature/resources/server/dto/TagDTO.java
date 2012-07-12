@@ -1,10 +1,9 @@
 package com.feature.resources.server.dto;
 
-import com.google.common.base.Objects;
-
 public class TagDTO {
     private String tag;
     private String id;
+    private String userId;
 
     public String getTag() {
         return tag;
@@ -22,6 +21,11 @@ public class TagDTO {
         this.id = id;
     }
 
+    public String getUserId() {
+        return userId;
+    }
 
-
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }

@@ -5,6 +5,8 @@ import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.util.SystemFunctions;
 import com.google.code.morphia.query.Query;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
@@ -17,6 +19,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -117,7 +120,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_get_checked_graphic_first_page_when_it_checked_when_request_page_is_zero() {
+    public void should_get_checked_graphic_first_page_when_it_checked_and_request_page_is_zero() {
         final String statusDesc = CheckStatusDesc.CHECKED.getValue();
         List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
         List<Graphic> graphics = graphicDao.findByPageAndQueryType(0, 10, CheckStatusDesc.CHECKED);
@@ -260,7 +263,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_delet_grahic_successful_when_idStringList_is_not_null(){
+    public void should_delete_graphic_successful_when_idStringList_is_not_null(){
         final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
         List<String> graphicList = getResourceStringList("Graphic");
         ObjectId objectId = null;
@@ -276,4 +279,38 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(row).isEqualTo(idStringList.size());
     }
 
+
+    @Test
+    public void should_get_graphic_by_userId_when_query_by_user_and_query_type(){
+        final String statusDesc = CheckStatusDesc.LATEST.getValue();
+        List<String> allGraphics = getResourceStringList("Graphic");
+        List<String> userGraphics = convertToUserContainGraphicList(allGraphics);
+        graphicDao.setMinusDays(30);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(1, 24, CheckStatusDesc.LATEST, "4ff410a897ac21319cf81011");
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(userGraphics.size());
+        judgeGraphicsOrder(graphics);
+    }
+
+    private List<String> convertToUserContainGraphicList(List<String> allGraphics) {
+        return Lists.newArrayList(Iterables.filter(allGraphics, new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String input) {
+                return input.contains("\"userId\":\"4ff410a897ac21319cf81011\"");
+            }
+        }));
+    }
+
+    @Test
+    public void should_get_checked_graphic_when_it_checked_and_query_by_user() {
+        final String statusDesc = CheckStatusDesc.CHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<String> userGraphics = convertToUserContainGraphicList(checkedList);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.CHECKED,"4ff410a897ac21319cf81011");
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(userGraphics.size());
+        for (Graphic graphic : graphics) {
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+    }
 }

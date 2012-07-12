@@ -66,16 +66,17 @@ public class WorkSpaceServiceTest {
 
     @Test
     public void should_return_true(WorkSpaceDao mockDao) {
-        boolean result = workSpaceService.exists("test");
-        verify(mockDao).isAlreadyExists("name", "test");
+        when(mockDao.isAlreadyExists("name,userId","test","abc")).thenReturn(true);
+        boolean result = workSpaceService.exists("test","abc");
+        verify(mockDao).isAlreadyExists("name,userId", "test","abc");
         assertThat(result).isEqualTo(true);
     }
 
     @Test
     public void should_return_false(WorkSpaceDao mockDao) {
-        when(mockDao.isAlreadyExists("name", "xxxx")).thenReturn(false);
-        boolean result = workSpaceService.exists("xxxx");
-        verify(mockDao).isAlreadyExists("name", "xxxx");
+        when(mockDao.isAlreadyExists("name,userId", "xxxx")).thenReturn(false);
+        boolean result = workSpaceService.exists("xxxx", "");
+        verify(mockDao).isAlreadyExists("name,userId", "xxxx","");
         assertThat(result).isEqualTo(false);
     }
 
@@ -93,6 +94,26 @@ public class WorkSpaceServiceTest {
         Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
         Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
         verify(mockDao).getEntityList();
+    }
+
+    @Test
+    public void should_return_workspace_list_when_query_by_userId(WorkSpaceDao mockDao) {
+        String userId = "4ff410a897ac21319cf81011";
+
+        List<WorkSpace> workSpaces = Lists.newArrayList();
+        WorkSpace workSpace = new WorkSpace();
+        workSpace.setName("text");
+        ObjectId id = new ObjectId();
+        workSpace.setId(id);
+        workSpace.setUserId(userId);
+        workSpaces.add(workSpace);
+
+        when(mockDao.getEntityListByUserId(userId)).thenReturn(workSpaces);
+        List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceListByUserId(userId);
+        Assert.assertNotNull(workSpaceList);
+        Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
+        Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
+        verify(mockDao).getEntityListByUserId(userId);
     }
 
     @Test

@@ -61,7 +61,7 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
 //        when(graphicService.saveGraphic(bytes,any(Graphic.class))).thenReturn(afterSaveGraphic);
         generateGraphicListTestFixture(afterSaveGraphic, graphics);
         when(graphicService.findGraphicByPage(1,10)).thenReturn(graphics);
-        when(graphicService.findGraphicByPageAndQueryType(1, 10, "all")).thenReturn(graphics);
+        when(graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, "all", "4ff687ae97acbe55b0b3591c")).thenReturn(graphics);
         doAnswer(new Answer() {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {

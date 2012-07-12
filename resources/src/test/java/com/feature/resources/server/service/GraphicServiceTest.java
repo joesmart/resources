@@ -9,6 +9,7 @@ import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.impl.GraphicServiceImpl;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.code.morphia.Datastore;
 import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
@@ -174,9 +175,8 @@ public class GraphicServiceTest {
 
         uncheckedList.addAll(checkedList);
 
-
-        when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.ALL)).thenReturn(uncheckedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,"ALL");
+        when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.ALL, objectId.toString())).thenReturn(uncheckedList);
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, "ALL", objectId.toString());
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size());
     }
@@ -184,8 +184,8 @@ public class GraphicServiceTest {
     @Test
     public void should_return_all_Graphic_when_queryType_is_checked(GraphicDao graphicDao){
         List<Graphic> checkedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.CHECKED,3);
-        when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.CHECKED)).thenReturn(checkedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.CHECKED.getValue());
+        when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.CHECKED, objectId.toString())).thenReturn(checkedList);
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, CheckStatusDesc.CHECKED.getValue(), objectId.toString());
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(checkedList.size()<10?checkedList.size():10);
     }
@@ -193,8 +193,8 @@ public class GraphicServiceTest {
     @Test
     public void should_return_all_Graphic_when_queryType_is_unchecked(GraphicDao graphicDao){
         List<Graphic> uncheckedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.UNCHECKED,3);
-        when(graphicDao.findByPageAndQueryType(1, 10, CheckStatusDesc.UNCHECKED)).thenReturn(uncheckedList);
-        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryType(1,10,CheckStatusDesc.UNCHECKED.getValue());
+        when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.UNCHECKED, objectId.toString())).thenReturn(uncheckedList);
+        List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, CheckStatusDesc.UNCHECKED.getValue(), objectId.toString());
         Assertions.assertThat(pageGraphic).isNotNull();
         Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size()<10?uncheckedList.size():10);
     }

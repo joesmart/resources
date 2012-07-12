@@ -10,7 +10,13 @@ import org.junit.runners.Suite;
  * FileName:DaoUnitTestSuite
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({TagDaoTest.class, WorkSpaceDaoTest.class,GraphicDaoTest.class})
+@Suite.SuiteClasses({
+        TagDaoTest.class,
+        WorkSpaceDaoTest.class,
+        GraphicDaoTest.class,
+        PermissionDaoTest.class,
+        UserDaoTest.class
+    })
 public class DaoUnitTestSuite {
 
 }

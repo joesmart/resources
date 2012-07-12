@@ -86,10 +86,16 @@ public class TestDataObjectFactory {
     }
 
     public List<TagDescription> createTagDescriptionList(){
+        return createTagDescriptionList(null);
+    }
+
+    public List<TagDescription> createTagDescriptionList(String userId){
         List<TagDescription> tagDescriptionList = Lists.newArrayList();
         for(Integer i:new Integer[]{1,2,3,4,5}){
             TagDescription tagDescription = createTagDescription(String.valueOf(i));
+            tagDescription.setUserId(userId);
             tagDescriptionList.add(tagDescription);
+
         }
         return tagDescriptionList;
     }

@@ -6,7 +6,7 @@ import java.util.Date;
 
 
 @Entity
-public class Properties extends BaseEntity {
+public class Properties extends ResourceEntity {
     private String uuid;
     private String name;
     private String path;
@@ -15,6 +15,10 @@ public class Properties extends BaseEntity {
     private Date modified;
     private String mimeType;
     private String status;
+
+    public Properties(){
+       setType("Properties");
+    }
 
     public Date getCreate() {
         return create;

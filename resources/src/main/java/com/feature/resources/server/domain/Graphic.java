@@ -23,6 +23,7 @@ public class Graphic extends ResourceEntity {
     private TagDescription tag;
     private String checkStatus;
     private String checkResult;
+    private String userId;
 
     public  Graphic(){
         super.setType("Graphic");
@@ -113,6 +114,14 @@ public class Graphic extends ResourceEntity {
 
     public void setCheckResult(String checkResult) {
         this.checkResult = checkResult;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String toString(){

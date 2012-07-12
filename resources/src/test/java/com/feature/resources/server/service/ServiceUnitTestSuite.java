@@ -15,7 +15,8 @@ import org.junit.runners.Suite;
         GraphicServiceTest.class,
         TagServiceTest.class,
         WorkSpaceServiceTest.class,
-        PropertiesServiceTest.class
+        PropertiesServiceTest.class,
+        UserServiceTest.class
 })
 public class ServiceUnitTestSuite {
 }

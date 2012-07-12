@@ -26,6 +26,6 @@ public class URIServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse response) throws ServletException, IOException {
-        super.doPost(httpServletRequest, response);
+        doGet(httpServletRequest, response);
     }
 }

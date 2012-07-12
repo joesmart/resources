@@ -134,4 +134,37 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
     public void setFunctions(SystemFunctions functions) {
         this.functions = functions;
     }
+
+    public List<Graphic> findByPageAndQueryTypeAndUserId(int requestPage, int pageSize, CheckStatusDesc desc, String userId) {
+        Preconditions.checkNotNull(userId,"用户不能为空");
+        Preconditions.checkArgument(!"".equals(userId),"用户不能为空");
+        int innerRequestPage = requestPage;
+        List<Graphic> graphics;
+        if (innerRequestPage < 1) {
+            innerRequestPage = 1;
+        }
+        int offset = (innerRequestPage - 1) * pageSize;
+        graphicQuery = createQuery();
+        String checkStatus = "checkStatus";
+        if (desc.equals(CheckStatusDesc.UNCHECKED)) {
+            graphicQuery.or(
+                    graphicQuery.criteria(checkStatus).equal(desc.getValue()),
+                    graphicQuery.criteria(checkStatus).equal(null)
+            );
+        }
+        if (desc.equals(CheckStatusDesc.CHECKED)) {
+            graphicQuery.field(checkStatus).equal(desc.getValue());
+        }
+        graphicQuery.field("userId").equal(userId);
+
+        if(desc.equals(CheckStatusDesc.LATEST)){
+            DateTime dateTime = new DateTime();
+            dateTime = dateTime.minusDays(minusDays);
+            LOGGER.info("date:" + dateTime.toString());
+            graphicQuery.filter("createDate >",dateTime.toDate());
+        }
+        graphicQuery.order("-createDate");
+        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
+        return graphics;
+    }
 }
