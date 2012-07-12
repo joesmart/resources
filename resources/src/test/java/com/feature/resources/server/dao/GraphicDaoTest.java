@@ -66,8 +66,9 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphicList).isNotNull();
         assertThat(graphicList.size()).isEqualTo(resourceDataSize("Graphic"));
         Date maxDate = graphicList.get(0).getCreateDate();
-        Date secondDate = graphicList.get(1).getCreateDate();
-        assertThat(maxDate.after(secondDate)).isTrue();
+        Date secondDate = graphicList.get(graphicList.size()-1).getCreateDate();
+        if(graphicList.size() >1 )
+            assertThat(maxDate.after(secondDate)).isTrue();
     }
 
     @Test
