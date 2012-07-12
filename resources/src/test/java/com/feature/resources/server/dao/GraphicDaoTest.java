@@ -79,13 +79,11 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_FindByPage_return_a_page_when_requestPage_is_zero() throws Exception {
+    public void should_FindByPage_return_first_page_when_Request_page_is_zero() throws Exception {
         List<Graphic> graphics = graphicDao.findByPage(0, 10);
         assertThat(graphics).isNotNull();
         int graphicSize = resourceDataSize("Graphic");
         assertThat(graphics.size()).isEqualTo(graphicSize >= 10 ? 10 : graphicSize);
-        judgeGraphicsOrder(graphics);
-
     }
 
     private void judgeGraphicsOrder(List<Graphic> graphics) {
@@ -131,6 +129,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         }
         judgeGraphicsOrder(graphics);
     }
+
 
     @Test
     public void should_get_checked_graphic_when_it_checked_and_pageSizeIs_less_than_7() {
@@ -279,6 +278,16 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(row).isEqualTo(idStringList.size());
     }
 
+    @Test(expected = NullPointerException.class)
+    public void should_get_null_point_exception_when_idStringList_is_null(){
+        graphicDao.batchDelete(null);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void should_get_illegalStateException_when_idStringList_is_empty(){
+        List<String> idStringList = Lists.newArrayList();
+        graphicDao.batchDelete(idStringList);
+    }
 
     @Test
     public void should_get_graphic_by_userId_when_query_by_user_and_query_type(){
@@ -306,11 +315,39 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         final String statusDesc = CheckStatusDesc.CHECKED.getValue();
         List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
         List<String> userGraphics = convertToUserContainGraphicList(checkedList);
-        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.CHECKED,"4ff410a897ac21319cf81011");
+        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.CHECKED, "4ff410a897ac21319cf81011");
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(userGraphics.size());
         for (Graphic graphic : graphics) {
             Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+    }
+
+
+    @Test
+    public void should_get_checked_graphic_first_page_when_it_checked_and_userNotNull_request_page_is_zero() {
+        final String statusDesc = CheckStatusDesc.CHECKED.getValue();
+        List<String> checkedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<String> userGraphics = convertToUserContainGraphicList(checkedList);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(0, 10, CheckStatusDesc.CHECKED, "4ff410a897ac21319cf81011");
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(userGraphics.size());
+        for (Graphic graphic : graphics) {
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+        }
+        judgeGraphicsOrder(graphics);
+    }
+
+    @Test
+    public void should_get_unchecked_graphics_when_findByPageAndQueryTypeAndUserId(){
+        final String statusDesc = CheckStatusDesc.UNCHECKED.getValue();
+        List<String> uncheckedList = getGraphicStringListByCheckStatus(statusDesc);
+        List<String> userGraphics = convertToUserContainGraphicList(uncheckedList);
+        List<Graphic> graphics = graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.UNCHECKED,"4ff410a897ac21319cf81011");
+        assertThat(graphics).isNotNull();
+        assertThat(graphics.size()).isEqualTo(userGraphics.size());
+        for (Graphic graphic : graphics) {
+            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
         }
     }
 }

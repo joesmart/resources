@@ -64,6 +64,11 @@ public class WorkSpaceDaoTest extends BasicMongoUnitTest {
         assertThat(workSpaceDao.isAlreadyExists("name", "xxx")).isFalse();
     }
 
+    @Test(expected = IllegalStateException.class)
+    public void should_Get_illegalStateException_when_properties_name_values_not_match(){
+        workSpaceDao.isAlreadyExists("id,name","12312","asdf","xxx");
+    }
+
     @Test
     public void should_return_all_entity(){
         List<String> workspaceStringList = getResourceStringList("WorkSpace");

@@ -109,7 +109,6 @@ public class BasicMongoUnitTest {
                 return conditions;
             }
         }));
-        System.out.println(checkedList.size());
         return checkedList;
     }
 

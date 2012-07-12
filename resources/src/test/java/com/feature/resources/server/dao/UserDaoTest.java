@@ -53,12 +53,12 @@ public class UserDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_get_user_when_user_isExists_query_loginName_(){
+    public void should_get_user_when_user_isExists_query_loginName_() {
         List<String> userStringList = getResourceStringList("User");
-        for(String json:userStringList){
-           DBObject dbObject = (DBObject) JSON.parse(json);
+        for (String json : userStringList) {
+            DBObject dbObject = (DBObject) JSON.parse(json);
             String loginName = (String) dbObject.get("loginNane");
-            if(StringUtils.isNotEmpty(loginName)){
+            if (StringUtils.isNotEmpty(loginName)) {
                 User user = userDao.findUserByLoginName(loginName);
                 assertThat(user).isNotNull();
                 assertThat(user.getLoginName()).isEqualTo(loginName);
@@ -67,16 +67,24 @@ public class UserDaoTest extends BasicMongoUnitTest {
     }
 
     @Test
-    public void should_get_true_when_user_isExists_queryby_loginName(){
+    public void should_get_true_when_user_isExists_queryby_loginName() {
         List<String> userStringList = getResourceStringList("User");
-        for(String json:userStringList){
+        for (String json : userStringList) {
             DBObject dbObject = (DBObject) JSON.parse(json);
             String loginName = (String) dbObject.get("loginNane");
-            if(StringUtils.isNotEmpty(loginName)){
-                boolean result = userDao.exists("loginName",loginName);
+            if (StringUtils.isNotEmpty(loginName)) {
+                boolean result = userDao.exists("loginName", loginName);
                 assertThat(result).isTrue();
             }
         }
     }
+
+    @Test
+    public void should_get_user_by_loginName_successful() {
+        User user = userDao.findUserByLoginName("joesmart");
+        assertThat(user).isNotNull();
+        assertThat(user.getLoginName()).isEqualTo("joesmart");
+    }
+
 
 }

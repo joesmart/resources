@@ -43,7 +43,7 @@ public class RegisterServlet extends HttpServlet {
         String userName = req.getParameter("userName");
         String loginName = req.getParameter("loginName");
         String password1 = req.getParameter("password1");
-        String password2 = req.getParameter("password1");
+        String password2 = req.getParameter("password2");
         String email = req.getParameter("email");
         String erroMessage = null;
         if(!password1.equals(password2)){
@@ -70,7 +70,8 @@ public class RegisterServlet extends HttpServlet {
             userDTO.setPassword(password1);
             userDTO.setName(userName);
             if(!userService.registerUser(userDTO)){
-                erroMessage = "注册失败";
+                erroMessage = "注册失败!";
+                req.setAttribute("errorMessage",erroMessage);
             }
         }
         LOGGER.info("userName:"+userName +" loginName:"+loginName + " password:"+password1 + " email:"+ email );
@@ -87,5 +88,9 @@ public class RegisterServlet extends HttpServlet {
                                    @Min(5) @Max(30) String password
                                    ){
 
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }

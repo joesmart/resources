@@ -3,6 +3,7 @@ package com.feature.resources.server;
 import com.feature.resources.server.dao.DaoUnitTestSuite;
 import com.feature.resources.server.resources.ResourcesUnitTestSuite;
 import com.feature.resources.server.service.ServiceUnitTestSuite;
+import com.feature.resources.server.servlet.ServletTestSutie;
 import com.feature.resources.server.util.StringUtilTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -18,7 +19,8 @@ import org.junit.runners.Suite;
         ResourcesUnitTestSuite.class,
         ServiceUnitTestSuite.class,
         DaoUnitTestSuite.class,
-        StringUtilTest.class
+        StringUtilTest.class,
+        ServletTestSutie.class
 })
 public class TestSuite {
 

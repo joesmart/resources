@@ -127,10 +127,6 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         return result.getN();
     }
 
-    public SystemFunctions getFunctions() {
-        return functions;
-    }
-
     public void setFunctions(SystemFunctions functions) {
         this.functions = functions;
     }
