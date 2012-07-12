@@ -54,7 +54,7 @@ public class UserDaoTest extends BasicMongoUnitTest {
 
     @Test
     public void should_get_user_when_user_isExists_query_loginName_(){
-        List<String> userStringList = getResourceStringList("user");
+        List<String> userStringList = getResourceStringList("User");
         for(String json:userStringList){
            DBObject dbObject = (DBObject) JSON.parse(json);
             String loginName = (String) dbObject.get("loginNane");
@@ -68,7 +68,7 @@ public class UserDaoTest extends BasicMongoUnitTest {
 
     @Test
     public void should_get_true_when_user_isExists_queryby_loginName(){
-        List<String> userStringList = getResourceStringList("user");
+        List<String> userStringList = getResourceStringList("User");
         for(String json:userStringList){
             DBObject dbObject = (DBObject) JSON.parse(json);
             String loginName = (String) dbObject.get("loginNane");
