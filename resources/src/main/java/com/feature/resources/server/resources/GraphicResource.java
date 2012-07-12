@@ -90,7 +90,7 @@ public class GraphicResource extends Resource{
                                                 ){
         LOGGER.info("Query Type:"+queryType);
         getCurrentUserFromUserssion();
-        List<Graphic> graphics = graphicService.findGraphicByPageAndQueryType(requestPage,pageSize,queryType, shiroUser.getUserId());
+        List<Graphic> graphics = graphicService.findGraphicByPageAndQueryTypeAndUser(requestPage, pageSize, queryType, shiroUser.getUserId());
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
         dataListInfo.setDataList(graphics);
         dataListInfo.setName("Graphics");

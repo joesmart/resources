@@ -45,7 +45,7 @@ public class DomainObjectFactory {
         String deleteUrl = "../rs/file/" + graphic.getId();
         long fileSize = graphic.getProperties().getSize();
         String fileName = graphic.getProperties().getName();
-        return new FileMeta(fileName, fileSize, url, thumbnailUrl, deleteUrl);
+        return new FileMeta(fileName, fileSize, url, thumbnailUrl, deleteUrl,graphic.getIdString());
     }
 
     public User translateToUser(UserDTO userDTO) {

@@ -2,34 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3b0c8cb-cdcf-4e91-8665-494b68a479ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iml" afterPath="$PROJECT_DIR$/resources.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iws" afterPath="$PROJECT_DIR$/resources.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/SimpleDomainObjectOperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/SimpleDomainObjectOperateDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/TagResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/TagResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/TagService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/TagService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/WorkSpaceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/WorkSpaceService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/Log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/RealtyDataStore.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/RealtyDataStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/TagDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/TagDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/WorkSpaceDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/WorkSpaceDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/DomainObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/DomainObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockGraphicServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockGraphicServiceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockTagServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockTagServiceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/GraphicServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/GraphicServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/TagServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/TagServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/TagDescription.json" afterPath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/TagDescription.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/User.json" afterPath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/User.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/WorkSpace.json" afterPath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/WorkSpace.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/Graphic.json" afterPath="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/Graphic.json" />
     </list>
     <ignored path="resources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +85,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" line="70" class="com.feature.resources.server.dao.BasicMongoUnitTest" package="com.feature.resources.server.dao">
+      <breakpoint url="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" line="71" class="com.feature.resources.server.dao.BasicMongoUnitTest" package="com.feature.resources.server.dao">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -172,73 +157,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Resource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java">
+      <file leaf-file-name="SystemFunctions.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/SystemFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="13" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileResourceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/FileResourceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="16" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicResourceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/GraphicResourceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="61" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="44" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroConfigurationModule.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="35" selection-start="1282" selection-end="1282" vertical-scroll-proportion="2.211207">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graphic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="31" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="19" selection-start="6887" selection-end="6887" vertical-scroll-proportion="0.0">
+            <state line="17" column="13" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -247,7 +169,25 @@
       <file leaf-file-name="GraphicService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="13" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
+            <state line="25" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShiroBaseRealm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroBaseRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="30" selection-start="4004" selection-end="4004" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphicServiceImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="232" column="0" selection-start="8412" selection-end="8412" vertical-scroll-proportion="0.7742818">
               <folding />
             </state>
           </provider>
@@ -276,7 +216,6 @@
     <option name="testFramework" value="JUNIT4" />
   </component>
   <component name="Git.Settings">
-    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -298,22 +237,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/TagServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/WorkSpace.json" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/WorkSpaceDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/TagResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/WorkSpaceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/WorkSpaceServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/TagResourceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockTagServiceProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockGraphicServiceProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/Graphic.json" />
+        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/DomainObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/GraphicServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroBaseRealm.java" />
       </list>
     </option>
   </component>
@@ -842,104 +781,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testdata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1033,7 +874,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1063,41 +904,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shiro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1287,8 +1098,8 @@
       <recent name="com.feature.resources.server.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestSuite">
-    <configuration default="false" name="TagDaoTest.should_get_a_unqiue_tag_by_id" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="Maven.jetty_run">
+    <configuration default="false" name="GraphicDaoTest.should_get_graphic_by_userId_when_query_by_user_and_query_type" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.feature.resources.server.dao.*" />
@@ -1299,8 +1110,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.feature.resources.server.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.dao.TagDaoTest" />
-      <option name="METHOD_NAME" value="should_get_a_unqiue_tag_by_id" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.dao.GraphicDaoTest" />
+      <option name="METHOD_NAME" value="should_get_graphic_by_userId_when_query_by_user_and_query_type" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1316,7 +1127,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="WorkSpaceDaoTest.should_get_one_size_list_when_get_entityList_by_userId" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="GraphicDaoTest.should_get_checked_graphic_when_it_checked_and_query_by_user" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.feature.resources.server.dao.*" />
@@ -1327,8 +1138,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.feature.resources.server.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.dao.WorkSpaceDaoTest" />
-      <option name="METHOD_NAME" value="should_get_one_size_list_when_get_entityList_by_userId" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.dao.GraphicDaoTest" />
+      <option name="METHOD_NAME" value="should_get_checked_graphic_when_it_checked_and_query_by_user" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1344,7 +1155,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="WorkSpaceServiceTest.should_return_true" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="GraphicServiceTest.should_return_all_Graphic_when_queryType_is_all" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.feature.resources.server.service.*" />
@@ -1355,8 +1166,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.feature.resources.server.service" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.WorkSpaceServiceTest" />
-      <option name="METHOD_NAME" value="should_return_true" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.GraphicServiceTest" />
+      <option name="METHOD_NAME" value="should_return_all_Graphic_when_queryType_is_all" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1372,7 +1183,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="WorkSpaceServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="GraphicServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.feature.resources.server.service.*" />
@@ -1383,7 +1194,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.feature.resources.server.service" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.WorkSpaceServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.GraphicServiceTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1804,15 +1615,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TagDaoTest.should_get_a_unqiue_tag_by_id" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.WorkSpaceDaoTest.should_get_one_size_list_when_get_entityList_by_userId" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.WorkSpaceServiceTest.should_return_true" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.WorkSpaceServiceTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestSuite" />
-      <item index="5" class="java.lang.String" itemvalue="Maven.c_c_t" />
-      <item index="6" class="java.lang.String" itemvalue="Maven.jetty_run" />
-      <item index="7" class="java.lang.String" itemvalue="Maven.sonar" />
-      <item index="8" class="java.lang.String" itemvalue="Maven.clean" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.should_get_graphic_by_userId_when_query_by_user_and_query_type" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.should_get_checked_graphic_when_it_checked_and_query_by_user" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.c_c_t" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.jetty_run" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.sonar" />
+      <item index="5" class="java.lang.String" itemvalue="Maven.clean" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest.should_return_all_Graphic_when_queryType_is_all" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.TestSuite" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1921,7 +1732,11 @@
       <created>1341566321282</created>
       <updated>1341566321282</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Graphic upload by user">
+      <created>1341799243327</created>
+      <updated>1341799243327</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1967,10 +1782,10 @@
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9050132" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32278937" sideWeight="0.53957784" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31488138" sideWeight="0.9182058" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278217" sideWeight="0.7110818" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31560028" sideWeight="0.34168866" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.65831137" sideWeight="0.48023006" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33141625" sideWeight="0.530343" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.79683375" sideWeight="0.48023006" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="554" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -2027,7 +1842,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="enable WorkSpace getEntityListByUserId" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graphic upload by user" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2051,6 +1866,7 @@
     <MESSAGE value="Modify domain object to extends ResourceEntity" />
     <MESSAGE value="enable TagDescription" />
     <MESSAGE value="enable WorkSpace getEntityListByUserId" />
+    <MESSAGE value="Graphic upload by user" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -2102,86 +1918,106 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/BasicJerseyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/WorkSpace.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="833" selection-end="833" vertical-scroll-proportion="0.10584958" />
+        <state line="0" column="150" selection-start="150" selection-end="185" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockUserServiceProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/BasicMongoUnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" />
+        <state line="76" column="43" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.8262654" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/TagResourceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" />
+        <state line="139" column="37" selection-start="5283" selection-end="5283" vertical-scroll-proportion="0.22844827" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockTagServiceProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/feature/resources/server/testdata/Graphic.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="63" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0" />
+        <state line="0" column="112" selection-start="111" selection-end="146" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/WorkspaceResourceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockWorkSpaceServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="69" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.4514364" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/TagServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.033391915" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="13" selection-start="3686" selection-end="3686" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/FileResourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="16" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/GraphicResourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="61" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="31" selection-start="2817" selection-end="2817" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="19" selection-start="6887" selection-end="6887" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="13" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="44" selection-start="3770" selection-end="3770" vertical-scroll-proportion="0.0">
+        <state line="312" column="45" selection-start="14149" selection-end="14149" vertical-scroll-proportion="0.026462395">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="35" selection-start="1282" selection-end="1282" vertical-scroll-proportion="2.211207">
+        <state line="28" column="13" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.18194254">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="47" selection-start="3773" selection-end="3773" vertical-scroll-proportion="0.74094707">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/service/GraphicServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="18" selection-start="1591" selection-end="1609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/TestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="588" selection-end="588" vertical-scroll-proportion="0.36388507">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.10396717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/DomainObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="98" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.9616963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/GuiceModules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.20793433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/SystemFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroBaseRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="30" selection-start="4004" selection-end="4004" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="0" selection-start="8412" selection-end="8412" vertical-scroll-proportion="0.7742818">
           <folding />
         </state>
       </provider>
