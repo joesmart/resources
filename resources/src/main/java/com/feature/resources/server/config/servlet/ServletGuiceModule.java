@@ -1,5 +1,6 @@
 package com.feature.resources.server.config.servlet;
 
+import com.feature.resources.server.config.app.CustomSiteMeshFilter;
 import com.feature.resources.server.servlet.LoginServerlet;
 import com.feature.resources.server.servlet.RegisterServlet;
 import com.feature.resources.server.servlet.URIServlet;
@@ -17,5 +18,6 @@ public class ServletGuiceModule extends ServletModule {
         serve("/servlet/menu").with(URIServlet.class);
         serve("/servlet/login").with(LoginServerlet.class);
         serve("/servlet/register").with(RegisterServlet.class);
+        filter("/*").through(CustomSiteMeshFilter.class);
     }
 }

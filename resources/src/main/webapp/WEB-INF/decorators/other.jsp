@@ -58,8 +58,8 @@
             <ul class="nav nav-pills">
                 <li><a href="${ctx}/index.jsp">首页</a></li>
                 <li><a href="${ctx}/servlet/menu?type=all">图片</a></li>
-                <li><a href="#">文档</a></li>
-                <li><a href="#">视频</a></li>
+              <%--  <li><a href="#">文档</a></li>
+                <li><a href="#">视频</a></li>--%>
                 <li><a href="${ctx}/upload/upload.jsp">上传</a></li>
                 <li><a href="${ctx}/other/createWorkspace.jsp">其他</a></li>
             </ul>

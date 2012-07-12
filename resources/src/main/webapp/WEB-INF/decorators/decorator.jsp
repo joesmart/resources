@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/page" prefix="page" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <%@ page contentType="text/html;charset=utf-8" pageEncoding="utf-8" %>
 <!DOCTYPE html>
@@ -46,9 +47,15 @@
             <div class="nav-collapse collapse">
 
             </div>
+
             <div class="pull-right">
-                <h3><a href="${ctx}/logout" class="">登出</a></h3>
+                <h3><a href="#" class=""><shiro:principal property="name"/></a>
+                    &nbsp;
+                    <a href="${ctx}/logout" class="">登出</a>
+                </h3>
+
             </div>
+
         </div>
     </div>
 </div>
@@ -59,8 +66,8 @@
             <ul class="nav nav-pills">
                 <li><a href="${ctx}/index.jsp">首页</a></li>
                 <li><a href="${ctx}/servlet/menu?type=all">图片</a></li>
-                <li><a href="#">文档</a></li>
-                <li><a href="#">视频</a></li>
+                <%--<li><a href="#">文档</a></li>
+                <li><a href="#">视频</a></li>--%>
                 <li><a href="${ctx}/upload/upload.jsp">上传</a></li>
                 <li><a href="${ctx}/other/createWorkspace.jsp">其他</a></li>
             </ul>
@@ -72,7 +79,7 @@
             <div class="span2 well leftpanel-height">
                 <page:applyDecorator page="/menu.jsp" name="left-panel"/>
             </div>
-            <div class="span10 well rightpanel-height"id="main_panel">
+            <div class="span10 well rightpanel-height" id="main_panel">
                 <decorator:body/>
             </div>
         </div>
