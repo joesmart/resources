@@ -216,8 +216,8 @@ public class GraphicServiceTest {
 
     @Test
     public void should_get_total_count_graphics_successful(GraphicDao graphicDao){
-        when(graphicDao.getTotalRecordCount()).thenReturn(10L);
-        long totalCount = graphicService.getGraphicsTotalCount();
+        when(graphicDao.getTotalRecordCount(null)).thenReturn(10L);
+        long totalCount = graphicService.getGraphicsTotalCount(null);
         assertThat(totalCount).isEqualTo(10L);
     }
 

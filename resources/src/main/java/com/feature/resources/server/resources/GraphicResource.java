@@ -71,7 +71,8 @@ public class GraphicResource extends Resource{
     @Path("/pageinfo")
     @Produces({MediaType.APPLICATION_JSON})
     public PageInfo getGraphicPageInfo() {
-        long totalRecords = graphicService.getGraphicsTotalCount();
+        getCurrentUserFromUserssion();
+        long totalRecords = graphicService.getGraphicsTotalCount(shiroUser.getUserId());
         int pageSize = 10;
         int maxPage = (int)(totalRecords/pageSize);
         int totalPages = (int)(((double)totalRecords/pageSize)>maxPage?maxPage+1:maxPage);

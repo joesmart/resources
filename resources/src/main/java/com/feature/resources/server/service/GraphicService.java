@@ -30,7 +30,7 @@ public  interface GraphicService {
 
      List<Graphic> findGraphicByPage(int requestpage,int  pageSize);
 
-     long getGraphicsTotalCount();
+     long getGraphicsTotalCount(String userId);
 
      void updateGraphic(GraphicDTO graphicDTO);
 

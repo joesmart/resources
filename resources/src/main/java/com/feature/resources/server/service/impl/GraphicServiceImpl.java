@@ -177,8 +177,8 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     @Override
-    public long getGraphicsTotalCount() {
-        return graphicDao.getTotalRecordCount();
+    public long getGraphicsTotalCount(String userId) {
+        return graphicDao.getTotalRecordCount(userId);
     }
 
     @Override

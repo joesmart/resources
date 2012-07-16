@@ -84,8 +84,12 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         return graphics;
     }
 
-    public long getTotalRecordCount() {
-        return count();
+    public long getTotalRecordCount(String userId) {
+        Preconditions.checkNotNull(userId);
+        Query<Graphic> countQuery = createQuery();
+        countQuery.field("userId").equal(userId);
+        long size = countQuery.countAll();
+        return size;
     }
 
     //TODO need Guice support Exception AOP

@@ -99,11 +99,20 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         }
     }
 
-    @Test
-    public void should_GetTotalRecordCount_return_correct_size() throws Exception {
-        long totalRecordCount = graphicDao.getTotalRecordCount();
+    @Test(expected = NullPointerException.class)
+    public void should_GetTotalRecordCount_throw_nullpointExcetpion_when_userId_is_null() throws Exception {
+        long totalRecordCount = graphicDao.getTotalRecordCount(null);
         int graphicSize = resourceDataSize("Graphic");
         assertThat(totalRecordCount).isEqualTo(graphicSize);
+    }
+
+    @Test
+    public void should_GetTotalRecordCount_return_correct_size() throws Exception {
+        List<String> allGraphics = getResourceStringList("Graphic");
+        String userId = "4ff410a897ac21319cf81011";
+        List<String> userGraphics = convertToUserContainGraphicList(allGraphics);
+        long totalRecordCount = graphicDao.getTotalRecordCount(userId);
+        assertThat(totalRecordCount).isEqualTo(userGraphics.size());
     }
 
     @Test
