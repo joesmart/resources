@@ -5,6 +5,7 @@ import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.WorkSpaceDTO;
 import com.feature.resources.server.service.impl.WorkSpaceServiceImpl;
 import com.google.code.morphia.Datastore;
+import com.google.code.morphia.Key;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
@@ -18,12 +19,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
 
 import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.*;
 
 /**
  * User: ZouYanjian
@@ -66,9 +69,9 @@ public class WorkSpaceServiceTest {
 
     @Test
     public void should_return_true(WorkSpaceDao mockDao) {
-        when(mockDao.isAlreadyExists("name,userId","test","abc")).thenReturn(true);
-        boolean result = workSpaceService.exists("test","abc");
-        verify(mockDao).isAlreadyExists("name,userId", "test","abc");
+        when(mockDao.isAlreadyExists("name,userId", "test", "abc")).thenReturn(true);
+        boolean result = workSpaceService.exists("test", "abc");
+        verify(mockDao).isAlreadyExists("name,userId", "test", "abc");
         assertThat(result).isEqualTo(true);
     }
 
@@ -76,7 +79,7 @@ public class WorkSpaceServiceTest {
     public void should_return_false(WorkSpaceDao mockDao) {
         when(mockDao.isAlreadyExists("name,userId", "xxxx")).thenReturn(false);
         boolean result = workSpaceService.exists("xxxx", "");
-        verify(mockDao).isAlreadyExists("name,userId", "xxxx","");
+        verify(mockDao).isAlreadyExists("name,userId", "xxxx", "");
         assertThat(result).isEqualTo(false);
     }
 
@@ -129,4 +132,35 @@ public class WorkSpaceServiceTest {
         assertThat(workSpace1.getName()).isEqualTo("test");
         verify(mockDao).findOne("id", id);
     }
+
+    @Test
+    public void should_get_default_workspace_when_workspace_id_is_null(WorkSpaceDao workSpaceDao) {
+        WorkSpace mockwWorkSpace = new WorkSpace();
+        mockwWorkSpace.setName("默认");
+        mockwWorkSpace.setUserId("abcd");
+        when(workSpaceDao.defaultWorkSpace("abcd")).thenReturn(mockwWorkSpace);
+        WorkSpace workSpace = workSpaceService.getDefaultWorkSpace("abcd");
+        assertThat(workSpace).isNotNull();
+
+    }
+
+    @Test
+    public void should_could_create_default_workspace_when_default_workspace_not_exits(WorkSpaceDao workSpaceDao) {
+
+        final ObjectId id = new ObjectId();
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                WorkSpace workSpace = (WorkSpace) invocation.getArguments()[0];
+                workSpace.setId(id);
+                Key<WorkSpace> key = new Key<WorkSpace>(WorkSpace.class,id);
+                return key;
+            }
+        }).when(workSpaceDao).save(any(WorkSpace.class));
+        WorkSpace workSpace = workSpaceService.getDefaultWorkSpace("abcd");
+        assertThat(workSpace).isNotNull();
+        verify(workSpaceDao).save(any(WorkSpace.class));
+        assertThat(workSpace.getIdString()).isEqualTo(id.toString());
+    }
+
 }

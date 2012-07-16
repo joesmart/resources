@@ -62,6 +62,7 @@ public class GraphicServiceImpl implements GraphicService {
 
 
     public void delete(String stringId) {
+        checkParaments(stringId);
         ObjectId id = new ObjectId(stringId);
         checkParaments(stringId);
         Graphic graphic = get(stringId);
@@ -135,6 +136,7 @@ public class GraphicServiceImpl implements GraphicService {
     private void checkParaments(String graphicId) {
         Preconditions.checkNotNull(graphicId);
         Preconditions.checkArgument(StringUtils.isNotEmpty(graphicId));
+        Preconditions.checkArgument(ObjectId.isValid(graphicId),"Graphic ID is invalid");
     }
 
     private void displayOriginalImageContent(OutputStream outputStream, GridFSDBFile gridFSDBFile) throws IOException {
@@ -199,14 +201,21 @@ public class GraphicServiceImpl implements GraphicService {
 
     public Graphic generateGraphic(String fileName, long size, String contentType,String tagId,String workspaceId) {
         Graphic graphic = objectFactory.createGraphic(fileName, contentType);
-        TagDescription tagDescription = tagService.getTagDescriptionById(tagId);
-        WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
+        if(StringUtils.isNotEmpty(tagId) && ObjectId.isValid(tagId)){
+            TagDescription tagDescription = tagService.getTagDescriptionById(tagId);
+            graphic.setTag(tagDescription);
+        }
+
+        if(StringUtils.isNotEmpty(workspaceId) && ObjectId.isValid(workspaceId)){
+            WorkSpace workSpace = workSpaceService.getWorkSpaceById(workspaceId);
+            graphic.setWorkSpace(workSpace);
+        }
 
         Properties properties = objectFactory.createProperties(fileName, size, contentType);
         propertiesService.addNewProperties(properties);
         graphic.setProperties(properties);
-        graphic.setWorkSpace(workSpace);
-        graphic.setTag(tagDescription);
+
+
         return graphic;
     }
 

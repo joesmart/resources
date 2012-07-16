@@ -263,12 +263,14 @@ public class GraphicServiceTest {
     public void should_generateGraphic_successful(GraphicDao graphicDao,DomainObjectFactory domainObjectFactory,
                                                   TagService tagService,WorkSpaceService workSpaceService,
                                                   PropertiesService propertiesService ){
+
+        ObjectId id = new ObjectId() ;
         Graphic tempGraphic = domainObjectFactory.createGraphic("abc.png","image/png") ;
         TagDescription tagDescription = testDataObjectFactory.createTagDescription("tag");
-        when(tagService.getTagDescriptionById("abcd")).thenReturn(tagDescription);
+        when(tagService.getTagDescriptionById(id.toString())).thenReturn(tagDescription);
 
         WorkSpace workSpace = testDataObjectFactory.createWorkSpace("default");
-        when(workSpaceService.getWorkSpaceById("default")).thenReturn(workSpace);
+        when(workSpaceService.getWorkSpaceById(id.toString())).thenReturn(workSpace);
 
         Properties properties = domainObjectFactory.createProperties("abc.png", 100L, "image/png");
         doAnswer(new Answer() {
@@ -278,11 +280,51 @@ public class GraphicServiceTest {
                 return properties1;
             }
         }).when(propertiesService).addNewProperties(properties);
-        Graphic graphic1 = graphicService.generateGraphic("abc.png",100L,"image/png","abcd","default");
+        Graphic graphic1 = graphicService.generateGraphic("abc.png",100L,"image/png",id.toString(),id.toString());
         tempGraphic.setTag(tagDescription);
         tempGraphic.setProperties(properties);
         tempGraphic.setWorkSpace(workSpace);
         assertThat(graphic1.getTag()).isEqualTo(tempGraphic.getTag());
+    }
+
+    @Test
+    public void should_tagIsNull_when_generateGraphic_method_tagId_is_not_a_valid_objectId(GraphicDao graphicDao,DomainObjectFactory domainObjectFactory,
+                                                  TagService tagService,WorkSpaceService workSpaceService,
+                                                  PropertiesService propertiesService ){
+
+        ObjectId id = new ObjectId() ;
+
+        Properties properties = domainObjectFactory.createProperties("abc.png", 100L, "image/png");
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                Properties properties1 = (Properties) invocation.getArguments()[0];
+                return properties1;
+            }
+        }).when(propertiesService).addNewProperties(properties);
+        Graphic graphic1 = graphicService.generateGraphic("abc.png",100L,"image/png","abcd",id.toString());
+
+        assertThat(graphic1.getTag()).isNull();
+    }
+
+    @Test
+    public void should_tagIsNull_when_generateGraphic_method_workSpaceId_is_not_a_valid_objectId(GraphicDao graphicDao,DomainObjectFactory domainObjectFactory,
+                                                                                           TagService tagService,WorkSpaceService workSpaceService,
+                                                                                           PropertiesService propertiesService ){
+
+        ObjectId id = new ObjectId() ;
+
+        Properties properties = domainObjectFactory.createProperties("abc.png", 100L, "image/png");
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                Properties properties1 = (Properties) invocation.getArguments()[0];
+                return properties1;
+            }
+        }).when(propertiesService).addNewProperties(properties);
+        Graphic graphic1 = graphicService.generateGraphic("abc.png",100L,"image/png",id.toString(),"abcd");
+
+        assertThat(graphic1.getTag()).isNull();
     }
 
     @Test(expected = NullPointerException.class)

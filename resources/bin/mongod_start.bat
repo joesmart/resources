@@ -20,6 +20,6 @@ goto end
 
 
 :okExec
-call "mongod" --journal --dbpath %MONGODB%\data
+call "mongod" --journal --rest --dbpath %MONGODB%\data
 
 :end

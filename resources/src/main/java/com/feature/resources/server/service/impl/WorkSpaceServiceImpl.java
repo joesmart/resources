@@ -53,4 +53,17 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
         return workSpaceDao.findOne("id",new ObjectId(id));
     }
 
+    @Override
+    public WorkSpace getDefaultWorkSpace(String userId) {
+        WorkSpace workSpace = workSpaceDao.defaultWorkSpace(userId);
+
+        if(workSpace == null){
+            workSpace = new WorkSpace();
+            workSpace.setName("默认");
+            workSpace.setUserId(userId);
+            workSpaceDao.save(workSpace);
+        }
+        return workSpace;
+    }
+
 }

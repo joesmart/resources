@@ -1,10 +1,12 @@
 package com.feature.resources.server.resources;
 
-import com.feature.resources.server.util.DomainObjectFactory;
 import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
 import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.service.WorkSpaceService;
+import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.apache.commons.fileupload.FileItem;
@@ -32,6 +34,8 @@ public class FileResource extends Resource{
 
     @Inject
     private GraphicService graphicService;
+    @Inject
+    private WorkSpaceService workSpaceService;
 
     @Inject
     private DomainObjectFactory objectFactory;
@@ -63,6 +67,10 @@ public class FileResource extends Resource{
                 long size = fileItem.getSize();
                 String contentType = fileItem.getContentType();
                 LOGGER.info("fileName:" + fileName + " size:" + size + " contentType:" + contentType);
+                if(StringUtils.isEmpty(workspaceId)){
+                    WorkSpace workSpace =workSpaceService.getDefaultWorkSpace(shiroUser.getUserId());
+                    workspaceId = workSpace.getIdString();
+                }
                 Graphic graphic = graphicService.generateGraphic(fileName, size, contentType,tagId,workspaceId);
                 graphic.setUserId(shiroUser.getUserId());
                 byte[] bytes = fileItem.get();

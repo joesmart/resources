@@ -97,4 +97,10 @@ public class WorkSpaceDaoTest extends BasicMongoUnitTest {
         assertThat(workSpaceList.size()).isEqualTo(userTagList.size());
 
     }
+
+    @Test
+    public void should_get_default_workspace_successful(){
+        WorkSpace workSpace = workSpaceDao.defaultWorkSpace("4ff410a897ac21319cf81011");
+        assertThat(workSpace).isNotNull();
+    }
 }

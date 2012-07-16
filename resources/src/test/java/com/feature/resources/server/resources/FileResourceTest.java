@@ -75,6 +75,31 @@ public class FileResourceTest extends BasicJerseyTest {
     }
 
     @Test
+    public void should_upload_graphic_with_workSpace_and_tag_info_successful_when_workspace_tag_file_not_null(){
+
+        final InputStream inputStream = testDataObjectFactory.getTestGraphicResource();
+        FormDataMultiPart mp = new FormDataMultiPart();
+        FormDataBodyPart part = new FormDataBodyPart(FormDataContentDisposition.name("part").build(), "CONTENT");
+        mp.bodyPart(part);
+
+        FormDataBodyPart tag = new FormDataBodyPart(FormDataContentDisposition.name("tag").build(),"tagId");
+        mp.bodyPart(tag);
+
+        FormDataBodyPart workSpace = new FormDataBodyPart(FormDataContentDisposition.name("workSpace").build(),"workspaceId");
+        mp.bodyPart(workSpace);
+
+        FormDataBodyPart inputStreamBody = new FormDataBodyPart(FormDataContentDisposition.name("file").fileName("graphics.png").size(1000L).build(),
+                                                                    inputStream,
+                                                                    MediaType.APPLICATION_OCTET_STREAM_TYPE);
+
+        mp.bodyPart(inputStreamBody);
+        client().addFilter(new HTTPBasicAuthFilter("joesmart","123456"));
+        WebResource webResource = resource().path("file");
+        webResource.type(MediaType.MULTIPART_FORM_DATA_TYPE).post(mp);
+
+    }
+
+    @Test
     public void should_post_tag_and_workspace_info_success() {
         final InputStream inputStream = testDataObjectFactory.getTestGraphicResource();
         FormDataMultiPart mp = new FormDataMultiPart();
