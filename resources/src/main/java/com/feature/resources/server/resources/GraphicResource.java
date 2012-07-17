@@ -58,6 +58,15 @@ public class GraphicResource extends Resource{
         }
     }
 
+    @GET
+    @Path("/show")
+    @Produces({"image/png"})
+    public StreamingOutput showGraphicbyId(
+            @QueryParam(value = "id") final String graphicId,
+            @QueryParam(value = "size") String size) {
+        return  getGraphicbyId(graphicId,size);
+    }
+
     @POST
     @Path("/update")
     @Produces({MediaType.APPLICATION_JSON})

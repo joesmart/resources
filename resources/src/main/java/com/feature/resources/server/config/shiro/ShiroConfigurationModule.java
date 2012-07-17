@@ -33,6 +33,7 @@ public class ShiroConfigurationModule extends ShiroWebModule {
         addFilterChain("/servlet/register",ANON);
         addFilterChain("/static/**", ANON);
         addFilterChain("/rs/file/**/meta",ANON);
+        addFilterChain("/rs/graphics/show**",ANON);
         addFilterChain("/rs/**",AUTHC_BASIC,REST,NO_SESSION_CREATION);
         addFilterChain("/**",AUTHC, REST,NO_SESSION_CREATION,USER);
 
