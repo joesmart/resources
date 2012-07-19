@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/page" prefix="page" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <%@ page contentType="text/html;charset=utf-8" pageEncoding="utf-8" %>
 <!DOCTYPE html>
@@ -46,7 +47,11 @@
 
             </div>
             <div class="pull-right">
-                <h3><a href="${ctx}/logout" class="">登出</a></h3>
+                <h3><a href="#" class=""><shiro:principal property="name"/></a>
+                    &nbsp;
+                    <a href="${ctx}/logout" class="">登出</a>
+                </h3>
+
             </div>
         </div>
     </div>
