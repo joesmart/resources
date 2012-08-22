@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-
 public class FileMeta {
     private String resourceId;
     private String name;
@@ -15,6 +14,7 @@ public class FileMeta {
     private String thumbnail_url;
     private String delete_url;
     private String delete_type;
+    private CheckStatusDesc checkStatusDesc;
 
     public FileMeta(String fileName,long size,String url,String thumbnailUrl,String delete_url,String resourceId){
         this.name = fileName;
@@ -84,5 +84,13 @@ public class FileMeta {
 
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+    public CheckStatusDesc getCheckStatusDesc() {
+        return checkStatusDesc;
+    }
+
+    public void setCheckStatusDesc(CheckStatusDesc checkStatusDesc) {
+        this.checkStatusDesc = checkStatusDesc;
     }
 }

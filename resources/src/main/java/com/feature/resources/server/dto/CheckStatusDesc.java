@@ -10,6 +10,7 @@ public enum CheckStatusDesc {
     ALL,
     CHECKED,
     UNCHECKED,
+    CHECKING,
     LATEST;
 
     public String getValue(){

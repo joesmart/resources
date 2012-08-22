@@ -30,7 +30,6 @@ public class MorphiaGuiceModule extends AbstractModule {
             Morphia morphia = new Morphia();
             morphia.map(Graphic.class);
             Datastore ds = morphia.createDatastore(mongo, "testDb");
-
             MorphiaValidation morphiaValidation = new MorphiaValidation();
             morphiaValidation.applyTo(morphia);
             ds.ensureIndexes();

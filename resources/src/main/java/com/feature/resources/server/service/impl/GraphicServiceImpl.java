@@ -140,11 +140,11 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     private void displayOriginalImageContent(OutputStream outputStream, GridFSDBFile gridFSDBFile) throws IOException {
-        byte[] btyes = new byte[2048];
+        byte[] bytes = new byte[2048];
         InputStream input = gridFSDBFile.getInputStream();
         int result = 0;
-        while ((result = input.read(btyes)) != -1) {
-            outputStream.write(btyes, 0, result);
+        while ((result = input.read(bytes)) != -1) {
+            outputStream.write(bytes, 0, result);
         }
         outputStream.flush();
     }
