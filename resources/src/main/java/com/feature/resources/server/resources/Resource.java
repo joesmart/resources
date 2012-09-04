@@ -16,7 +16,7 @@ public class Resource {
     public static final Logger LOGGER = LoggerFactory.getLogger(Resource.class);
     protected ShiroBaseRealm.ShiroUser shiroUser;
 
-    protected void getCurrentUserFromUserssion() {
+    protected void getCurrentUserFromSession() {
         Subject currentUser = SecurityUtils.getSubject();
         if(currentUser != null){
             shiroUser = (ShiroBaseRealm.ShiroUser) currentUser.getPrincipal();

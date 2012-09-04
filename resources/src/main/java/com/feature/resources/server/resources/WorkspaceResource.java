@@ -27,7 +27,7 @@ public class WorkspaceResource extends Resource {
     @Path("/add")
     @POST
     public Response addNewWorkspace(WorkSpaceDTO workspaceDTO) {
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         String userId = null;
         if (shiroUser != null) {
             userId = shiroUser.getUserId();
@@ -44,7 +44,7 @@ public class WorkspaceResource extends Resource {
     @Path("/all")
     @GET
     public List<WorkSpaceDTO> getAllWorkSpace() {
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         return workSpaceService.getCurrentWorkSpaceListByUserId(shiroUser.getUserId());
     }
 

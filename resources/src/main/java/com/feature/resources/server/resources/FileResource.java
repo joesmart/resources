@@ -61,7 +61,7 @@ public class FileResource extends Resource{
         String key = "xxx";
         ServletFileUpload uploadHandler = new ServletFileUpload(new DiskFileItemFactory());
         List<FileItem> fileItems = uploadHandler.parseRequest(req);
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         for (FileItem fileItem : fileItems) {
             if (!fileItem.isFormField()) {
                 String fileName = fileItem.getName();

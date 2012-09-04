@@ -198,6 +198,10 @@
 			<groupId>net.coobird</groupId>
 			<artifactId>thumbnailator</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.99soft.guice</groupId>
+            <artifactId>guartz</artifactId>
+        </dependency>
 		<!-- GENERAL UTILS end -->
         <!-- apache shiro support -->
         <dependency>
@@ -215,6 +219,11 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-ehcache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
         </dependency>
 
 		<!-- TEST begin -->

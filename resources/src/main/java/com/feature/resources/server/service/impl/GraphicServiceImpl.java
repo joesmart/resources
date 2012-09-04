@@ -7,10 +7,7 @@ import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
-import com.feature.resources.server.service.GraphicService;
-import com.feature.resources.server.service.PropertiesService;
-import com.feature.resources.server.service.TagService;
-import com.feature.resources.server.service.WorkSpaceService;
+import com.feature.resources.server.service.*;
 import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
@@ -43,6 +40,8 @@ public class GraphicServiceImpl implements GraphicService {
     private TagService tagService;
     @Inject
     private WorkSpaceService workSpaceService;
+    @Inject
+    private CXServerService cxServerService;
 
     private Integer width = 40;
     private Integer height = 40;
@@ -172,8 +171,8 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     @Override
-    public List<Graphic> findGraphicByPage(int requestpage, int pageSize) {
-        return graphicDao.findByPage(requestpage,pageSize);
+    public List<Graphic> findGraphicByPage(int requestPage, int pageSize) {
+        return graphicDao.findByPage(requestPage,pageSize);
     }
 
     @Override
@@ -232,6 +231,7 @@ public class GraphicServiceImpl implements GraphicService {
         CheckResult checkResult = CheckResult.valueOf(graphicCheckDTO.getCheckResult());
         int row =graphicDao.updateCheckStatus(graphicCheckDTO.getGraphicIds(),CheckStatusDesc.CHECKED, checkResult);
         LOGGER.info("Check status updated row:"+row);
+        cxServerService.updateGraphicResourceAuditStatus(graphicCheckDTO);
     }
 
     @Override

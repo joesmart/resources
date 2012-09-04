@@ -28,7 +28,7 @@ public  interface GraphicService {
 
      Graphic saveGraphic(byte[] contents, Graphic graphic);
 
-     List<Graphic> findGraphicByPage(int requestpage,int  pageSize);
+     List<Graphic> findGraphicByPage(int requestPage,int  pageSize);
 
      long getGraphicsTotalCount(String userId);
 

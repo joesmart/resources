@@ -80,7 +80,7 @@ public class GraphicResource extends Resource{
     @Path("/pageinfo")
     @Produces({MediaType.APPLICATION_JSON})
     public PageInfo getGraphicPageInfo() {
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         long totalRecords = graphicService.getGraphicsTotalCount(shiroUser.getUserId());
         int pageSize = 10;
         int maxPage = (int)(totalRecords/pageSize);
@@ -99,7 +99,7 @@ public class GraphicResource extends Resource{
                                                  @QueryParam("queryType") String queryType
                                                 ){
         LOGGER.info("Query Type:"+queryType);
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         List<Graphic> graphics = graphicService.findGraphicByPageAndQueryTypeAndUser(requestPage, pageSize, queryType, shiroUser.getUserId());
         DataListInfo<Graphic> dataListInfo = new DataListInfo<Graphic>();
         dataListInfo.setDataList(graphics);

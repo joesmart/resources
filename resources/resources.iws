@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3b0c8cb-cdcf-4e91-8665-494b68a479ce" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/AppQuartzModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/jobs/AutoAuditGraphicJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/CXServerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/CXServerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/JerseyResourceUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/feature/resources/server/util/LocalDateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/parent.iml" afterPath="$PROJECT_DIR$/../parent/parent.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/pom.xml" afterPath="$PROJECT_DIR$/../parent/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iml" afterPath="$PROJECT_DIR$/resources.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.ipr" afterPath="$PROJECT_DIR$/resources.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources.iws" afterPath="$PROJECT_DIR$/resources.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/app/ApplicationGuiceModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/app/ApplicationGuiceModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/Resource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/TagResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/TagResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/GraphicService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" />
     </list>
     <ignored path="resources.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +55,11 @@
     <SUITE FILE_PATH="coverage/resources$FileResourceTest_should_upload_graphic_with_workSpace_and_tag_info_successful_when_workspace_tag_file_not_null.coverage" NAME="FileResourceTest.should_upload_graphic_with_workSpace_and_tag_info_successful_when_workspace_tag_file_not_null Coverage Results" MODIFIED="1342165357157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.resources.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/resources$GraphicDaoTest.coverage" NAME="GraphicDaoTest Coverage Results" MODIFIED="1342073600181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.feature.resources.server.dao.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/resources$UserServiceTest.coverage" NAME="UserServiceTest Coverage Results" MODIFIED="1341455794836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.feature.resources.server.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/resources$GraphicDaoTest.coverage" NAME="GraphicDaoTest Coverage Results" MODIFIED="1342073600181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.feature.resources.server.dao.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -53,7 +74,20 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" line="104" class="com.feature.resources.server.resources.FileResource" package="com.feature.resources.server.resources">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" line="233" class="com.feature.resources.server.service.impl.GraphicServiceImpl" package="com.feature.resources.server.service.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" line="34" class="com.feature.resources.server.config.morphia.MorphiaGuiceModule" package="com.feature.resources.server.config.morphia">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -102,28 +136,72 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="resources" />
     <favorites_list name="Current task" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileMeta.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java">
+      <file leaf-file-name="AutoAuditGraphicJob.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/jobs/AutoAuditGraphicJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="25" selection-start="2077" selection-end="2095" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileResource.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
+      <file leaf-file-name="AppQuartzModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/AppQuartzModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="35" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.24861111">
-              <folding>
-                <element signature="e#4449#4465#0" expanded="true" />
-              </folding>
+            <state line="17" column="70" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/app.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="17" selection-start="231" selection-end="231" vertical-scroll-proportion="0.26619965">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CXServerServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/CXServerServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="32" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropertiesServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphicServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="230" column="41" selection-start="8266" selection-end="8266" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/CheckResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="6" selection-start="158" selection-end="162" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +209,43 @@
       <file leaf-file-name="MorphiaGuiceModule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="46" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="1019" selection-end="1080" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppBasicDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="11" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/morphia/morphia/0.99/morphia-0.99-sources.jar!/com/google/code/morphia/dao/BasicDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="14" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiceModuleBounds.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="25" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationGuiceModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/app/ApplicationGuiceModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="32" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,22 +295,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../parent/pom.xml" />
-        <option value="$PROJECT_DIR$/bin/mongod_start.bat" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/GraphicDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/guice/MockGraphicServiceProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/JerseyResourceUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/CXServerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/CXServerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/GraphicCheckDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/app/ApplicationGuiceModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/AppQutarzModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/shiro/ShiroConfigurationModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/other.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators/upload.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/CheckStatusDesc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/SystemFunctions.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../parent/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/feature/resources/server/util/LocalDateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/AppQuartzModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/jobs/AutoAuditGraphicJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/app.properties" />
       </list>
     </option>
   </component>
@@ -215,98 +329,17 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Feature :: Resources" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Feature :: Resources" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="war" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Feature :: Resources" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Feature :: Resources" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="sonar3" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Feature :: Resources" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
+    <treeState />
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
     <option name="vmOptions" value="-Xmx512m -XX:MaxPermSize=256m" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
-    <option name="y" value="-140" />
-    <option name="width" value="1456" />
-    <option name="height" value="916" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -773,44 +806,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Default" />
         <subPane subId="Problems" />
-        <subPane subId="Production">
+        <subPane subId="Tests">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
@@ -818,7 +817,7 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-        <subPane subId="Tests">
+        <subPane subId="Production">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
@@ -858,6 +857,94 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -874,6 +961,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="175" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="864" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="846" />
@@ -894,7 +982,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="reference.settings.project.maven.repository.indices" />
+    <property name="options.lastSelected" value="KeyPromoterConfiguration" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="project.structure.side.proportion" value="0.37309417" />
@@ -912,6 +1000,7 @@
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" />
+            <mapping local="$PROJECT_DIR$/../parent" />
           </mappings>
         </serverdata>
       </server>
@@ -924,8 +1013,8 @@
       <recent name="com.feature.resources.server.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.feature.resources.server.util.beanvalidator" />
       <recent name="com.feature.resources.server.util" />
+      <recent name="com.feature.resources.server.util.beanvalidator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\workspaces\idea\xtemp\resources\resources\src\main\java\com\feature\resources\server\util\security" />
@@ -943,73 +1032,17 @@
       <recent name="com.feature.resources.server.servlet" />
       <recent name="com.feature.resources.server.config.shiro" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\workspaces\idea\xtemp\resources\resources\3rd_lib" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.feature.resources.server.util" />
       <recent name="com.feature.resources.server.service" />
       <recent name="com.feature.resources.server.domain" />
       <recent name="com.feature.resources.server.dto" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\workspaces\idea\xtemp\resources\resources\3rd_lib" />
+    </key>
   </component>
-  <component name="RunManager" selected="Maven.jetty_run">
-    <configuration default="false" name="GraphicServiceTest.should_generateGraphic_successful" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.feature.resources.server.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="resources" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.feature.resources.server.service" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.GraphicServiceTest" />
-      <option name="METHOD_NAME" value="should_generateGraphic_successful" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GraphicServiceTest.should_tagIsNull_when_generateGraphic_method_tagId_is_not_a_valid_objectId" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.feature.resources.server.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="resources" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.feature.resources.server.service" />
-      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.service.GraphicServiceTest" />
-      <option name="METHOD_NAME" value="should_tagIsNull_when_generateGraphic_method_tagId_is_not_a_valid_objectId" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Maven.war">
     <configuration default="false" name="GraphicServiceTest.should_tagIsNull_when_generateGraphic_method_workSpaceId_is_not_a_valid_objectId" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1102,6 +1135,62 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="LocalDateTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.feature.resources.server.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="resources" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.feature.resources.server.util" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.util.LocalDateTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LocalDateTest.test" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.feature.resources.server.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="resources" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.feature.resources.server.util" />
+      <option name="MAIN_CLASS_NAME" value="com.feature.resources.server.util.LocalDateTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1136,37 +1225,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GAEApplicationRunConfiguration" factoryName="Application Engine Server">
-      <option name="sdkDirectory" value="" />
-      <option name="email" value="" />
-      <option name="password" value="" />
-      <option name="scriptArguments" value="" />
-      <option name="workDir" value="F:\workspaces\idea\xtemp\resources\resources" />
-      <module name="" />
-      <RunnerSettings RunnerId="JavaRebel">
-        <option name="bootstrapPath" />
-        <option name="jrebelArgs" />
-        <option name="loggingEnabled" value="false" />
-        <option name="useBootstrapDefaults" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="JavaRebel Debug">
-        <option name="bootstrapPath" />
-        <option name="debugPort" value="" />
-        <option name="jrebelArgs" />
-        <option name="loggingEnabled" value="false" />
-        <option name="transport" value="0" />
-        <option name="useBootstrapDefaults" value="true" />
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1509,16 +1567,44 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest.should_generateGraphic_successful" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest.should_tagIsNull_when_generateGraphic_method_tagId_is_not_a_valid_objectId" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest.should_tagIsNull_when_generateGraphic_method_workSpaceId_is_not_a_valid_objectId" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestSuite" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.should_GetTotalRecordCount_return_correct_size" />
+    <configuration default="false" name="war" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="war:war" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="10">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.GraphicServiceTest.should_tagIsNull_when_generateGraphic_method_workSpaceId_is_not_a_valid_objectId" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestSuite" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GraphicDaoTest.should_GetTotalRecordCount_return_correct_size" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LocalDateTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LocalDateTest.test" />
       <item index="5" class="java.lang.String" itemvalue="Maven.c_c_t" />
       <item index="6" class="java.lang.String" itemvalue="Maven.jetty_run" />
       <item index="7" class="java.lang.String" itemvalue="Maven.sonar" />
       <item index="8" class="java.lang.String" itemvalue="Maven.clean" />
+      <item index="9" class="java.lang.String" itemvalue="Maven.war" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1691,33 +1777,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-140" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.26385224" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8905013" sideWeight="0.48885694" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32717678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8865435" sideWeight="0.48885694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2271747" sideWeight="0.45778364" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292595" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54221636" sideWeight="0.6017254" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30984902" sideWeight="0.4762533" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292595" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73614776" sideWeight="0.5061107" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25593668" sideWeight="0.49173257" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JavaRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="BuildWatcher" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9050132" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20632638" sideWeight="0.53825855" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.26385224" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30028737" sideWeight="0.26385224" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73614776" sideWeight="0.46872753" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29742032" sideWeight="0.26174498" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.58575195" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="22" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.738255" sideWeight="0.46872753" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.67546177" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.71308726" sideWeight="0.6017254" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30984902" sideWeight="0.4762533" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49748382" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.90436244" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="BuildWatcher" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537357" sideWeight="0.7902375" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686782" sideWeight="0.67546177" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="554" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.6701847" order="9" side_tool="false" content_ui="tabs" />
@@ -1728,7 +1816,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.49748382" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32717678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -1857,105 +1945,87 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../parent/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.1.6/quartz-2.1.6-sources.jar!/org/quartz/impl/triggers/CronTriggerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="706" column="27" selection-start="21118" selection-end="21354" vertical-scroll-proportion="0.03499079" />
+        <state line="45" column="13" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/GraphicResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/AppGuiceFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="16" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.034050178" />
+        <state line="7" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/WorkspaceResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="613" selection-end="613" vertical-scroll-proportion="0.033274956" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/mongod_start.bat">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/beanvalidator/BeanValidators.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/CheckStatusDesc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" />
+        <state line="10" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="0.025920874" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/util/DomainObjectFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/jobs/AutoAuditGraphicJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="29" selection-start="1383" selection-end="1397" vertical-scroll-proportion="0.025920874">
-          <folding />
-        </state>
+        <state line="47" column="0" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/resources/FileResourceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/CXServerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="24" selection-start="1926" selection-end="1934" vertical-scroll-proportion="0.02638889">
-          <folding />
-        </state>
+        <state line="30" column="32" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/PropertiesServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="13" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/service/impl/GraphicServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="20" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="230" column="41" selection-start="8266" selection-end="8266" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/CheckStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/CheckResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/domain/Graphic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="767" selection-end="778" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/CheckStatusDesc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="204" selection-end="212" vertical-scroll-proportion="0.31105047">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feature/resources/server/dao/GraphicDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="76" selection-start="5746" selection-end="5761" vertical-scroll-proportion="0.02638889">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dto/FileMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="25" selection-start="2077" selection-end="2095" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="6" selection-start="158" selection-end="162" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/morphia/MorphiaGuiceModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="46" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="1019" selection-end="1080" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/resources/FileResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/dao/AppBasicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="35" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.24861111">
-          <folding>
-            <element signature="e#4449#4465#0" expanded="true" />
-          </folding>
+        <state line="21" column="11" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/morphia/morphia/0.99/morphia-0.99-sources.jar!/com/google/code/morphia/dao/BasicDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="14" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/bootstrap/GuiceModuleBounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="25" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/app/ApplicationGuiceModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="32" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feature/resources/server/config/qutarz/AppQuartzModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="70" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/app.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="231" selection-end="231" vertical-scroll-proportion="0.26619965">
+          <folding />
         </state>
       </provider>
     </entry>

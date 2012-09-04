@@ -3,6 +3,7 @@ package com.feature.resources.server.config.bootstrap;
 import com.feature.resources.server.config.app.ApplicationGuiceModule;
 import com.feature.resources.server.config.beanvalidate.ValidatorGuiceModule;
 import com.feature.resources.server.config.jersey.JerseyGuiceModule;
+import com.feature.resources.server.config.qutarz.AppQuartzModule;
 import com.feature.resources.server.config.servlet.ServletGuiceModule;
 import com.feature.resources.server.config.shiro.ShiroConfigurationModule;
 import com.google.code.morphia.logging.MorphiaLoggerFactory;
@@ -54,7 +55,7 @@ public class GuiceModuleBounds extends GuiceServletContextListener {
         ServletGuiceModule servletModule = new ServletGuiceModule();
         ValidatorGuiceModule interceptorModule = new ValidatorGuiceModule();
         ShiroConfigurationModule shiroConfigurationModule = new ShiroConfigurationModule(servletContext);
-
+        AppQuartzModule quartzModule = new AppQuartzModule();
         modules.add(shiroConfigurationModule);
         modules.add(new ShiroAopModule());
         modules.add(ShiroWebModule.guiceFilterModule());
@@ -62,6 +63,7 @@ public class GuiceModuleBounds extends GuiceServletContextListener {
         modules.add(applicationGuiceModule);
         modules.add(servletModule);
         modules.add(interceptorModule);
+        modules.add(quartzModule);
         return Guice.createInjector(modules);
     }
 }

@@ -20,7 +20,7 @@ public class TagResource extends Resource {
     @Path("/add")
     @POST
     public Response addNewWorkspace(TagDTO tagDTO) {
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         String userId = "";
         if(shiroUser != null){
             userId = shiroUser.getUserId();
@@ -37,7 +37,7 @@ public class TagResource extends Resource {
     @Path("/all")
     @GET
     public List<TagDTO> getAllTags(){
-        getCurrentUserFromUserssion();
+        getCurrentUserFromSession();
         return tagService.getCurrentTagListByUserId(shiroUser.getUserId());
     }
 }
