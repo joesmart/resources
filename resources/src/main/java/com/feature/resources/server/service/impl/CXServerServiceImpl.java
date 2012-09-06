@@ -38,13 +38,19 @@ public class CXServerServiceImpl implements CXServerService {
     @Named("cxserver.audit.method")
     private String method;
 
+    @Inject
+    @Named("audit.close")
+    private boolean isAuditClose;
+
     @Override
     public void updateGraphicResourceAuditStatus(GraphicCheckDTO graphicCheckDTO) {
+        if (isAuditClose)
+            return;
         WebResource webResource = JerseyResourceUtil.getClient().resource(createURL());
-        ClientResponse clientResponse = webResource.type(MediaType.APPLICATION_JSON_TYPE).accept(MediaType.APPLICATION_JSON_TYPE).post(ClientResponse.class,graphicCheckDTO);
+        ClientResponse clientResponse = webResource.type(MediaType.APPLICATION_JSON_TYPE).accept(MediaType.APPLICATION_JSON_TYPE).post(ClientResponse.class, graphicCheckDTO);
     }
 
     private String createURL() {
-        return "http://"+cxServerHost+":"+cxServerPort+"/"+cxServerName+"/"+cxServerAuditService;
+        return "http://" + cxServerHost + ":" + cxServerPort + "/" + cxServerName + "/" + cxServerAuditService;
     }
 }

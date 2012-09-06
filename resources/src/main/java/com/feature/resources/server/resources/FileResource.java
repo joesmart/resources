@@ -2,6 +2,7 @@ package com.feature.resources.server.resources;
 
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.WorkSpace;
+import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.FileUrl;
@@ -10,6 +11,7 @@ import com.feature.resources.server.service.WorkSpaceService;
 import com.feature.resources.server.util.DomainObjectFactory;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -40,6 +42,10 @@ public class FileResource extends Resource{
 
     @Inject
     private DomainObjectFactory objectFactory;
+
+    @Inject
+    @Named("audit.auto")
+    private boolean isAutoAudit;
 
     private String tagId;
     private String workspaceId;
@@ -75,6 +81,10 @@ public class FileResource extends Resource{
                 Graphic graphic = graphicService.generateGraphic(fileName, size, contentType,tagId,workspaceId);
                 graphic.setUserId(shiroUser.getUserId());
                 byte[] bytes = fileItem.get();
+                if(isAutoAudit){
+                    graphic.setCheckStatus(CheckStatusDesc.CHECKED.getValue());
+                    graphic.setCheckResult(CheckResult.PASS.getValue());
+                }
                 key = graphicService.dealUploadDataToCreateNewGraphic(bytes, graphic );
             }else{
                 getWorkSpaceAndTagIdInfoFromUPloadFormData(fileItem);
@@ -108,7 +118,8 @@ public class FileResource extends Resource{
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         FileMeta fileMeta = objectFactory.createFileMeta(graphic);
-        fileMeta.setCheckStatusDesc(CheckStatusDesc.CHECKING);
+        fileMeta.setCheckStatusDesc(CheckStatusDesc.valueOf(graphic.getCheckStatus()));
+        fileMeta.setCheckResult(CheckResult.valueOf(graphic.getCheckResult()));
         List<FileMeta> metaList = Lists.newArrayList(fileMeta);
         GenericEntity<List<FileMeta>> entity = new GenericEntity<List<FileMeta>>(metaList) {  };
         return Response.ok(entity).build();

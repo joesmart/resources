@@ -61,9 +61,9 @@ public class GraphicServiceImpl implements GraphicService {
 
 
     public void delete(String stringId) {
-        checkParaments(stringId);
+        checkParameters(stringId);
         ObjectId id = new ObjectId(stringId);
-        checkParaments(stringId);
+        checkParameters(stringId);
         Graphic graphic = get(stringId);
         propertiesDao.delete(graphic.getProperties());
         graphicDao.deleteGridFSDBFile(graphic.getAttachment());
@@ -71,7 +71,7 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     public Graphic get(String id) {
-        checkParaments(id);
+        checkParameters(id);
         return graphicDao.findOne("id", new ObjectId(id));
     }
 
@@ -85,7 +85,7 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     public void writeThumbnailStreamIntoDisplay(String graphicId, OutputStream outputStream) {
-        checkParaments(graphicId);
+        checkParameters(graphicId);
         Graphic graphic = graphicDao.get(new ObjectId(graphicId));
         GridFSDBFile gridFSDBFile = graphicDao.getGridFSDBFile(graphic.getAttachment());
 
@@ -114,7 +114,7 @@ public class GraphicServiceImpl implements GraphicService {
 
 
     public void writeOriginalResourceIntoOutputStream(String graphicId, OutputStream outputStream) {
-        checkParaments(graphicId);
+        checkParameters(graphicId);
         Graphic graphic = graphicDao.get(new ObjectId(graphicId));
         if (graphic == null) {
             return;
@@ -132,7 +132,7 @@ public class GraphicServiceImpl implements GraphicService {
         }
     }
 
-    private void checkParaments(String graphicId) {
+    private void checkParameters(String graphicId) {
         Preconditions.checkNotNull(graphicId);
         Preconditions.checkArgument(StringUtils.isNotEmpty(graphicId));
         Preconditions.checkArgument(ObjectId.isValid(graphicId),"Graphic ID is invalid");

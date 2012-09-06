@@ -15,6 +15,7 @@ public class FileMeta {
     private String delete_url;
     private String delete_type;
     private CheckStatusDesc checkStatusDesc;
+    private CheckResult checkResult;
 
     public FileMeta(String fileName,long size,String url,String thumbnailUrl,String delete_url,String resourceId){
         this.name = fileName;
@@ -92,5 +93,13 @@ public class FileMeta {
 
     public void setCheckStatusDesc(CheckStatusDesc checkStatusDesc) {
         this.checkStatusDesc = checkStatusDesc;
+    }
+
+    public CheckResult getCheckResult() {
+        return checkResult;
+    }
+
+    public void setCheckResult(CheckResult checkResult) {
+        this.checkResult = checkResult;
     }
 }
