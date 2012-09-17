@@ -14,8 +14,8 @@
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
 
-    <link href="${ctx}/static/bootstrap/2.0.3/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link href="${ctx}/static/bootstrap/2.0.3/css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctx}/static/bootstrap/2.1.1/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctx}/static/bootstrap/2.1.1/css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
     <link href="${ctx}/static/jquery-validation/1.9.0/validate.css" type="text/css" rel="stylesheet"/>
     <link href="${ctx}/static/main.css" rel="stylesheet" type="text/css"/>
     <link href="${ctx}/static/jquery-ui-1.8.20/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css"
@@ -62,7 +62,7 @@
     <script src="../static/upload/js/main.js"></script>
     <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
     <!--[if gte IE 8]><script src="../static/upload/js/cors/jquery.xdr-transport.js"></script><![endif]-->
-    <script src="../static/bootstrap/2.0.3/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../static/bootstrap/2.1.1/js/bootstrap.js" type="text/javascript"></script>
     <decorator:head/>
 </head>
 

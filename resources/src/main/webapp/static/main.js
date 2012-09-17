@@ -16,7 +16,6 @@ $(document).ready(function () {
             $("#main_info").css("display", "");
             $("#properties_info").css("display", "none");
         }
-
     }
 
     $("a[id='properties']").live("click", function () {
@@ -27,7 +26,7 @@ $(document).ready(function () {
     });
 
     function populateDetailPanelData(dialog,detail_option, graphic) {
-        dialog.find("img").attr("src", "../" + graphic.originalFilePath);
+        dialog.find("img").addClass('img-rounded').attr("src", "../" + graphic.originalFilePath);
         var text_length = graphic.name.length * 10;
         if (text_length < 280) {
             text_length = 280;
@@ -71,6 +70,8 @@ $(document).ready(function () {
         dialog.find("#save_button").css("display", "none");
     }
 
+
+
     $.ajax({
         url:"../rs/tag/all",
         type:'GET'
@@ -102,8 +103,8 @@ $(document).ready(function () {
         },
         detail_show:function (elem, graphic) {
             var detail_option = {
-                width:600,
-                height:500,
+                width:640,
+                height:510,
                 title:"详情",
                 position:'center',
                 buttons:{}
@@ -115,10 +116,11 @@ $(document).ready(function () {
             populateDetailPanelData(dialog,detail_option, graphic);
             dialog.dialog("open");
         },
+        //编辑页面显示
         edit_view_show:function (elem, graphic) {
             var detail_option = {
-                width:600,
-                height:500,
+                width:640,
+                height:510,
                 title:"详情",
                 position:'center',
                 buttons:{}
@@ -164,6 +166,7 @@ $(document).ready(function () {
                 dialog.dialog("close");
             });
         },
+        //删除确认
         delete_confirm:function (elem, params) {
             var detail_option = {
                 width:300,
@@ -196,6 +199,7 @@ $(document).ready(function () {
             dialog.dialog('open');
 
         },
+        //批量删除
         batch_delete_confirm:function (elem, idList) {
             var detail_option = {
                 width:300,
@@ -230,6 +234,7 @@ $(document).ready(function () {
             dialog.dialog('open');
 
         },
+        //批量审核
         batch_check_confirm:function (parent, graphic_id_array) {
             var form = $("<form/>").append($("<label/>").text("审核结果:"));
             var checkResult = $("<select>" +
@@ -242,7 +247,7 @@ $(document).ready(function () {
 
             var detail_option = {
                 width:300,
-                height:200,
+                height:220,
                 position:'center',
                 title:"审核",
                 buttons:{
@@ -295,7 +300,7 @@ $(document).ready(function () {
 
         },
         render_data:function (value, tr) {
-            var td = $("<td/>").append($("<img/>").css("width", 30).css("height", 30).attr("src", "../" + value.thumbnailPath));
+            var td = $("<td/>").append($("<img/>").addClass('img-rounded').css("width", 30).css("height", 30).attr("src", "../" + value.thumbnailPath));
             tr.append(td);
             td = $("<td/>").append(value.name);
             tr.append(td);
@@ -307,7 +312,7 @@ $(document).ready(function () {
     var queryType = $("#queryType").val();
     $.ajax(
         {
-            url:"/resources/rs/graphics/pageinfo",
+            url:"/resources/rs/graphics/pageinfo?queryType="+queryType,
             type:"GET"
         }
     ).success(function (data) {
@@ -325,6 +330,8 @@ $(document).ready(function () {
         }).fail(function (data) {
             console.log(data);
         });
+
+
 
 
 });

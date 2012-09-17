@@ -7,8 +7,8 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 
-<link href="${ctx}/static/bootstrap/2.0.3/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-<link href="${ctx}/static/bootstrap/2.0.3/css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
+<link href="${ctx}/static/bootstrap/2.1.1/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<link href="${ctx}/static/bootstrap/2.1.1/css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
 <link href="${ctx}/static/jquery-validation/1.9.0/validate.css" type="text/css" rel="stylesheet"/>
 <link href="${ctx}/static/main.css" rel="stylesheet" type="text/css"/>
 <link href="${ctx}/static/jquery-ui-1.8.20/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />

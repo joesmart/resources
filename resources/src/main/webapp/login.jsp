@@ -11,7 +11,8 @@
 <%@ page import="org.apache.shiro.authc.IncorrectCredentialsException" %>
 <html>
 <head>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>登录界面</title>
 </head>
 <body>
 <div class="container well">

@@ -181,6 +181,13 @@ public class GraphicServiceImpl implements GraphicService {
     }
 
     @Override
+    public long getGraphicsTotalCountByUserAndQueryType(String userId,String queryType) {
+        String upperCaseQueryType = queryType.toUpperCase();
+        CheckStatusDesc checkStatusDesc = CheckStatusDesc.valueOf(upperCaseQueryType);
+        return graphicDao.countRecordByQueryType(userId,checkStatusDesc);
+    }
+
+    @Override
     public void updateGraphic(GraphicDTO graphicDTO) {
         TagDescription tagDescription = tagService.getTagDescriptionById(graphicDTO.getTagId());
 

@@ -43,4 +43,6 @@ public  interface GraphicService {
     void checkGraphics(GraphicCheckDTO graphicCheckDTO);
 
     void batchDelete(List<String> idString);
+
+    public long getGraphicsTotalCountByUserAndQueryType(String userId,String queryType);
 }

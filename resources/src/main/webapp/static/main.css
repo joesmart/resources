@@ -47,21 +47,21 @@ ul{
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
-.navbar-fixed-top .brand {
-    padding-right: 0;
-    padding-left: 0;
-    margin-left: 20px;
-    float: right;
-    font-weight: bold;
-    color: #000;
-    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    transition: all .2s linear;
-}
-.navbar-fixed-top .brand:hover {
-    text-decoration: none;
-}
+/*.navbar-fixed-top .brand {*/
+    /*padding-right: 0;*/
+    /*padding-left: 0;*/
+    /*margin-left: 20px;*/
+    /*float: right;*/
+    /*font-weight: bold;*/
+    /*color: #000;*/
+    /*text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);*/
+    /*-webkit-transition: all .2s linear;*/
+    /*-moz-transition: all .2s linear;*/
+    /*transition: all .2s linear;*/
+/*}*/
+/*.navbar-fixed-top .brand:hover {*/
+    /*text-decoration: none;*/
+/*}*/
 
 
 /* Space out sub-sections more
@@ -208,6 +208,7 @@ hr.soften {
     -moz-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
 }
+
 
 /* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
 @media (min-width: 980px) {

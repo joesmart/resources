@@ -11,6 +11,7 @@
 
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>资源列表</title>
     <script src="${ctx}/static/main.js" type="text/javascript"></script>
 </head>

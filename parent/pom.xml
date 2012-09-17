@@ -405,6 +405,11 @@
 				<artifactId>thumbnailator</artifactId>
 				<version>${thumbnailator.version}</version>
 			</dependency>
+            <dependency>
+                <groupId>org.im4java</groupId>
+                <artifactId>im4java</artifactId>
+                <version>1.2.0</version>
+            </dependency>
 			<!-- google java library -->
 			<dependency>
 				<groupId>com.google.guava</groupId>

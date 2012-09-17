@@ -1,10 +1,7 @@
 package com.feature.resources.server.resources;
 
 import com.feature.resources.server.domain.Graphic;
-import com.feature.resources.server.dto.DataListInfo;
-import com.feature.resources.server.dto.GraphicCheckDTO;
-import com.feature.resources.server.dto.GraphicDTO;
-import com.feature.resources.server.dto.PageInfo;
+import com.feature.resources.server.dto.*;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.util.StringUtil;
 import com.google.common.base.Preconditions;
@@ -15,7 +12,9 @@ import com.google.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
@@ -29,6 +28,7 @@ import java.util.List;
 public class GraphicResource extends Resource{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GraphicResource.class);
+    private static final String AUDIT_HEADER_NAME="auditStatus";
 
     @Inject
     private GraphicService graphicService;
@@ -63,7 +63,19 @@ public class GraphicResource extends Resource{
     @Produces({"image/png"})
     public StreamingOutput showGraphicbyId(
             @QueryParam(value = "id") final String graphicId,
-            @QueryParam(value = "size") String size) {
+            @QueryParam(value = "size") String size,@Context HttpServletResponse response) {
+        Graphic graphic = graphicService.get(graphicId);
+        if(graphic.getCheckStatus() == null || CheckStatusDesc.UNCHECKED.getValue().equals(graphic.getCheckStatus())){
+            response.setHeader(AUDIT_HEADER_NAME,"CHECKING");
+        }
+        if(CheckStatusDesc.CHECKED.getValue().equalsIgnoreCase(graphic.getCheckStatus())){
+            if(CheckResult.PASS.getValue().equalsIgnoreCase(graphic.getCheckResult())){
+                response.setHeader(AUDIT_HEADER_NAME,"PASSED");
+            }else if(CheckResult.UNPASS.getValue().equalsIgnoreCase(graphic.getCheckResult())){
+                response.setHeader(AUDIT_HEADER_NAME,"UNPASS");
+            }
+        }
+
         return  getGraphicbyId(graphicId,size);
     }
 
@@ -79,9 +91,9 @@ public class GraphicResource extends Resource{
     @GET
     @Path("/pageinfo")
     @Produces({MediaType.APPLICATION_JSON})
-    public PageInfo getGraphicPageInfo() {
+    public PageInfo getGraphicPageInfo(@DefaultValue("ALL")@QueryParam("queryType") String queryType) {
         getCurrentUserFromSession();
-        long totalRecords = graphicService.getGraphicsTotalCount(shiroUser.getUserId());
+        long totalRecords = graphicService.getGraphicsTotalCountByUserAndQueryType(shiroUser.getUserId(),queryType);
         int pageSize = 10;
         int maxPage = (int)(totalRecords/pageSize);
         int totalPages = (int)(((double)totalRecords/pageSize)>maxPage?maxPage+1:maxPage);

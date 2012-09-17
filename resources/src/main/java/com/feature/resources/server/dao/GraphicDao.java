@@ -92,6 +92,14 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         return size;
     }
 
+    public long countRecordByQueryType(String userId,CheckStatusDesc checkStatusDesc){
+        Preconditions.checkNotNull(userId);
+        graphicQuery = createQuery();
+        generateConditions(checkStatusDesc,userId);
+        long size = graphicQuery.countAll();
+        return size;
+    }
+
     //TODO need Guice support Exception AOP
     public int updateCheckStatus(List<String> ids, CheckStatusDesc desc, CheckResult checkResult) {
         Preconditions.checkNotNull(ids, "Id String can't be null");
@@ -145,6 +153,13 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
         }
         int offset = (innerRequestPage - 1) * pageSize;
         graphicQuery = createQuery();
+        generateConditions(desc, userId);
+        graphicQuery.order("-createDate");
+        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
+        return graphics;
+    }
+
+    private void generateConditions(CheckStatusDesc desc, String userId) {
         String checkStatus = "checkStatus";
         if (desc.equals(CheckStatusDesc.UNCHECKED)) {
             graphicQuery.or(
@@ -163,8 +178,5 @@ public class GraphicDao extends AppBasicDao<Graphic, ObjectId> {
             LOGGER.info("date:" + dateTime.toString());
             graphicQuery.filter("createDate >",dateTime.toDate());
         }
-        graphicQuery.order("-createDate");
-        graphics = Lists.newArrayList(graphicQuery.offset(offset).limit(pageSize).fetch());
-        return graphics;
     }
 }

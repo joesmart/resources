@@ -81,6 +81,7 @@ public class FileResource extends Resource{
                 Graphic graphic = graphicService.generateGraphic(fileName, size, contentType,tagId,workspaceId);
                 graphic.setUserId(shiroUser.getUserId());
                 byte[] bytes = fileItem.get();
+                graphic.setCheckStatus(CheckStatusDesc.UNCHECKED.getValue());
                 if(isAutoAudit){
                     graphic.setCheckStatus(CheckStatusDesc.CHECKED.getValue());
                     graphic.setCheckResult(CheckResult.PASS.getValue());
@@ -119,7 +120,9 @@ public class FileResource extends Resource{
         }
         FileMeta fileMeta = objectFactory.createFileMeta(graphic);
         fileMeta.setCheckStatusDesc(CheckStatusDesc.valueOf(graphic.getCheckStatus()));
-        fileMeta.setCheckResult(CheckResult.valueOf(graphic.getCheckResult()));
+        if(graphic.getCheckResult() != null){
+            fileMeta.setCheckResult(CheckResult.valueOf(graphic.getCheckResult()));
+        }
         List<FileMeta> metaList = Lists.newArrayList(fileMeta);
         GenericEntity<List<FileMeta>> entity = new GenericEntity<List<FileMeta>>(metaList) {  };
         return Response.ok(entity).build();
