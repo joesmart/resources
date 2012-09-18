@@ -1,6 +1,8 @@
 package com.feature.resources.server.resources.guice;
 
+import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.User;
+import com.feature.resources.server.dto.FileMeta;
 import com.feature.resources.server.dto.UserDTO;
 import com.feature.resources.server.dto.UserStatus;
 import com.feature.resources.server.testdata.TestDataObjectFactory;
@@ -35,6 +37,7 @@ public class MockDoaminObjectFactoryProvider implements Provider<DomainObjectFac
         when(domainObjectFactory.translateToUser(any(UserDTO.class))).thenReturn(user);
         when(domainObjectFactory.createGraphic(anyString(), anyString())).thenReturn(testDataObjectFactory.getGraphic());
         when(domainObjectFactory.createProperties(anyString(), anyLong(), anyString())).thenReturn(testDataObjectFactory.getProperties());
+        when(domainObjectFactory.createFileMeta(any(Graphic.class))).thenReturn(new FileMeta("abc.jpg",123123L,"abcdefg","abcdefg","abcde","abcde"));
     }
 
     private void createMockUser() {

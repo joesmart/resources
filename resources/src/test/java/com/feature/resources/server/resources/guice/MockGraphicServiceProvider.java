@@ -55,6 +55,7 @@ public class MockGraphicServiceProvider implements Provider<GraphicService> {
         byte[] bytes = Resources.toByteArray(url);
         when(graphicService.saveGraphic(bytes, graphic)).thenReturn(afterSaveGraphic);
         when(graphicService.getGraphicsTotalCount(anyString())).thenReturn(100L);
+        when(graphicService.getGraphicsTotalCountByUserAndQueryType(anyString(),anyString())).thenReturn(100L);
         LOGGER.info("Mock IdString:" + idString);
         when(graphicService.get(anyString())).thenReturn(afterSaveGraphic);
         when(graphicService.generateGraphic(anyString(),anyLong(),anyString(),anyString(),anyString())).thenReturn(afterSaveGraphic);

@@ -64,6 +64,7 @@ public class MockGuiceContextListener extends GuiceServletContextListener {
                 bind(WorkSpaceService.class).toProvider(MockWorkSpaceServiceProvider.class).in(Scopes.SINGLETON);
                 bind(TagService.class).toProvider(MockTagServiceProvider.class).in(Scopes.SINGLETON);
                 bind(UserService.class).toProvider(MockUserServiceProvider.class).in(Scopes.SINGLETON);
+                bind(String.class).annotatedWith(Names.named("audit.auto")).toInstance("false");
             }
 
             @Provides @Named("testData") @Singleton

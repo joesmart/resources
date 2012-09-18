@@ -15,13 +15,13 @@
 		<jersey.version>1.13</jersey.version>
 		<hibernate-validator.version>4.3.0.Final</hibernate-validator.version>
 		<jackson.version>2.0.5</jackson.version>
-		<guava.version>13.0</guava.version>
+		<guava.version>13.0.1</guava.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
 		<commons-io.version>2.4</commons-io.version>
 		<joda-time.version>2.1</joda-time.version>
 		<dozer.version>5.3.2</dozer.version>
-		<slf4j.version>1.6.6</slf4j.version>
-		<jetty.version>8.1.3.v20120416</jetty.version>
+		<slf4j.version>1.7.1</slf4j.version>
+		<jetty.version>8.1.5.v20120716</jetty.version>
 		<junit.version>4.10</junit.version>
 		<mockito.version>1.9.0</mockito.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
@@ -33,14 +33,14 @@
 		<guiceberry.version>3.1.0</guiceberry.version>
 		<guice.version>3.0</guice.version>
 		<morphia.version>0.99</morphia.version>
-		<mongodb.version>2.8.0</mongodb.version>
+		<mongodb.version>2.9.1</mongodb.version>
 		<thumbnailator.version>0.4.2</thumbnailator.version>
 		<commons-fileupload.version>1.2.2</commons-fileupload.version>
-		<jodd.version>3.3.7</jodd.version>
+		<jodd.version>3.3.8</jodd.version>
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
-        <shiro.version>1.2.0</shiro.version>
+        <shiro.version>1.2.1</shiro.version>
     </properties>
 	<repositories>
         <repository>
@@ -75,23 +75,12 @@
         </repository>
 
 		<repository>
-			<id>maven-mongodb-plugin-repo</id>
-			<name>maven mongodb plugin repository</name>
-			<url>http://maven-mongodb-plugin.googlecode.com/svn/maven/repo</url>
-			<layout>default</layout>
-		</repository>
-
-		<repository>
 			<id>morphia.googlecode.com</id>
 			<name>Morphia Repo at Google Code</name>
 			<url>http://morphia.googlecode.com/svn/mavenrepo</url>
 		</repository>
 
-		<repository>
-			<id>Glassfish</id>
-			<name>Glassfish Maven2 Repository</name>
-			<url>http://download.java.net/maven/glassfish/</url>
-		</repository>
+
 	</repositories>
 	<dependencyManagement>
 		<dependencies>
@@ -346,12 +335,12 @@
 			<dependency>
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
-				<version>2.2.6</version>
+				<version>2.2.7</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
 				<artifactId>jaxb-impl</artifactId>
-				<version>2.2.5.1</version>
+				<version>2.2.6</version>
 			</dependency>
 			<!-- XML end -->
 
@@ -489,7 +478,7 @@
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>jsr305</artifactId>
-                <version>2.0.0</version>
+                <version>2.0.1</version>
             </dependency>
 			<!-- OTHER UTILS end -->
 
