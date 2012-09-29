@@ -111,21 +111,7 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <processorPath useClasspath="true" />
-        <module name="parent" />
-        <module name="resources" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="parent" target="1.7" />
-      <module name="resources" target="1.6" />
-    </bytecodeTargetLevel>
+    <annotationProcessing enabled="false" useClasspath="true" />
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -301,6 +287,7 @@
           <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Flex" enabled="true" />
+          <content-type name="Manifest" enabled="true" />
         </content-types>
       </qualified-text-editor>
       <record-navigation>
@@ -543,6 +530,9 @@
     <option white="true" />
     <option widget="true" />
     <option windows="true" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.7" />
   </component>
   <component name="JenkinsControlComponent">
     <option name="enableJobAutoRefresh" value="true" />

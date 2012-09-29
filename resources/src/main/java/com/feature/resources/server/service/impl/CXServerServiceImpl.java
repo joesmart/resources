@@ -7,6 +7,8 @@ import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.core.MediaType;
 
@@ -18,6 +20,7 @@ import javax.ws.rs.core.MediaType;
  */
 public class CXServerServiceImpl implements CXServerService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(CXServerServiceImpl.class);
     @Inject
     @Named("cxserver.url")
     private String cxServerHost;
@@ -48,9 +51,14 @@ public class CXServerServiceImpl implements CXServerService {
             return;
         WebResource webResource = JerseyResourceUtil.getClient().resource(createURL());
         ClientResponse clientResponse = webResource.type(MediaType.APPLICATION_JSON_TYPE).accept(MediaType.APPLICATION_JSON_TYPE).post(ClientResponse.class, graphicCheckDTO);
+        if (clientResponse.getStatus()>210) {
+            throw new RuntimeException("error:"+clientResponse.getStatus()+"");
+        }
     }
 
     private String createURL() {
-        return "http://" + cxServerHost + ":" + cxServerPort + "/" + cxServerName + "/" + cxServerAuditService;
+        String url = "http://" + cxServerHost + ":" + cxServerPort + "/" + cxServerName + "/" + cxServerAuditService;
+        LOGGER.info("business service url:"+url);
+        return url;
     }
 }
