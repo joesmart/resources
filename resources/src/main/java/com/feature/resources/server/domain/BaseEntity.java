@@ -24,7 +24,7 @@ public class BaseEntity {
     }
 
     @PrePersist
-    public void prepersist() {
+    public void prePersist() {
         this.updateDate = new Date();
     }
 

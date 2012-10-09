@@ -1,5 +1,6 @@
 package com.feature.resources.server.domain;
 
+import com.google.code.morphia.annotations.Embedded;
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Reference;
 import com.google.common.base.Objects;
@@ -16,7 +17,8 @@ public class User extends ResourceEntity {
     private String salt;
     private String email;
     private String status;
-
+    @Embedded
+    private Profile profile;
     @Reference
     private List<Role> roles = Lists.newArrayList();
 
@@ -92,6 +94,14 @@ public class User extends ResourceEntity {
         this.roles = roles;
     }
 
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
     @Override
     public String toString() {
         return Objects.toStringHelper(this).add("id", getId())
@@ -103,6 +113,7 @@ public class User extends ResourceEntity {
                                             .add("email",email)
                                             .add("status",status)
                                             .add("Roles",roles.toString())
+                                            .add("Profile",profile.toString())
                                             .toString();
     }
 }
