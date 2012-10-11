@@ -81,6 +81,15 @@
             <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.2.1" />
             <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.5.0" />
             <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:2.0.1" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.aggregate:jetty-webapp:8.1.5.v20120716" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-jsp:8.1.5.v20120716" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:org.apache.jasper.glassfish:2.2.2.v201112011158" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:javax.servlet.jsp.jstl:1.2.0.v201105211821" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:org.apache.taglibs.standard.glassfish:1.2.0.v201112081803" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:javax.el:2.2.0.v201108011116" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:com.sun.el:2.2.0.v201108011116" />
+            <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:org.eclipse.jdt.core:3.7.1" />
             <element id="library" level="project" name="Maven: org.easytesting:fest-assert:1.4" />
             <element id="library" level="project" name="Maven: org.easytesting:fest-util:1.1.6" />
           </element>
@@ -111,7 +120,21 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <processorPath useClasspath="true" />
+        <module name="parent" />
+        <module name="resources" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parent" target="1.7" />
+      <module name="resources" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -287,7 +310,6 @@
           <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Flex" enabled="true" />
-          <content-type name="Manifest" enabled="true" />
         </content-types>
       </qualified-text-editor>
       <record-navigation>
@@ -530,9 +552,6 @@
     <option white="true" />
     <option widget="true" />
     <option windows="true" />
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.7" />
   </component>
   <component name="JenkinsControlComponent">
     <option name="enableJobAutoRefresh" value="true" />

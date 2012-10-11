@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar resources/target/endorsed/webapp-runner.jar --port $PORT resources/target/*.war
