@@ -109,10 +109,6 @@
 			<artifactId>bson</artifactId>
 		</dependency>
 		<!-- Morphia -->
-        <dependency>
-            <groupId>com.github.jsimone</groupId>
-            <artifactId>webapp-runner</artifactId>
-        </dependency>
 		<dependency>
 			<groupId>com.google.code.morphia</groupId>
 			<artifactId>morphia</artifactId>
@@ -429,16 +425,10 @@
 									<type>jar</type>
 								</artifactItem>
                                 <artifactItem>
-                                    <groupId>org.mortbay.jetty</groupId>
-                                    <artifactId>jetty-runner</artifactId>
-                                    <version>${jetty.version}</version>
-                                    <destFileName>jetty-runner.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
                                     <groupId>com.github.jsimone</groupId>
                                     <artifactId>webapp-runner</artifactId>
                                     <version>7.0.30.1</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
+                                    <type>jar</type>
                                 </artifactItem>
 							</artifactItems>
 						</configuration>
