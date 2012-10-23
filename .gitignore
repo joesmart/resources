@@ -5,3 +5,4 @@
 *.war
 *.ear
 /logs/*.log
+.idea
