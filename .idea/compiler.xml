@@ -13,21 +13,10 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <processorPath useClasspath="true" />
-        <module name="parent" />
-        <module name="resources" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="parent" target="1.7" />
-      <module name="resources" target="1.6" />
-    </bytecodeTargetLevel>
+    <annotationProcessing enabled="false" useClasspath="true" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.7" />
   </component>
 </project>
 
