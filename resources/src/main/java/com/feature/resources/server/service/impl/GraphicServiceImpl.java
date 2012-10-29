@@ -88,19 +88,19 @@ public class GraphicServiceImpl implements GraphicService {
         checkParameters(graphicId);
         Graphic graphic = graphicDao.get(new ObjectId(graphicId));
         GridFSDBFile gridFSDBFile = graphicDao.getGridFSDBFile(graphic.getAttachment());
-
+        InputStream inputStream = gridFSDBFile.getInputStream();
         if (gridFSDBFile != null) {
             try {
-                Thumbnails.of(gridFSDBFile.getInputStream()).size(width, height).toOutputStream(outputStream);
+                Thumbnails.of(inputStream).size(width, height).toOutputStream(outputStream);
             } catch (IOException e) {
                 LOGGER.error("Thumbnail image error!",e);
                 try {
-                    displayOriginalImageContent(outputStream, gridFSDBFile);
+                    displayOriginalImageContent(outputStream, inputStream);
                 } catch (IOException e1) {
                     LOGGER.error("Original image read error!",e1);
-                }finally {
-                    closeIOStream(outputStream,null);
                 }
+            }finally {
+                closeIOStream(outputStream,inputStream);
             }
         }
     }
@@ -120,10 +120,10 @@ public class GraphicServiceImpl implements GraphicService {
             return;
         }
         GridFSDBFile gridFSDBFile = graphicDao.getGridFSDBFile(graphic.getAttachment());
-        InputStream input = null;
+        InputStream input = gridFSDBFile.getInputStream();
         if (gridFSDBFile != null) {
             try {
-                displayOriginalImageContent(outputStream, gridFSDBFile);
+                displayOriginalImageContent(outputStream, input);
             } catch (IOException e) {
                 LOGGER.error("Display Image error:", e);
             } finally {
@@ -138,9 +138,9 @@ public class GraphicServiceImpl implements GraphicService {
         Preconditions.checkArgument(ObjectId.isValid(graphicId),"Graphic ID is invalid");
     }
 
-    private void displayOriginalImageContent(OutputStream outputStream, GridFSDBFile gridFSDBFile) throws IOException {
+    private void displayOriginalImageContent(OutputStream outputStream, InputStream inputStream) throws IOException {
         byte[] bytes = new byte[2048];
-        InputStream input = gridFSDBFile.getInputStream();
+        InputStream input = inputStream;
         int result = 0;
         while ((result = input.read(bytes)) != -1) {
             outputStream.write(bytes, 0, result);
