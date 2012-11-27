@@ -4,7 +4,6 @@ import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.*;
 import com.feature.resources.server.service.GraphicService;
 import com.feature.resources.server.util.StringUtil;
-import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
@@ -12,6 +11,7 @@ import com.google.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -20,6 +20,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.util.List;
 
 @Path("/graphics")
@@ -37,8 +39,17 @@ public class GraphicResource extends Resource{
     @Produces({"image/png"})
     public StreamingOutput getGraphicbyId(
             @QueryParam(value = "id") final String graphicId,
-            @QueryParam(value = "size") String size) {
-        Preconditions.checkNotNull(graphicId);
+            @QueryParam(value = "size") String size,@Context HttpServletRequest request) {
+        String  path = request.getSession().getServletContext().getRealPath("/")+"static/image/error.jpg";
+        if(Strings.isNullOrEmpty(graphicId)){
+            return outputErrorImage(path);
+        }
+
+        Graphic graphic = graphicService.get(graphicId);
+
+        if(graphic == null){
+            return outputErrorImage(path);
+        }
         if (!Strings.isNullOrEmpty(size)) {
             List<String> sizeList = Lists.newArrayList(Splitter.on('X').split(size));
             final List<Integer> intSizeList = StringUtil.stringSizeListConvertToIntSizeList(sizeList);
@@ -63,8 +74,16 @@ public class GraphicResource extends Resource{
     @Produces({"image/png"})
     public StreamingOutput showGraphicbyId(
             @QueryParam(value = "id") final String graphicId,
-            @QueryParam(value = "size") String size,@Context HttpServletResponse response) {
+            @QueryParam(value = "size") String size,@Context HttpServletResponse response,@Context HttpServletRequest request) {
+        String  path = request.getSession().getServletContext().getRealPath("/")+"/static/image/error.jpg";
+        if(Strings.isNullOrEmpty(graphicId)){
+            return outputErrorImage(path);
+        }
+
         Graphic graphic = graphicService.get(graphicId);
+        if(graphic == null){
+            return outputErrorImage(path);
+        }
         if(graphic.getCheckStatus() == null || CheckStatusDesc.UNCHECKED.getValue().equals(graphic.getCheckStatus())){
             response.setHeader(AUDIT_HEADER_NAME,"CHECKING");
         }
@@ -76,7 +95,7 @@ public class GraphicResource extends Resource{
             }
         }
 
-        return  getGraphicbyId(graphicId,size);
+        return  getGraphicbyId(graphicId,size,request);
     }
 
     @POST
@@ -143,5 +162,22 @@ public class GraphicResource extends Resource{
         LOGGER.info("GraphicCheckDTO"+idString.toString());
         graphicService.batchDelete(idString);
         return Response.ok().build();
+    }
+
+    private StreamingOutput outputErrorImage(String path){
+        try {
+            final byte[] bytes = Files.readAllBytes(FileSystems.getDefault().getPath(path));
+            return new StreamingOutput() {
+                @Override
+                public void write(OutputStream output) throws IOException, WebApplicationException {
+                    output.write(bytes);
+                    output.flush();
+                    output.close();
+                }
+            };
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return null;
     }
 }

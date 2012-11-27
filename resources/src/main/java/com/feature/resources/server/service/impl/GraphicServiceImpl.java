@@ -18,6 +18,7 @@ import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -91,7 +92,7 @@ public class GraphicServiceImpl implements GraphicService {
         InputStream inputStream = gridFSDBFile.getInputStream();
         if (gridFSDBFile != null) {
             try {
-                Thumbnails.of(inputStream).size(width, height).toOutputStream(outputStream);
+                Thumbnails.of(inputStream).size(width, height).imageType(BufferedImage.TYPE_INT_ARGB).toOutputStream(outputStream);
             } catch (IOException e) {
                 LOGGER.error("Thumbnail image error!",e);
                 try {

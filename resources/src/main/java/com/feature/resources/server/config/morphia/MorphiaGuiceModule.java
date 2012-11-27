@@ -10,7 +10,6 @@ import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
-import com.mongodb.MongoURI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,14 +31,14 @@ public class MorphiaGuiceModule extends AbstractModule {
     @Provides
     @Singleton
     public Datastore provideMorphia(@Named("mongoDB.url") String mongoDbURL, @Named("mongoDB.port") Integer mongoDbPort, @Named("mongoDb.db") String db) {
-        MongoURI mongoURI = new MongoURI(System.getenv("MONGOHQ_URL"));
+       // MongoURI mongoURI = new MongoURI(System.getenv("MONGOHQ_URL"));
         Mongo mongo = null;
         try {
-            if (mongoURI != null) {
-                mongo = mongoURI.connect();
-            } else {
-                mongo = new Mongo(mongoDbURL, mongoDbPort);
-            }
+//            if (mongoURI != null) {
+//                mongo = mongoURI.connect();
+//            } else {
+//            }
+            mongo = new Mongo(mongoDbURL, mongoDbPort);
             Morphia morphia = new Morphia();
             morphia.map(Graphic.class);
             Datastore ds = morphia.createDatastore(mongo, db);
