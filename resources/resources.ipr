@@ -81,6 +81,8 @@
             <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.2.1" />
             <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.5.0" />
             <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:2.0.1" />
+            <element id="library" level="project" name="Maven: org.easytesting:fest-assert:1.4" />
+            <element id="library" level="project" name="Maven: org.easytesting:fest-util:1.1.6" />
           </element>
         </element>
       </root>
@@ -96,6 +98,10 @@
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/target/generated-sources/annotations" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/target/generated-test-sources/test-annotations" includeSubdirectories="true" />
+    </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="?*.properties" />
@@ -109,7 +115,22 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="resources" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parent" target="1.7" />
+      <module name="resources" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -529,9 +550,6 @@
     <option widget="true" />
     <option windows="true" />
   </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.7" />
-  </component>
   <component name="JenkinsControlComponent">
     <option name="enableJobAutoRefresh" value="true" />
     <option name="enableRssAutoRefresh" value="true" />
@@ -695,7 +713,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ScalacSettings">
@@ -707,6 +725,27 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="deltaUtilsSettings">
+    <option name="settings">
+      <list>
+        <BrowsePattern>
+          <option name="icon" value="GOOGLE" />
+          <option name="label" value="Search with Google" />
+          <option name="pattern" value="http://www.google.com/search?q={selection}" />
+        </BrowsePattern>
+        <BrowsePattern>
+          <option name="icon" value="SEARCH CODE" />
+          <option name="label" value="Search code" />
+          <option name="pattern" value="http://code.google.com/codesearch#search/&amp;q={selection}" />
+        </BrowsePattern>
+        <BrowsePattern>
+          <option name="icon" value="TRANSLATE" />
+          <option name="label" value="Translate with Google" />
+          <option name="pattern" value="http://translate.google.com/#auto/en/{selection}" />
+        </BrowsePattern>
+      </list>
+    </option>
+  </component>
   <component name="libraryTable">
     <library name="Maven: aopalliance:aopalliance:1.0">
       <CLASSES>
@@ -1577,15 +1616,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/easytesting/fest-util/1.1.6/fest-util-1.1.6-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty.aggregate:jetty-webapp:8.1.4.v20120524">
+    <library name="Maven: org.eclipse.jetty.aggregate:jetty-webapp:8.1.5.v20120716">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.4.v20120524/jetty-webapp-8.1.4.v20120524.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.4.v20120524/jetty-webapp-8.1.4.v20120524-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.4.v20120524/jetty-webapp-8.1.4.v20120524-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/aggregate/jetty-webapp/8.1.5.v20120716/jetty-webapp-8.1.5.v20120716-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.eclipse.jetty.orbit:com.sun.el:2.2.0.v201108011116">
@@ -1665,15 +1704,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/orbit/org.eclipse.jdt.core/3.7.1/org.eclipse.jdt.core-3.7.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.jetty:jetty-jsp:8.1.4.v20120524">
+    <library name="Maven: org.eclipse.jetty:jetty-jsp:8.1.5.v20120716">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.4.v20120524/jetty-jsp-8.1.4.v20120524.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.5.v20120716/jetty-jsp-8.1.5.v20120716.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.4.v20120524/jetty-jsp-8.1.4.v20120524-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.5.v20120716/jetty-jsp-8.1.5.v20120716-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.4.v20120524/jetty-jsp-8.1.4.v20120524-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-jsp/8.1.5.v20120716/jetty-jsp-8.1.5.v20120716-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.glassfish.external:management-api:3.0.0-b012">

@@ -3,6 +3,7 @@ package com.feature.resources.server.resources;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.dto.*;
 import com.feature.resources.server.service.GraphicService;
+import com.feature.resources.server.util.FilesUtil;
 import com.feature.resources.server.util.StringUtil;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
@@ -18,10 +19,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.StreamingOutput;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
 import java.util.List;
 
 @Path("/graphics")
@@ -165,8 +166,8 @@ public class GraphicResource extends Resource{
     }
 
     private StreamingOutput outputErrorImage(String path){
-        try {
-            final byte[] bytes = Files.readAllBytes(FileSystems.getDefault().getPath(path));
+
+            final byte[] bytes = FilesUtil.readAllBytes(new File(path));
             return new StreamingOutput() {
                 @Override
                 public void write(OutputStream output) throws IOException, WebApplicationException {
@@ -175,9 +176,5 @@ public class GraphicResource extends Resource{
                     output.close();
                 }
             };
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        return null;
     }
 }
