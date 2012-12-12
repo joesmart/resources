@@ -17,7 +17,7 @@ import static org.fest.assertions.Assertions.assertThat;
 public class FilesUtilTest {
     @Test
     public void testReadImageFileIntoBytes() throws URISyntaxException {
-        URL url = this.getClass().getResource("error.jpg");
+        URL url = this.getClass().getResource("../../../../../error.jpg");
 
         File file = new File(url.toURI());
 
