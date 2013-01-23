@@ -9,6 +9,7 @@ import com.feature.resources.server.dto.GraphicCheckDTO;
 import com.feature.resources.server.dto.GraphicDTO;
 import com.feature.resources.server.service.*;
 import com.feature.resources.server.util.DomainObjectFactory;
+import com.feature.resources.server.util.FilesUtil;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
 import com.mongodb.gridfs.GridFSDBFile;
@@ -18,11 +19,12 @@ import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.ImageInputStream;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.util.Iterator;
 import java.util.List;
 
 public class GraphicServiceImpl implements GraphicService {
@@ -46,6 +48,7 @@ public class GraphicServiceImpl implements GraphicService {
 
     private Integer width = 40;
     private Integer height = 40;
+
 
     public Graphic addNewGraphic(Graphic graphic, InputStream inputStream) {
         Preconditions.checkNotNull(graphic);
@@ -92,25 +95,59 @@ public class GraphicServiceImpl implements GraphicService {
         InputStream inputStream = gridFSDBFile.getInputStream();
         if (gridFSDBFile != null) {
             try {
-                Thumbnails.of(inputStream).size(width, height).imageType(BufferedImage.TYPE_INT_ARGB).toOutputStream(outputStream);
+                BufferedImage image = findSupportImage(inputStream);
+                if(image != null){
+
+                    Thumbnails.of(image).size(width, height).imageType(BufferedImage.TYPE_INT_ARGB).outputFormat("PNG").toOutputStream(outputStream);
+                    FileOutputStream fileOutputStream = FilesUtil.createTemplateThumbnailFile(graphicId, width, height);
+                    Thumbnails.of(image).size(width, height).imageType(BufferedImage.TYPE_INT_ARGB).outputFormat("PNG").toOutputStream(fileOutputStream);
+                }else {
+                    displayOriginalImageContent(outputStream, inputStream);
+                }
+//                Thumbnails.of(inputStream).size(width, height).imageType(BufferedImage.TYPE_INT_ARGB).toOutputStream(outputStream);
             } catch (IOException e) {
                 LOGGER.error("Thumbnail image error!",e);
-                try {
-                    displayOriginalImageContent(outputStream, inputStream);
-                } catch (IOException e1) {
-                    LOGGER.error("Original image read error!",e1);
-                }
             }finally {
                 closeIOStream(outputStream,inputStream);
             }
         }
     }
 
+    public BufferedImage findSupportImage(InputStream inputStream){
+        try {
+            ImageInputStream imageInputStream = ImageIO.createImageInputStream(inputStream);
+            BufferedImage image = null;
+            ImageReader imageReader;
+            Iterator<ImageReader> imageReaders = ImageIO.getImageReaders(imageInputStream);
+            while (imageReaders!=null&&imageReaders.hasNext()){
+                imageReader = imageReaders.next();
+                imageReader.setInput(imageInputStream);
+                try {
+                    image = imageReader.read(0);
+                    break;
+                } catch (IOException e) {
+                }
+            }
+            return image;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return  null;
+    }
+
 
     public void displayThumbnailImage(String graphicId, OutputStream outputStream, List<Integer> size) {
         width = size.get(0);
         height = size.get(1);
-        writeThumbnailStreamIntoDisplay(graphicId, outputStream);
+        if(FilesUtil.isThumbnailFileAlreadyExists(graphicId,width,height)){
+            try {
+                FilesUtil.writeTempThumbnailFile(graphicId,width,height,outputStream);
+            } catch (IOException e) {
+               LOGGER.error("Read template thumbnail files failed",e);
+            }
+        }else {
+            writeThumbnailStreamIntoDisplay(graphicId, outputStream);
+        }
     }
 
 
