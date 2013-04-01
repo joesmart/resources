@@ -230,12 +230,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>hamcrest-core</artifactId>
-                    <groupId>org.hamcrest</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 		<dependency>
 			<groupId>com.google.guiceberry</groupId>
@@ -315,7 +309,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.easytesting</groupId>
-			<artifactId>fest-assert</artifactId>
+			<artifactId>fest-assert-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.jersey.jersey-test-framework</groupId>

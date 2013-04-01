@@ -9,7 +9,6 @@ import com.google.code.morphia.Key;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import org.bson.types.ObjectId;
-import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
@@ -24,7 +23,7 @@ import org.mockito.stubbing.Answer;
 
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
@@ -94,8 +93,8 @@ public class WorkSpaceServiceTest {
         when(mockDao.getEntityList()).thenReturn(workSpaces);
         List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceList();
         Assert.assertNotNull(workSpaceList);
-        Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
-        Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
+        assertThat(workSpaceList.size()).isEqualTo(1);
+        assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
         verify(mockDao).getEntityList();
     }
 
@@ -114,8 +113,8 @@ public class WorkSpaceServiceTest {
         when(mockDao.getEntityListByUserId(userId)).thenReturn(workSpaces);
         List<WorkSpaceDTO> workSpaceList = workSpaceService.getCurrentWorkSpaceListByUserId(userId);
         Assert.assertNotNull(workSpaceList);
-        Assertions.assertThat(workSpaceList.size()).isEqualTo(1);
-        Assertions.assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
+        assertThat(workSpaceList.size()).isEqualTo(1);
+        assertThat(workSpaceList.get(0).getName()).isEqualTo(workSpace.getName());
         verify(mockDao).getEntityListByUserId(userId);
     }
 

@@ -1,6 +1,9 @@
 package com.feature.resources.server.dao;
 
-import com.feature.resources.server.domain.*;
+import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.domain.Properties;
+import com.feature.resources.server.domain.TagDescription;
+import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.util.SystemFunctions;
@@ -11,7 +14,6 @@ import com.google.common.collect.Lists;
 import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 import org.bson.types.ObjectId;
-import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,7 +26,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian
@@ -123,7 +125,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(checkedList.size());
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
     }
 
@@ -135,7 +137,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(checkedList.size());
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
         judgeGraphicsOrder(graphics);
     }
@@ -149,7 +151,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(checkedList.size() < 4 ? checkedList.size() : 4);
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
         judgeGraphicsOrder(graphics);
     }
@@ -165,7 +167,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics.size()).isEqualTo(checkedList.size() + nullCheckStatusList.size() < 24 ? checkedList.size() + nullCheckStatusList.size() : 24);
         for (Graphic graphic : graphics) {
             if (graphic.getCheckStatus() != null && !graphic.getCheckStatus().equals(""))
-                Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
+                assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
         }
         judgeGraphicsOrder(graphics);
     }
@@ -191,7 +193,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics.size()).isEqualTo(checkedList.size() < 4 ? checkedList.size() : 4);
         for (Graphic graphic : graphics) {
             if (graphic.getCheckStatus() != null && !graphic.getCheckStatus().equals(""))
-                Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
+                assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
         }
         judgeGraphicsOrder(graphics);
     }
@@ -329,7 +331,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(userGraphics.size());
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
     }
 
@@ -343,7 +345,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(userGraphics.size());
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.CHECKED.getValue());
         }
         judgeGraphicsOrder(graphics);
     }
@@ -357,7 +359,7 @@ public class GraphicDaoTest extends BasicMongoUnitTest {
         assertThat(graphics).isNotNull();
         assertThat(graphics.size()).isEqualTo(userGraphics.size());
         for (Graphic graphic : graphics) {
-            Assertions.assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
+            assertThat(graphic.getCheckStatus()).isEqualTo(CheckStatusDesc.UNCHECKED.getValue());
         }
     }
 }

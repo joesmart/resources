@@ -5,7 +5,7 @@ import junit.framework.Assert;
 import org.bson.types.ObjectId;
 import org.junit.Test;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian
