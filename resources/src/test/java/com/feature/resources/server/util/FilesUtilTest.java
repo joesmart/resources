@@ -1,13 +1,12 @@
 package com.feature.resources.server.util;
 
-import org.fest.assertions.Assertions;
 import org.junit.Test;
 
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: yanjianzou

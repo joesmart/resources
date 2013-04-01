@@ -18,7 +18,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.InputStream;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian

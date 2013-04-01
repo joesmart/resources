@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian

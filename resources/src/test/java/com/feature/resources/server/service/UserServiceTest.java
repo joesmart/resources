@@ -23,7 +23,7 @@ import org.mockito.stubbing.Answer;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
@@ -37,11 +37,7 @@ import static org.mockito.Mockito.*;
 @RunWith(JukitoRunner.class)
 @AutoValidating
 public class UserServiceTest {
-
-
-
     public static class Module extends JukitoModule{
-
         @Override
         protected void configureTest() {
             bindMock(UserDao.class).in(TestSingleton.class);
