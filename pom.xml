@@ -3,51 +3,86 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
 
 	<groupId>com.feature.parent</groupId>
 	<artifactId>parent</artifactId>
 	<version>1.0</version>
-	<name>Feature :: Parent</name>
+	<name>Resources</name>
 	<packaging>pom</packaging>
-
+    <url>https://github.com/zouyanjian/resources</url>
+    <description>
+        Image Resource Manager.
+    </description>
     <modules>
         <module>resources</module>
     </modules>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<jersey.version>1.13</jersey.version>
-		<hibernate-validator.version>4.3.0.Final</hibernate-validator.version>
-		<jackson.version>2.0.5</jackson.version>
-		<guava.version>13.0.1</guava.version>
+
+		<jersey.version>1.17</jersey.version>
+		<hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
+		<jackson.version>2.1.4</jackson.version>
+		<guava.version>14.0.1</guava.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
 		<commons-io.version>2.4</commons-io.version>
-		<joda-time.version>2.1</joda-time.version>
-		<dozer.version>5.3.2</dozer.version>
-		<slf4j.version>1.7.1</slf4j.version>
+		<joda-time.version>2.2</joda-time.version>
+		<dozer.version>5.4.0</dozer.version>
+		<slf4j.version>1.7.4</slf4j.version>
 		<jetty.version>8.1.4.v20120524</jetty.version>
-		<junit.version>4.10</junit.version>
-		<mockito.version>1.9.0</mockito.version>
-		<spring.version>3.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<mockito.version>1.9.5</mockito.version>
+		<spring.version>3.2.1.RELEASE</spring.version>
 		<spring-data-jpa.version>1.1.0.RELEASE</spring-data-jpa.version>
 		<powermock.version>1.4.12</powermock.version>
-		<selenium.version>2.25.0</selenium.version>
-		<lombok.version>0.11.4</lombok.version>
-		<h2.version>1.3.168</h2.version>
+		<selenium.version>2.29.1</selenium.version>
+		<lombok.version>0.11.6</lombok.version>
+		<h2.version>1.3.171</h2.version>
 		<guiceberry.version>3.1.0</guiceberry.version>
 		<guice.version>3.0</guice.version>
 		<morphia.version>0.99</morphia.version>
-		<mongodb.version>2.9.1</mongodb.version>
-		<thumbnailator.version>0.4.2</thumbnailator.version>
+		<mongodb.version>2.9.3</mongodb.version>
+		<thumbnailator.version>0.4.3</thumbnailator.version>
 		<commons-fileupload.version>1.2.2</commons-fileupload.version>
-		<jodd.version>3.3.8</jodd.version>
-		<!-- Plugin的属性定义 -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk.version>1.7</jdk.version>
+		<jodd.version>3.4.1</jodd.version>
         <shiro.version>1.2.1</shiro.version>
+		<!-- Plugin的属性定义 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<jdk.version>1.7</jdk.version>
+
     </properties>
-	<repositories>
+    <developers>
+        <developer>
+            <name>Zou Yanjian</name>
+            <email>zouyanjian110@gmail.com</email>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/zouyanjian/resources.git</connection>
+        <developerConnection>scm:git:git@github.com:zouyanjian/resources.git</developerConnection>
+        <url>http://github.com/zouyanjian/resources/</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>github</system>
+        <url>http://github.com/zouyanjian/resources/issues#issue/</url>
+    </issueManagement>
+
+
+    <repositories>
         <repository>
             <id>central</id>
             <name>Central Repository</name>
@@ -85,8 +120,37 @@
 			<url>http://morphia.googlecode.com/svn/mavenrepo</url>
 		</repository>
 
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
 
 	</repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Nexus Release Repository</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <site>
+            <id>repo.codahale.com</id>
+            <url>scp://codahale.com/home/codahale/dropwizard.codahale.com/maven/</url>
+        </site>
+    </distributionManagement>
+
     <!-- 设定插件仓库 如有Nexus私服, 取消注释并指向正确的服务器地址.
     <pluginRepositories>
         <pluginRepository>
@@ -167,7 +231,7 @@
 			<dependency>
 				<groupId>com.sun.jersey.contribs</groupId>
 				<artifactId>jersey-guice</artifactId>
-				<version>1.13</version>
+				<version>${jersey.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.jersey.contribs</groupId>
@@ -294,7 +358,7 @@
             <dependency>
                 <groupId>org.lazyluke</groupId>
                 <artifactId>log4jdbc-remix</artifactId>
-                <version>0.2.7</version>
+                <version>0.2.8-SNAPSHOT</version>
             </dependency>
 			<!-- LOGGING end -->
 
@@ -315,7 +379,7 @@
 			<dependency>
 				<groupId>jaxen</groupId>
 				<artifactId>jaxen</artifactId>
-				<version>1.1.3</version>
+				<version>1.1.4</version>
 				<exclusions>
 					<exclusion>
 						<groupId>xerces</groupId>
@@ -357,7 +421,7 @@
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
 				<artifactId>jaxb-impl</artifactId>
-				<version>2.2.6</version>
+				<version>2.2.7-b53</version>
 			</dependency>
 			<!-- XML end -->
 
@@ -404,7 +468,7 @@
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.6</version>
+				<version>1.7</version>
 			</dependency>
 			<dependency>
 				<groupId>net.coobird</groupId>
@@ -471,7 +535,7 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
-				<version>4.2.1</version>
+				<version>4.2.3</version>
 			</dependency>
 
 			<!-- email -->
@@ -489,7 +553,7 @@
 			<dependency>
 				<groupId>com.ibm.icu</groupId>
 				<artifactId>icu4j</artifactId>
-				<version>49.1</version>
+				<version>50.1.1</version>
 			</dependency>
 
             <dependency>
@@ -584,7 +648,7 @@
             <dependency>
                 <groupId>com.github.jsimone</groupId>
                 <artifactId>webapp-runner</artifactId>
-                <version>7.0.30.1</version>
+                <version>7.0.34.1</version>
             </dependency>
 
 			<!-- selenium 2.0 -->
@@ -620,7 +684,7 @@
 			<dependency>
 				<groupId>org.dbunit</groupId>
 				<artifactId>dbunit</artifactId>
-				<version>2.4.8</version>
+				<version>2.4.9</version>
 				<scope>test</scope>
 			</dependency>
 
@@ -640,8 +704,8 @@
 			<!--junit assertions -->
 			<dependency>
 				<groupId>org.easytesting</groupId>
-				<artifactId>fest-assert</artifactId>
-				<version>1.4</version>
+				<artifactId>fest-assert-core</artifactId>
+				<version>2.0M10</version>
                 <scope>test</scope>
 			</dependency>
 
@@ -672,7 +736,7 @@
 			<dependency>
 				<groupId>de.flapdoodle.embedmongo</groupId>
 				<artifactId>de.flapdoodle.embedmongo</artifactId>
-				<version>1.18</version>
+				<version>1.19-SNAPSHOT</version>
 				<scope>test</scope>
 			</dependency>
 			<!-- TEST end -->

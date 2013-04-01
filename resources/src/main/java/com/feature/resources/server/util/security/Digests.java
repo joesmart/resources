@@ -6,7 +6,7 @@
 package com.feature.resources.server.util.security;
 
 import com.feature.resources.server.util.Exceptions;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -2,7 +2,6 @@ package com.feature.resources.server.resources;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
-import org.fest.assertions.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +10,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.Map;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian
@@ -32,7 +31,7 @@ public class TagResourceTest extends BasicJerseyTest {
         String json = "{\"tag\":\"test\"}";
         ClientResponse response = resource.path("tag/add").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, json);
-        Assertions.assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
+        assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
     }
 
     @Test
@@ -40,7 +39,7 @@ public class TagResourceTest extends BasicJerseyTest {
         String json = "{\"tag\":\"xxx\"}";
         ClientResponse response = resource.path("tag/add").accept(MediaType.APPLICATION_JSON)
                 .type(MediaType.APPLICATION_JSON).post(ClientResponse.class, json);
-        Assertions.assertThat(response.getStatus()).isEqualTo(Response.Status.NOT_MODIFIED.getStatusCode());
+        assertThat(response.getStatus()).isEqualTo(Response.Status.NOT_MODIFIED.getStatusCode());
     }
     @Test
     public void should_get_tagDTO_list(){

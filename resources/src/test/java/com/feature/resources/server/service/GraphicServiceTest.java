@@ -2,7 +2,10 @@ package com.feature.resources.server.service;
 
 import com.feature.resources.server.dao.GraphicDao;
 import com.feature.resources.server.dao.PropertiesDao;
-import com.feature.resources.server.domain.*;
+import com.feature.resources.server.domain.Graphic;
+import com.feature.resources.server.domain.Properties;
+import com.feature.resources.server.domain.TagDescription;
+import com.feature.resources.server.domain.WorkSpace;
 import com.feature.resources.server.dto.CheckResult;
 import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.dto.GraphicCheckDTO;
@@ -17,7 +20,6 @@ import com.google.inject.Inject;
 import com.google.inject.Scopes;
 import com.mongodb.gridfs.GridFSDBFile;
 import org.bson.types.ObjectId;
-import org.fest.assertions.Assertions;
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
 import org.jukito.TestSingleton;
@@ -35,7 +37,7 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 /**
@@ -177,8 +179,8 @@ public class GraphicServiceTest {
 
         when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.ALL, objectId.toString())).thenReturn(uncheckedList);
         List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, "ALL", objectId.toString());
-        Assertions.assertThat(pageGraphic).isNotNull();
-        Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size());
+        assertThat(pageGraphic).isNotNull();
+        assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size());
     }
 
     @Test
@@ -186,8 +188,8 @@ public class GraphicServiceTest {
         List<Graphic> checkedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.CHECKED,3);
         when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.CHECKED, objectId.toString())).thenReturn(checkedList);
         List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, CheckStatusDesc.CHECKED.getValue(), objectId.toString());
-        Assertions.assertThat(pageGraphic).isNotNull();
-        Assertions.assertThat(pageGraphic.size()).isEqualTo(checkedList.size()<10?checkedList.size():10);
+        assertThat(pageGraphic).isNotNull();
+        assertThat(pageGraphic.size()).isEqualTo(checkedList.size()<10?checkedList.size():10);
     }
 
     @Test
@@ -195,8 +197,8 @@ public class GraphicServiceTest {
         List<Graphic> uncheckedList = testDataObjectFactory.createGraphicList(CheckStatusDesc.UNCHECKED,3);
         when(graphicDao.findByPageAndQueryTypeAndUserId(1, 10, CheckStatusDesc.UNCHECKED, objectId.toString())).thenReturn(uncheckedList);
         List<Graphic> pageGraphic = graphicService.findGraphicByPageAndQueryTypeAndUser(1, 10, CheckStatusDesc.UNCHECKED.getValue(), objectId.toString());
-        Assertions.assertThat(pageGraphic).isNotNull();
-        Assertions.assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size()<10?uncheckedList.size():10);
+        assertThat(pageGraphic).isNotNull();
+        assertThat(pageGraphic.size()).isEqualTo(uncheckedList.size()<10?uncheckedList.size():10);
     }
 
     @Test

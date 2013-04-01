@@ -1,6 +1,9 @@
 package com.feature.resources.server.dao;
 
-import com.feature.resources.server.domain.*;
+import com.feature.resources.server.domain.Permission;
+import com.feature.resources.server.domain.Role;
+import com.feature.resources.server.domain.User;
+import com.feature.resources.server.domain.WorkSpace;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.query.Query;
 import com.google.common.base.Predicate;
@@ -16,7 +19,7 @@ import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian

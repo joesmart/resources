@@ -1,10 +1,10 @@
 package com.feature.resources.server.testdata;
 
-import com.feature.resources.server.domain.WorkSpace;
-import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.domain.Graphic;
 import com.feature.resources.server.domain.Properties;
 import com.feature.resources.server.domain.TagDescription;
+import com.feature.resources.server.domain.WorkSpace;
+import com.feature.resources.server.dto.CheckStatusDesc;
 import com.feature.resources.server.service.WorkSpaceService;
 import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * User: ZouYanjian

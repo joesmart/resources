@@ -1,6 +1,6 @@
 package com.feature.resources.server.util;
 
-import org.fest.assertions.Assertions;
+import org.fest.assertions.api.Assertions;
 import org.joda.time.LocalDateTime;
 import org.joda.time.Minutes;
 import org.junit.Test;

@@ -4,7 +4,7 @@ import com.feature.resources.server.dto.UserDTO;
 import com.feature.resources.server.service.UserService;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.method.MethodConstraintViolationException;
 import org.slf4j.Logger;

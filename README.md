@@ -3,4 +3,4 @@ resources
 
 Resources
 
-资源服务器
+###image manager
